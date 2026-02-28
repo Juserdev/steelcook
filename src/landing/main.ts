@@ -1,4 +1,4 @@
-import './style.css'
+import '../style.css'
 
 const app = document.querySelector<HTMLDivElement>("#app")!
 
@@ -56,4 +56,13 @@ containerGeneral.appendChild(whatsapp)
 
 
 app.appendChild(containerGeneral)
+
+const systemQuotationButton = document.createElement("a") as HTMLAnchorElement
+systemQuotationButton.classList.add("system-quotation-a")
+systemQuotationButton.href = "./system/login.html"
+systemQuotationButton.target = "_blank"
+systemQuotationButton.rel = "noopener noreferrer"
+systemQuotationButton.textContent = "Login"
+
+app.appendChild(systemQuotationButton)
 

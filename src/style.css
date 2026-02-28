@@ -1,26 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap');
 
-:root{
+:root {
   --font-family: 'Comfortaa', sans-serif;
 
-  --bg-gradient: linear-gradient(0deg,rgba(0, 0, 0, 0.459) 0%, rgba(0, 0, 0, 0) 30%);
+  --bg-gradient: linear-gradient(0deg, rgba(0, 0, 0, 0.459) 0%, rgba(0, 0, 0, 0) 30%);
   --bg-container-general: hsla(0, 0%, 0%, 0.53);
   --bg-container-general-border: #ffffff9b;
   --bg-whatsapp: #0000006e;
-  
+
   --paragraph-color: #ffffffc8;
 
 
 }
 
-*{
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
   font-family: var(--font-family);
 }
 
-#app{
+#app {
   background-image: var(--bg-gradient), url("../public/bg.jpg");
   background-size: cover, cover;
   background-position: center;
@@ -34,7 +34,7 @@
   padding: 10px;
 }
 
-.container-general{
+.container-general {
   width: min(1200px, 100%);
   background: var(--bg-container-general);
   backdrop-filter: blur(5px);
@@ -49,29 +49,29 @@
 
 }
 
-.logo{
+.logo {
   width: min(400px, 100%);
 }
 
-.container-text{
+.container-text {
   color: white;
   text-align: center;
 }
 
-.title{
-  font-size: clamp(20px, 4vw ,30px);
+.title {
+  font-size: clamp(20px, 4vw, 30px);
   font-weight: 700;
   padding-bottom: 10px;
 }
 
-.paragraph{
+.paragraph {
   font-size: clamp(16px, 2vw, 18px);
-  font-weight: 300; 
+  font-weight: 300;
   color: var(--paragraph-color);
   max-width: 750px;
 }
 
-.whatsapp{
+.whatsapp {
   text-decoration: none;
   color: white;
   cursor: pointer;
@@ -86,10 +86,29 @@
   transition: background-color 0.3s ease;
 }
 
-.whatsapp:hover{
+.whatsapp:hover {
   background-color: transparent;
 }
 
-.whatsapp-text{
+.whatsapp-text {
   font-size: clamp(12px, 2vw, 16px);
+}
+
+.system-quotation-a {
+  all: initial;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: var(--paragraph-color);
+  background: red;
+  padding: 10px 20px;
+  border-radius: 1.2rem;
+  border: 1px solid var(--bg-container-general-border);
+  background-color: var(--bg-gradient);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.system-quotation-a:hover {
+  background-color: orange;
 }
