@@ -1,4 +1,5 @@
 import { SUPABASE_KEY, SUPABASE_URL } from "../auth-service";
+import type { Clients } from "./clients.types";
 
 export async function getClients(TOKEN: string) {
 
@@ -12,6 +13,6 @@ export async function getClients(TOKEN: string) {
     }
   });
 
-  const data = await response.json();
+  const data: Clients[] = await response.json();
   return data
 }

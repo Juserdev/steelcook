@@ -1,4 +1,5 @@
 import { SUPABASE_KEY, SUPABASE_URL } from "../auth-service";
+import type { Products } from "./products.types";
 
 export async function getProducts(TOKEN: string) {
 
@@ -12,6 +13,6 @@ export async function getProducts(TOKEN: string) {
     }
   });
 
-  const data = await response.json();
+  const data: Products[] = await response.json();
   return data
 }

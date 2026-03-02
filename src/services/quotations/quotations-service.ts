@@ -1,6 +1,7 @@
 import { SUPABASE_KEY, SUPABASE_URL } from "../auth-service";
+import type { Quotations } from "./quotations.types";
 
-export async function getqQuotations(TOKEN: string) {
+export async function getQuotations(TOKEN: string) {
 
   const response = await fetch(`${SUPABASE_URL}/rest/v1/quotations`, {
     method: "GET",
@@ -12,6 +13,6 @@ export async function getqQuotations(TOKEN: string) {
     }
   });
 
-  const data = await response.json();
+  const data: Quotations[] = await response.json();
   return data
 }

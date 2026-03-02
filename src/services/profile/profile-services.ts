@@ -1,4 +1,5 @@
 import { SUPABASE_KEY, SUPABASE_URL } from "../auth-service";
+import type { Profile } from "./profile.types";
 
 export async function getProfile(TOKEN: string) {
 
@@ -12,6 +13,6 @@ export async function getProfile(TOKEN: string) {
     }
   });
 
-  const data = await response.json();
+  const data: Profile[] = await response.json();
   return data
 }

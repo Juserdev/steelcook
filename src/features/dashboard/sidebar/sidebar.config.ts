@@ -35,7 +35,7 @@ export const buttons: Buttons = [
     key: "quotations",
     container: { container_class: "btn-container", container_class_key: "btn-container-quotations" },
     icon: { svg: quotations_icon, class: "quotations_icon" },
-    name_btn: { name: "Productos", class: "quotations-text-btn" }
+    name_btn: { name: "Cotizaciones", class: "quotations-text-btn" }
   }
 
 ]

@@ -1,12 +1,26 @@
 import { buttons } from '@/features/dashboard/sidebar/sidebar.config'
+import type { Profile } from '@/services/profile/profile.types'
+import '@/features/dashboard/sidebar/sidebar.css'
 
-export function sidebar(): HTMLDivElement {
-  const left_container = document.createElement("div")
-  left_container.classList.add('left-container')
+export function sidebar(profile: Profile[]): HTMLDivElement {
+  const sidebar = document.createElement("div")
+  sidebar.classList.add('sidebar')
+
+  const logo = document.createElement("img")
+  logo.classList.add("logo")
+  logo.src = `${profile[0]!.logo}`
+
+  sidebar.appendChild(logo)
+
+  const interface_container = document.createElement('div')
+  interface_container.classList.add('interface-container')
+
+  sidebar.appendChild(interface_container)
 
   buttons.forEach(button => {
     const container_btn = document.createElement("div")
     container_btn.classList.add(button.container.container_class, button.container.container_class_key)
+    container_btn.dataset.section = button.key
 
     const icon_btn = document.createElement("img")
     icon_btn.classList.add(button.icon.class)
@@ -18,10 +32,10 @@ export function sidebar(): HTMLDivElement {
 
     container_btn.appendChild(icon_btn)
     container_btn.appendChild(name_btn)
-    left_container.appendChild(container_btn)
+    interface_container.appendChild(container_btn)
 
   })
 
-  return left_container
+  return sidebar
 
 }

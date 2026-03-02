@@ -1,69 +1,37 @@
-import { getClients } from "@/services/clients/clients-services"
-import { getProducts } from "@/services/products/products-services"
-import { getProfile } from "@/services/profile/profile-services"
-import { getqQuotations } from "@/services/quotations/quotations-service"
+import type { Clients } from "@/services/clients/clients.types"
+import type { Products } from "@/services/products/products.types"
+import type { Quotations } from "@/services/quotations/quotations.types"
+import { homeContentConfig } from "./home-config"
 
-const TOKEN = localStorage.getItem('access_token')
-
-interface Clients {
-  address: string
-  created_at: string
-  email: string
-  id: string
-  name: string
-  phone: string
-}
-
-interface Products {
-  created_at: string
-  description: string
-  id: string
-  name: string
-  price: number
-}
-
-interface Profile {
-  address: string
-  company: string
-  created_at: string
-  email: string
-  id: string
-  logo: string | null
-  phone: string
-}
-
-interface Quotations {
-  client_snapshot: unknown
-  created_at: string
-  id: string
-  items: unknown
-  profile_snapshot: unknown
-  public_id: string
-  quotation_id: string
-  subtotal: number
-  tax: number
-  total: number
-  user_id: string
-}
-
-
-const clients: Clients[] = await getClients(TOKEN!)
-const products: Products[] = await getProducts(TOKEN!)
-const profile: Profile[] = await getProfile(TOKEN!)
-const quotations: Quotations[] = await getqQuotations(TOKEN!)
-
-export function home(): HTMLDivElement {
+export function content_home(clients: Clients[], products: Products[], quotations: Quotations[]): HTMLDivElement {
   const home = document.createElement('div')
+  home.classList.add('section-content', 'home-content')
 
-  const p = document.createElement("p")
-  p.textContent = "esta es el contenido de la derecha"
-  home.appendChild(p)
-  console.log(clients)
-  console.log(products)
-  console.log(profile)
-  console.log(quotations)
+  const title = document.createElement('h1')
+  title.classList.add("title", "home-title")
+  title.textContent = 'Home'
 
+  home.appendChild(title)
 
+  const home_content = homeContentConfig(clients, products, quotations)
+
+  home_content.forEach(content => {
+    const container = document.createElement("div")
+    container.classList.add(content.class_container)
+
+    const title = document.createElement('h2')
+    title.classList.add(content.class_title)
+    title.textContent = content.title
+
+    const text_content = document.createElement("span")
+    text_content.classList.add(content.class_text)
+    text_content.textContent = `${content.counter} ${content.text}`
+
+    container.appendChild(title)
+    container.appendChild(text_content)
+    home.appendChild(container)
+
+  });
 
   return home
 }
