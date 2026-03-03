@@ -9,6 +9,7 @@ import { content_profile } from "@/services/profile/profile"
 import { content_quotations } from "@/services/quotations/quotations"
 import { showQuotationPublic } from "./navigation/dashboard-public-links"
 
+import { client_toggle } from "@/services/clients/components/clients-toggle"
 
 const TOKEN = localStorage.getItem('access_token')
 
@@ -22,7 +23,7 @@ const app = document.querySelector<HTMLDivElement>("#app")!
 const sidebar_container = sidebar(profile)
 const home_content = content_home(clients, products, quotations)
 const profile_content = content_profile(profile)
-const clients_content = content_clients(clients)
+const clients_content = content_clients(TOKEN!, clients)
 const products_content = content_products(products)
 const quotation_content = content_quotations(quotations)
 
@@ -45,3 +46,5 @@ app.appendChild(right_container)
 
 initDashboardNavigation()
 showQuotationPublic()
+
+client_toggle()

@@ -11,7 +11,8 @@ export const clients_config: Clients_config = {
     email: 'client-email',
     address: 'client-address',
     phone: 'client-phone'
-  }
+  },
+  add_client_btn: { class: 'add-client_btn', text: 'Agregar Cliente' }
 
 }
 
