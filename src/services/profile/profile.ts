@@ -1,5 +1,6 @@
 import { profile_config, profile_titles_sheets } from "./profile-config"
 import type { Profile } from "./profile.types"
+import '@/services/profile/profile.css'
 
 export function content_profile(company_profile: Profile[]): HTMLDivElement {
   const profile_container = document.createElement('div')
