@@ -7,6 +7,7 @@ import '@/styles/dashboard.css'
 import { content_products } from "@/services/products/products"
 import { content_profile } from "@/services/profile/profile"
 import { content_quotations } from "@/services/quotations/quotations"
+import { showQuotationPublic } from "./navigation/dashboard-public-links"
 
 
 const TOKEN = localStorage.getItem('access_token')
@@ -43,3 +44,4 @@ app.appendChild(left_container)
 app.appendChild(right_container)
 
 initDashboardNavigation()
+showQuotationPublic()

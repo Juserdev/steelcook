@@ -4,14 +4,15 @@ import type { Quotations_Config } from "@/services/quotations/quotations.types";
 
 export const quotations_config: Quotations_Config = {
   quotations_container_class: { common_class: 'section-content', class: 'quotations-content' },
-  title: { class_1: 'title', class_2: 'clients-title', text: 'Cotizaciones' },
+  title: { class_1: 'title', class_2: 'quotation-title', text: 'Cotizaciones', text_button: "Ver cotización" },
   quotations_class: {
     file: 'quotation-file',
     id: 'quotation-id',
     client: 'quotation-client',
     phone: 'quotation-phone',
     total: 'quotation-total',
-    date: 'quotation-date'
+    date: 'quotation-date',
+    button: "quotation-vew-btn"
   }
 }
 
@@ -32,5 +33,5 @@ export const quotation_titles_sheets: Titles_Sheets[] = [
     title: "FECHA",
     class: "quoattion-sheet-date",
     common_class: "quoattion-sheet"
-  },
+  }
 ]
