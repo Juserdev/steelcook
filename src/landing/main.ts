@@ -59,7 +59,7 @@ app.appendChild(containerGeneral)
 
 const systemQuotationButton = document.createElement("a") as HTMLAnchorElement
 systemQuotationButton.classList.add("system-quotation-a")
-systemQuotationButton.href = "./system/login.html"
+systemQuotationButton.href = "./system/login/index.html"
 systemQuotationButton.target = "_blank"
 systemQuotationButton.rel = "noopener noreferrer"
 systemQuotationButton.textContent = "Login"
