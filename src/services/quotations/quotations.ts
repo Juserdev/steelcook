@@ -30,6 +30,7 @@ export function content_quotations(quoatations: Quotations[]): HTMLDivElement {
     const quotation_file = document.createElement('div')
     quotation_file.classList.add(quotations_config.quotations_class.file)
 
+
     const quotation_id = document.createElement('sapn')
     quotation_id.classList.add(quotations_config.quotations_class.id)
     quotation_id.textContent = quotation.quotation_id
@@ -53,18 +54,21 @@ export function content_quotations(quoatations: Quotations[]): HTMLDivElement {
     const formatted_date = `${date.getDate()}-${date.getMonth() + 1}-${date.getFullYear()}`
     quotation_date.textContent = formatted_date
 
+    const quotation_button = document.createElement('button')
+    quotation_button.classList.add(quotations_config.quotations_class.button)
+    quotation_button.textContent = quotations_config.title.text_button
+    quotation_button.dataset.public_id = quotation.public_id
+
 
     quotation_file.appendChild(quotation_id)
     quotation_file.appendChild(quotation_client)
     quotation_file.appendChild(quotation_phone)
     quotation_file.appendChild(quotation_total)
     quotation_file.appendChild(quotation_date)
+    quotation_file.appendChild(quotation_button)
 
     quotations_container.appendChild(quotation_file)
   });
-
-
-
 
 
   return quotations_container
