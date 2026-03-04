@@ -36,5 +36,8 @@ export interface Quotations_Config {
     date: string
     button: string
   }
+  add_quotation_btn: { class: string, text: string }
 }
+
+export interface Create_Quotation extends Omit<Quotations, 'id' | 'created_at'> { }
 

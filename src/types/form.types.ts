@@ -37,7 +37,7 @@ export interface Button_Form {
   class: string
 }
 
-export interface Form_Add_Client {
+export interface Form_Add {
   form: Form
   fields: Form_Field[]
   button: Button_Form

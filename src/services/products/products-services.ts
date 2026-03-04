@@ -1,5 +1,5 @@
 import { SUPABASE_KEY, SUPABASE_URL } from "../auth-service";
-import type { Products } from "./products.types";
+import type { Create_Product, Products } from "./products.types";
 
 export async function getProducts(TOKEN: string) {
 
@@ -15,4 +15,26 @@ export async function getProducts(TOKEN: string) {
 
   const data: Products[] = await response.json();
   return data
+}
+
+export async function createProduct(TOKEN: string, product: Create_Product) {
+
+  const response = await fetch(`${SUPABASE_URL}/rest/v1/products`, {
+    method: "POST",
+    headers: {
+      "Authorization": `Bearer ${TOKEN}`,
+      "apikey": SUPABASE_KEY,
+      "Content-Type": "application/json",
+      "Prefer": "return=representation"
+    },
+    body: JSON.stringify(product)
+  });
+
+  if (!response.ok) {
+    throw new Error("Error creating product");
+  }
+
+  const data: Products[] = await response.json();
+
+  return data[0];
 }

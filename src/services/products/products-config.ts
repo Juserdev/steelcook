@@ -1,7 +1,7 @@
 import type { Titles_Sheets } from "@/types/ui.types"
-import type { Products_config } from "./products.types"
+import type { Products_Config } from "./products.types"
 
-export const products_config: Products_config = {
+export const products_config: Products_Config = {
   products_content_class: { common_class: 'section-content', class: 'products-content' },
   title: { class_1: 'title', class_2: 'products-title', text: 'Productos' },
   products_class: {
@@ -10,7 +10,8 @@ export const products_config: Products_config = {
     name: 'product-name',
     description: 'product-description',
     price: 'product-price'
-  }
+  },
+  add_product_btn: { class: 'add-product-btn', text: 'Agregar producto' }
 
 }
 

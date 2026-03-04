@@ -3,28 +3,30 @@ import { content_home } from "./main-content/home/home"
 import { initDashboardNavigation } from "./navigation/dashboard-navigation"
 import { content_clients } from "@/services/clients/clients"
 import { loadDashboardData } from "./dashboard-data"
-import '@/styles/dashboard.css'
 import { content_products } from "@/services/products/products"
 import { content_profile } from "@/services/profile/profile"
 import { content_quotations } from "@/services/quotations/quotations"
 import { showQuotationPublic } from "./navigation/dashboard-public-links"
 
 import { client_toggle } from "@/services/clients/components/clients-toggle"
+import { product_toggle } from "@/services/products/components/products-toggle"
+
+import '@/styles/dashboard.css'
 
 const TOKEN = localStorage.getItem('access_token')
 
 if (!TOKEN) window.location.href = './login.html'
 
-const { clients, products, quotations, profile } = await loadDashboardData(TOKEN!)
+const { clients, products, quotations, profile, quote_settings } = await loadDashboardData(TOKEN!)
 
-
+console.log(quote_settings)
 const app = document.querySelector<HTMLDivElement>("#app")!
 
 const sidebar_container = sidebar(profile)
 const home_content = content_home(clients, products, quotations)
 const profile_content = content_profile(profile)
 const clients_content = content_clients(TOKEN!, clients)
-const products_content = content_products(products)
+const products_content = content_products(TOKEN!, products)
 const quotation_content = content_quotations(quotations)
 
 const right_container = document.createElement("div")
@@ -48,3 +50,4 @@ initDashboardNavigation()
 showQuotationPublic()
 
 client_toggle()
+product_toggle()
