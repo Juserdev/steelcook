@@ -4,7 +4,7 @@ import { client_title_sheets, clients_config } from '../clients-config'
 export function clients_list(clients: Clients[], header: HTMLDivElement) {
 
   const list_container = document.createElement('div')
-  list_container.classList.add("list-container")
+  list_container.classList.add("list-container-client")
 
   const clients_titles_sheet_container = document.createElement("div")
   clients_titles_sheet_container.classList.add("quotations-titles-sheet")

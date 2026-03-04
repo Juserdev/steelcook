@@ -1,8 +1,6 @@
-import type { Form_Add_Client } from "./form.types";
+import type { Form_Add } from "@/types/form.types";
 
-
-
-export const form_add_client: Form_Add_Client = {
+export const form_add_client: Form_Add = {
   form: {
     method: "POST",
     class: "form-add-clients"
