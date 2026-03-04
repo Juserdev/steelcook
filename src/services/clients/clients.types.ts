@@ -19,4 +19,7 @@ export interface Clients_config {
     address: string
     phone: string
   }
+  add_client_btn: { class: string, text: string }
 }
+
+export interface Create_Client extends Omit<Clients, "created_at" | "id"> { }

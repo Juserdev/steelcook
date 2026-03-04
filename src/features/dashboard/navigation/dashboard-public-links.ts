@@ -7,7 +7,7 @@ export function showQuotationPublic() {
     button.addEventListener('click', () => {
 
       const public_id = button.dataset.public_id
-      if (public_id) window.open(`/system/quotation.html?public_id=${public_id}`, "_blank")
+      if (public_id) window.open(`/system/quotation/index.html?public_id=${public_id}`, "_blank")
 
     })
   });

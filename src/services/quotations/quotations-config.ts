@@ -13,7 +13,8 @@ export const quotations_config: Quotations_Config = {
     total: 'quotation-total',
     date: 'quotation-date',
     button: "quotation-vew-btn"
-  }
+  },
+  add_quotation_btn: { class: 'add-quotation-btn', text: 'Agregar cotizacion' }
 }
 
 export const quotation_titles_sheets: Titles_Sheets[] = [
