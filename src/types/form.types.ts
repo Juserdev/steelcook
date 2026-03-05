@@ -4,7 +4,6 @@ export type Button_Type = "submit" | "reset" | "button"
 export interface Form {
   method: Method
   class: string
-
 }
 
 export interface Class_Name {

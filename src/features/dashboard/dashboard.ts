@@ -12,14 +12,14 @@ import { client_toggle } from "@/services/clients/components/clients-toggle"
 import { product_toggle } from "@/services/products/components/products-toggle"
 
 import '@/styles/dashboard.css'
+import { content_quote_settings } from "@/services/quote-settings/quote-settings"
+import { quotations_toggle } from "@/services/quotations/components/quotations-toggle"
 
 const TOKEN = localStorage.getItem('access_token')
 
 if (!TOKEN) window.location.href = './login.html'
 
 const { clients, products, quotations, profile, quote_settings } = await loadDashboardData(TOKEN!)
-
-console.log(quote_settings)
 const app = document.querySelector<HTMLDivElement>("#app")!
 
 const sidebar_container = sidebar(profile)
@@ -28,6 +28,7 @@ const profile_content = content_profile(profile)
 const clients_content = content_clients(TOKEN!, clients)
 const products_content = content_products(TOKEN!, products)
 const quotation_content = content_quotations(quotations)
+const quote_settings_content = content_quote_settings(quote_settings)
 
 const right_container = document.createElement("div")
 right_container.classList.add("right-container")
@@ -42,6 +43,7 @@ right_container.appendChild(profile_content)
 right_container.appendChild(clients_content)
 right_container.appendChild(products_content)
 right_container.appendChild(quotation_content)
+right_container.appendChild(quote_settings_content)
 
 app.appendChild(left_container)
 app.appendChild(right_container)
@@ -51,3 +53,4 @@ showQuotationPublic()
 
 client_toggle()
 product_toggle()
+quotations_toggle()

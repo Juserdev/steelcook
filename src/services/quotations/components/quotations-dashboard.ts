@@ -13,7 +13,7 @@ export function quotation_headers(): HTMLDivElement {
   const add_quotation_btn = document.createElement("button")
   add_quotation_btn.classList.add(quotations_config.add_quotation_btn.class)
   add_quotation_btn.textContent = quotations_config.add_quotation_btn.text
-  add_quotation_btn.dataset.add_product = "add_product"
+  add_quotation_btn.dataset.add_quotation = "add_quotation"
 
   quotations_container.appendChild(title)
   quotations_container.appendChild(add_quotation_btn)
