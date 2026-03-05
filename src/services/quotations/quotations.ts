@@ -1,4 +1,4 @@
-import { quotation_form } from "./components/quotation-form"
+import { quotation_form } from "./components/form/quotation-form"
 import { quotation_list } from "./components/quotation-list"
 import { quotation_headers } from "./components/quotations-dashboard"
 

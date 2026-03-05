@@ -1,4 +1,4 @@
-import { quotation_titles_sheets, quotations_config } from "../quotations-config";
+import { quotation_titles_sheets, quotations_config } from "./config/quotations-config";
 import type { Quotations } from "../quotations.types";
 
 export function quotation_list(quotations: Quotations[], header: HTMLDivElement) {

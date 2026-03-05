@@ -1,5 +1,12 @@
 
-import { btn_add_product, form_aq, form_client_aq, form_product_aq, form_profile_quotation_aq, form_quote_setings_aq, form_total_aq, sections } from "./form/form-config"
+import { btn_add_product } from "@/services/quotations/components/config/quotation-btn-add-product-config"
+import { sections } from "../config/quotation-section-config"
+import { form_profile_quotation_aq } from "../config/quotation-profile-config"
+import { form_quote_settings_aq } from "../config/quotations-settings-config"
+import { form_client_aq } from "../config/quotation-client-config"
+import { form_product_aq } from "../config/quotation-product-config"
+import { form_total_aq } from "../config/quotation-total-config"
+import { form_aq } from "../config/quotation-form-aq-config"
 
 export function quotation_form(header: HTMLDivElement) {
 
@@ -52,7 +59,7 @@ export function quotation_form(header: HTMLDivElement) {
 
   form.appendChild(section_quote_settings)
 
-  form_quote_setings_aq.forEach(file => {
+  form_quote_settings_aq.forEach(file => {
     const { label: labels, input: inputs } = file
 
     const label = document.createElement('label')

@@ -1,4 +1,4 @@
-import { quotations_config } from "../quotations-config"
+import { quotations_config } from "./config/quotations-config"
 
 export function quotation_headers(): HTMLDivElement {
   const quotations_container = document.createElement('div')
