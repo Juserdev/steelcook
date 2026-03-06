@@ -12,6 +12,24 @@ export interface Sections {
   total: Sections_Content
 }
 
+type Section_keys = 'profile' | 'quote_settings' | 'client' | 'products' | 'total'
+
+export interface Section_Types {
+  profile: Section_keys
+  quotation: Section_keys
+  client: Section_keys
+  product: Section_keys
+  total: Section_keys
+}
+
+export const section_types: Section_Types = {
+  profile: 'profile',
+  quotation: 'quote_settings',
+  client: 'client',
+  product: 'products',
+  total: 'total'
+}
+
 export const sections: Sections = {
   profile: {
     class_section: 'section-faq-profile',

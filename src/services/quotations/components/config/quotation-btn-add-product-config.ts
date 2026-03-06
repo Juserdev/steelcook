@@ -1,12 +1,6 @@
-import type { Button_Type } from "@/types/form.types"
+import type { Btn_Add_Quottion } from "@/services/quotations/components/config/btn.types"
 
-export interface Btn_Add_Product {
-  type: Button_Type
-  class: string
-  text: string
-}
-
-export const btn_add_product: Btn_Add_Product = {
+export const quotation_btn_add_product: Btn_Add_Quottion = {
   type: 'button',
   class: 'btn-add-product',
   text: "Agregar producto"

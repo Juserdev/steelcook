@@ -1,195 +1,59 @@
 
-import { btn_add_product } from "@/services/quotations/components/config/quotation-btn-add-product-config"
-import { sections } from "../config/quotation-section-config"
-import { form_profile_quotation_aq } from "../config/quotation-profile-config"
-import { form_quote_settings_aq } from "../config/quotations-settings-config"
-import { form_client_aq } from "../config/quotation-client-config"
-import { form_product_aq } from "../config/quotation-product-config"
-import { form_total_aq } from "../config/quotation-total-config"
-import { form_aq } from "../config/quotation-form-aq-config"
+import { quotation_btn_add_product } from '@/services/quotations/components/config/quotation-btn-add-product-config'
+import { section_types } from '../config/quotation-section-config'
+import { form_quote_settings_aq } from '../config/quotations-settings-config'
+import { form_client_aq } from '../config/quotation-client-config'
+import { form_product_aq } from '../config/quotation-product-config'
+import { form_total_aq } from '../config/quotation-total-config'
+import { create_form } from './builders/create-form'
+
+import { create_form_section } from './builders/create-form-sections'
+import { form_profile_quotation_aq } from '../config/quotation-profile-config'
+import { create_form_fields } from './builders/create-form-fields'
+import { quotation_btn_submit } from '../config/quotation-btn-submit-confing'
+import { create_btns } from './builders/create-form-btns'
+import { handler_add_product } from '../handlers/handler-add-product'
 
 export function quotation_form(header: HTMLDivElement) {
 
-  const form = document.createElement('form')
-  form.method = form_aq.method
-  form.classList.add(form_aq.class)
+  const form = create_form()
 
-  const title_profile = document.createElement('h2')
-  title_profile.classList.add(sections.profile.class_title)
-  title_profile.textContent = sections.profile.title_content
-
-  form.appendChild(title_profile)
-
-  const section_profile = document.createElement("section")
-  section_profile.classList.add(sections.profile.class_section)
-
-  form.appendChild(section_profile)
-
-  form_profile_quotation_aq.forEach(file => {
-    const { label: labels, input: inputs } = file
-
-    const label = document.createElement('label')
-    label.htmlFor = labels.for
-    label.classList.add(labels.class.specific, labels.class.common)
-    label.textContent = labels.content
-
-    const input = document.createElement('input')
-    input.type = inputs.type
-    input.id = inputs.id
-    input.name = inputs.name
-    input.placeholder = inputs.placeholder
-    input.classList.add(inputs.class.specific, inputs.class.common)
-
-    section_profile.appendChild(label)
-    section_profile.appendChild(input)
-
-  })
+  const section_profile = create_form_section(section_types.profile, form)
+  create_form_fields(form_profile_quotation_aq, section_profile, 'profile')
 
   // formulario de quote_settings
 
-
-  const title_quote_settings = document.createElement('h2')
-  title_quote_settings.classList.add(sections.quote_settings.class_title)
-  title_quote_settings.textContent = sections.quote_settings.title_content
-
-  form.appendChild(title_quote_settings)
-
-  const section_quote_settings = document.createElement("section")
-  section_quote_settings.classList.add(sections.quote_settings.class_section)
-
-  form.appendChild(section_quote_settings)
-
-  form_quote_settings_aq.forEach(file => {
-    const { label: labels, input: inputs } = file
-
-    const label = document.createElement('label')
-    label.htmlFor = labels.for
-    label.classList.add(labels.class.specific, labels.class.common)
-    label.textContent = labels.content
-
-    const input = document.createElement('input')
-    input.type = inputs.type
-    input.id = inputs.id
-    input.name = inputs.name
-    input.placeholder = inputs.placeholder
-    input.classList.add(inputs.class.specific, inputs.class.common)
-
-    section_quote_settings.appendChild(label)
-    section_quote_settings.appendChild(input)
-
-  })
+  const section_qs = create_form_section(section_types.quotation, form)
+  create_form_fields(form_quote_settings_aq, section_qs, 'quotation')
 
   // formulario de Clientes
 
-  const title_client = document.createElement('h2')
-  title_client.classList.add(sections.client.class_title)
-  title_client.textContent = sections.client.title_content
-
-  form.appendChild(title_client)
-
-  const section_client = document.createElement("section")
-  section_client.classList.add(sections.client.class_section)
-
-  form.appendChild(section_client)
-
-  form_client_aq.forEach(file => {
-    const { label: labels, input: inputs } = file
-
-    const label = document.createElement('label')
-    label.htmlFor = labels.for
-    label.classList.add(labels.class.specific, labels.class.common)
-    label.textContent = labels.content
-
-    const input = document.createElement('input')
-    input.type = inputs.type
-    input.id = inputs.id
-    input.name = inputs.name
-    input.placeholder = inputs.placeholder
-    input.classList.add(inputs.class.specific, inputs.class.common)
-
-    section_client.appendChild(label)
-    section_client.appendChild(input)
-
-  })
+  const section_client = create_form_section(section_types.client, form)
+  create_form_fields(form_client_aq, section_client, 'client')
 
   // Formulario de productos
 
-  const title_products = document.createElement('h2')
-  title_products.classList.add(sections.products.class_title)
-  title_products.textContent = sections.products.title_content
-
-  form.appendChild(title_products)
-
-  const section_products = document.createElement("section")
-  section_products.classList.add(sections.products.class_section)
-
-  form.appendChild(section_products)
-
-  form_product_aq.forEach(file => {
-    const { label: labels, input: inputs } = file
-
-    const container = document.createElement("div")
-    container.classList.add("container-products-aq")
-
-    const label = document.createElement('label')
-    label.htmlFor = labels.for
-    label.classList.add(labels.class.specific, labels.class.common)
-    label.textContent = labels.content
-
-    const input = document.createElement('input')
-    input.type = inputs.type
-    input.id = inputs.id
-    input.name = inputs.name
-    input.placeholder = inputs.placeholder
-    input.classList.add(inputs.class.specific, inputs.class.common)
-
-    container.appendChild(label)
-    container.appendChild(input)
-    section_products.appendChild(container)
-
-  })
+  const section_products = create_form_section(section_types.product, form)
+  create_form_fields(form_product_aq, section_products, 'product')
 
   // Boton para agregar productos
 
-  const add_product_btn = document.createElement("button")
-  add_product_btn.type = btn_add_product.type
-  add_product_btn.classList.add(btn_add_product.class)
-  add_product_btn.textContent = btn_add_product.text
+  const btn_add_product = create_btns(form, quotation_btn_add_product)
 
-  form.appendChild(add_product_btn)
+  handler_add_product(btn_add_product, section_products)
+
+  // btn_add_product.addEventListener('click', () => create_form_fields(form_product_aq, section_products, 'product'))
 
   // Formulario con detalles finales
 
-  const title_total = document.createElement('h2')
-  title_total.classList.add(sections.total.class_title)
-  title_total.textContent = sections.total.title_content
+  const section_total = create_form_section(section_types.total, form)
+  create_form_fields(form_total_aq, section_total, 'total')
 
-  form.appendChild(title_total)
+  // Boton submit
 
-  const section_total = document.createElement("section")
-  section_total.classList.add(sections.total.class_section)
+  const btn_submit = create_btns(form, quotation_btn_submit)
 
-  form.appendChild(section_total)
-
-  form_total_aq.forEach(file => {
-    const { label: labels, input: inputs } = file
-
-    const label = document.createElement('label')
-    label.htmlFor = labels.for
-    label.classList.add(labels.class.specific, labels.class.common)
-    label.textContent = labels.content
-
-    const input = document.createElement('input')
-    input.type = inputs.type
-    input.id = inputs.id
-    input.name = inputs.name
-    input.placeholder = inputs.placeholder
-    input.classList.add(inputs.class.specific, inputs.class.common)
-
-    section_total.appendChild(label)
-    section_total.appendChild(input)
-
-  })
+  form.appendChild(btn_submit)
 
   header.appendChild(form)
 }
