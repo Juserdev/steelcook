@@ -1,5 +1,5 @@
 export interface Clients {
-  address: string | null
+  address: string
   client_id: number | null
   created_at: string
   email: string

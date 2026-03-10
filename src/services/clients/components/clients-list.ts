@@ -31,7 +31,7 @@ export function clients_list(clients: Clients[], header: HTMLDivElement) {
 
     const client_id = document.createElement('span')
     client_id.classList.add(clients_config.clients_class.id)
-    client_id.textContent = client.client_id
+    client_id.textContent = String(client.client_id ?? '')
 
     const email = document.createElement('span')
     email.classList.add(clients_config.clients_class.email)
@@ -43,7 +43,7 @@ export function clients_list(clients: Clients[], header: HTMLDivElement) {
 
     const phone = document.createElement('span')
     phone.classList.add(clients_config.clients_class.phone)
-    phone.textContent = client.phone
+    phone.textContent = String(client.phone ?? '')
 
     clients_file.appendChild(name)
     clients_file.appendChild(client_id)

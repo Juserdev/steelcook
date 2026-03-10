@@ -35,7 +35,7 @@ export function quotation_list(quotations: Quotations[], header: HTMLDivElement)
 
     const quotation_phone = document.createElement('span')
     quotation_phone.classList.add(quotations_config.quotations_class.phone)
-    quotation_phone.textContent = quotation.client_snapshot.phone
+    quotation_phone.textContent = String(quotation.client_snapshot.phone ?? '')
 
     const quotation_total = document.createElement('span')
     quotation_total.classList.add(quotations_config.quotations_class.total)
