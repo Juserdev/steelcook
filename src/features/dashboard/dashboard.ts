@@ -27,7 +27,7 @@ const home_content = content_home(clients, products, quotations)
 const profile_content = content_profile(profile)
 const clients_content = content_clients(TOKEN!, clients)
 const products_content = content_products(TOKEN!, products)
-const quotation_content = content_quotations(quotations)
+const quotation_content = content_quotations(TOKEN!, quotations)
 const quote_settings_content = content_quote_settings(quote_settings)
 
 const right_container = document.createElement("div")

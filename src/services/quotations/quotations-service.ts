@@ -1,5 +1,5 @@
 import { SUPABASE_KEY, SUPABASE_URL } from "../auth-service";
-import type { Create_Quotation, Quotations } from "./quotations.types";
+import type { Quotations, Send_Create_Quotation } from "./quotations.types";
 
 export async function getQuotations(TOKEN: string) {
 
@@ -17,7 +17,7 @@ export async function getQuotations(TOKEN: string) {
   return data
 }
 
-export async function createProduct(TOKEN: string, product: Create_Quotation) {
+export async function createQuotation(TOKEN: string, quotation: Send_Create_Quotation) {
 
   const response = await fetch(`${SUPABASE_URL}/rest/v1/quotations`, {
     method: "POST",
@@ -27,14 +27,18 @@ export async function createProduct(TOKEN: string, product: Create_Quotation) {
       "Content-Type": "application/json",
       "Prefer": "return=representation"
     },
-    body: JSON.stringify(product)
+    body: JSON.stringify(quotation)
   });
 
   if (!response.ok) {
-    throw new Error("Error creating product");
+    // throw new Error("Error creating product");
+    const errorText = await response.text()
+    console.error('supabase error response: ', errorText)
+    throw new Error(`Èrror creating quotation: ${errorText}`)
   }
 
-  const data: Quotations[] = await response.json();
+  // const data: Send_Create_Quotation[] = await response.json();
+  const data = await response.json() as Send_Create_Quotation[]
 
   return data[0];
 }

@@ -1,12 +1,12 @@
 export interface Profile {
   address: string
   company: string
-  company_id: string
+  company_id: number
   created_at: string
   email: string
   id: string
   logo: string | null
-  phone: string
+  phone: number | null
 }
 
 export interface Profile_config {
@@ -22,3 +22,5 @@ export interface Profile_config {
     address: string
   }
 }
+
+export interface Send_Quote_Profile extends Omit<Profile, 'created_at' | 'id' | 'logo'> { }

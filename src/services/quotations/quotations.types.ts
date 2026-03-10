@@ -1,7 +1,7 @@
-import type { Clients } from "@/services/clients/clients.types"
-import type { Products } from "@/services/products/products.types"
-import type { Profile } from "@/services/profile/profile.types"
-import type { Quote_Settings } from "../quote-settings/quote-settings-types"
+import type { Clients, Send_Quote_Client } from "@/services/clients/clients.types"
+import type { Products, Send_Quote_Product } from "@/services/products/products.types"
+import type { Profile, Send_Quote_Profile } from "@/services/profile/profile.types"
+import type { Quote_Settings, Send_Quote_Settings } from "../quote-settings/quote-settings-types"
 
 interface Client_Snapshot extends Omit<Clients, "created_at"> { }
 interface Profile_Snapshot extends Omit<Profile, "created_at"> { }
@@ -44,5 +44,16 @@ export interface Quotations_Config {
   add_quotation_btn: { class: string, text: string }
 }
 
-export interface Create_Quotation extends Omit<Quotations, 'id' | 'created_at'> { }
+export interface Send_Create_Quotation {
+  quotation_id: string
+  profile_snapshot: Send_Quote_Profile
+  client_snapshot: Send_Quote_Client
+  items: Send_Quote_Product[]
+  subtotal: number
+  discount: number
+  subtotal_2: number
+  tax: number
+  total: number
+  quote_settings: Send_Quote_Settings
+}
 

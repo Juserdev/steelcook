@@ -13,8 +13,9 @@ import { create_form_fields } from './builders/create-form-fields'
 import { quotation_btn_submit } from '../config/quotation-btn-submit-confing'
 import { create_btns } from './builders/create-form-btns'
 import { handler_add_product } from '../handlers/handler-add-product'
+import { handler_submit } from '../handlers/handler-submit'
 
-export function quotation_form(header: HTMLDivElement) {
+export function quotation_form(TOKEN: string, header: HTMLDivElement) {
 
   const form = create_form()
 
@@ -54,6 +55,11 @@ export function quotation_form(header: HTMLDivElement) {
   const btn_submit = create_btns(form, quotation_btn_submit)
 
   form.appendChild(btn_submit)
+
+  // handler submit
+
+  handler_submit(form, TOKEN)
+
 
   header.appendChild(form)
 }
