@@ -17,6 +17,21 @@ export function create_form_fields(form: Form_Field[], section: HTMLElement, cla
     input.id = inputs.id
     input.name = inputs.name
     input.placeholder = inputs.placeholder
+
+    if (inputs.list) {
+      input.setAttribute('list', inputs.list)
+
+      const datalist = document.createElement('datalist')
+      datalist.id = inputs.list
+      datalist.classList.add(inputs.list)
+
+      container.appendChild(label)
+      container.appendChild(input)
+      container.appendChild(datalist)
+      return
+    }
+
+
     input.classList.add(inputs.class.specific, inputs.class.common)
 
     container.appendChild(label)

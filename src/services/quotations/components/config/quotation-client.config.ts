@@ -12,6 +12,7 @@ export const form_client_aq: Form_Field[] = [
       id: "client_name",
       name: "client_name",
       placeholder: "Pedro Perez",
+      list: 'client_list',
       class: { specific: "faq-client-input-name", common: "faq-client-input" }
     }
   }, {

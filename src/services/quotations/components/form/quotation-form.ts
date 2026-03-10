@@ -18,12 +18,16 @@ import type { Profile } from '@/services/profile/profile.types'
 import type { Quote_Settings } from '@/services/quote-settings/quote-settings-types'
 import { fill_form_fileds } from '../utils/fill_form_fileds'
 import { profile_inputs_map, settings_inputs_map } from '../config/quotation-fill-maps.config'
+import type { Clients } from '@/services/clients/clients.types'
+import type { Products } from '@/services/products/products.types'
 
 export function quotation_form(
   TOKEN: string,
   header: HTMLDivElement,
   profile: Profile[],
-  quote_settings: Quote_Settings[]
+  quote_settings: Quote_Settings[],
+  clients: Clients[],
+  products: Products[]
 ) {
 
   const form = create_form()
@@ -49,10 +53,76 @@ export function quotation_form(
   const section_client = create_form_section(section_types.client, form)
   create_form_fields(form_client_aq, section_client, 'client')
 
+  //* creacion de options en datalist_clients
+
+  const datalist_clients = form.querySelector('.client_list')
+
+  clients.forEach(client => {
+    const option = document.createElement('option')
+    option.value = client.name
+
+    datalist_clients?.appendChild(option)
+  })
+
+  //* agrego los datoa automatios
+
+  const c_input_name = form.elements.namedItem('client_name') as HTMLInputElement
+  const c_input_id = form.elements.namedItem('client_id') as HTMLInputElement
+  const c_input_email = form.elements.namedItem('client_email') as HTMLInputElement
+  const c_input_phone = form.elements.namedItem('client_phone') as HTMLInputElement
+  const c_input_address = form.elements.namedItem('client_address') as HTMLInputElement
+
+  c_input_name.addEventListener('input', () => {
+    const client_selected = clients.find(client => client.name === c_input_name.value)
+
+    if (!client_selected) return
+
+    if (c_input_id) c_input_id.value = String(client_selected.client_id)
+    if (c_input_email) c_input_email.value = client_selected.email
+    if (c_input_phone) c_input_phone.value = String(client_selected.phone)
+    if (c_input_address) c_input_address.value = client_selected.address
+
+  })
+
+
   // Formulario de productos
 
   const section_products = create_form_section(section_types.product, form)
   create_form_fields(form_product_aq, section_products, 'product')
+
+  //* creacion de options en datalist_products
+
+  const datalist_products = form.querySelector('.product_list')
+
+  products.forEach(product => {
+    const option = document.createElement('option')
+    option.value = product.code
+
+    datalist_products?.appendChild(option)
+  })
+
+  const p_input_code = form.querySelectorAll('[name="product_code"]') as NodeListOf<HTMLInputElement>
+  const p_input_name = form.querySelectorAll('[name="product_names"]') as NodeListOf<HTMLInputElement>
+  const p_input_description = form.querySelectorAll('[name="product_descriptions"]') as NodeListOf<HTMLInputElement>
+  const p_input_price = form.querySelectorAll('[name="product_prices"]') as NodeListOf<HTMLInputElement>
+  const p_input_quantites = form.querySelectorAll('[name="product_quantites"]') as NodeListOf<HTMLInputElement>
+  const p_input_totals = form.querySelectorAll('[name="product_totals"]') as NodeListOf<HTMLInputElement>
+
+  console.log(p_input_code, p_input_name, p_input_description, p_input_price, p_input_quantites, p_input_totals)
+
+  p_input_code.forEach((product_code, i) => {
+    product_code.addEventListener('input', () => {
+      const product_selected = products.find(product => product.code === product_code.value)
+
+      if (!product_selected) return
+
+      if (p_input_name[i]) p_input_name[i].value = product_selected.name
+      if (p_input_description[i]) p_input_description[i].value = product_selected.description
+      if (p_input_price[i]) p_input_price[i].value = String(product_selected.price)
+
+    })
+  })
+
 
   // Boton para agregar productos
 

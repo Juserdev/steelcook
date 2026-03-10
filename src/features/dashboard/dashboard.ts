@@ -28,7 +28,7 @@ const profile_content = content_profile(profile)
 const clients_content = content_clients(TOKEN!, clients)
 const products_content = content_products(TOKEN!, products)
 const quote_settings_content = content_quote_settings(quote_settings)
-const quotation_content = content_quotations(TOKEN!, quotations, profile, quote_settings)
+const quotation_content = content_quotations(TOKEN!, quotations, profile, quote_settings, clients, products)
 
 const right_container = document.createElement("div")
 right_container.classList.add("right-container")

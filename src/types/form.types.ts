@@ -23,6 +23,7 @@ export interface Input {
   name: string
   placeholder: string
   class: Class_Name
+  list?: string
 }
 
 export interface Form_Field {

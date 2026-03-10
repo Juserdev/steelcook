@@ -9,9 +9,10 @@ export const form_product_aq: Form_Field[] = [
     },
     input: {
       type: 'text',
-      id: 'product_codes',
-      name: 'product_codes',
+      id: 'product_code',
+      name: 'product_code',
       placeholder: '211244...',
+      list: 'product_list',
       class: { specific: 'faq-product-input-code', common: 'faq-product-input' }
     },
   }, {
