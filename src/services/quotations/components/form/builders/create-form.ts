@@ -1,4 +1,4 @@
-import { form_aq } from "../../config/quotation-form-aq-config"
+import { form_aq } from "../../config/quotation-form-aq.config"
 
 export function create_form(): HTMLFormElement {
 

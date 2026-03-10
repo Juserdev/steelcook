@@ -1,4 +1,4 @@
-import { sections } from "@/services/quotations/components/config/quotation-section-config"
+import { sections } from "@/services/quotations/components/config/quotation-section.config"
 
 type SectionName = keyof typeof sections
 

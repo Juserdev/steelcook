@@ -1,5 +1,5 @@
 import type { Btn_Add_Quottion } from "../../config/btn.types"
-import { quotation_btn_add_product } from "../../config/quotation-btn-add-product-config"
+import { quotation_btn_add_product } from "../../config/quotation-btn-add-product.config"
 
 quotation_btn_add_product
 
