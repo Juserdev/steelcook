@@ -12,7 +12,7 @@ import { form_profile_quotation_aq } from '../config/quotation-profile.config'
 import { create_form_fields } from './builders/create-form-fields'
 import { quotation_btn_submit } from '../config/quotation-btn-submit.confing'
 import { create_btns } from './builders/create-form-btns'
-import { handler_add_product } from '../handlers/handler-add-product'
+import { handler_product_add } from '../handlers/handler-product-add'
 import { handler_submit } from '../handlers/handler-submit'
 import type { Profile } from '@/services/profile/profile.types'
 import type { Quote_Settings } from '@/services/quote-settings/quote-settings-types'
@@ -77,17 +77,20 @@ export function quotation_form(
   // creacion de formulario
 
   handler_product_autofill(section_products, products)
-  handler_product_total(section_products)
 
   // Boton para agregar productos
 
   const btn_add_product = create_btns(form, quotation_btn_add_product)
-  handler_add_product(btn_add_product, section_products)
+  handler_product_add(btn_add_product, section_products)
 
   // Formulario con detalles finales
 
   const section_total = create_form_section(section_types.total, form)
   create_form_fields(form_total_aq, section_total, 'total')
+
+  // Boton que crea el total de los productos y el total total
+  handler_product_total(section_products, section_total)
+
 
   // Boton submit
 
