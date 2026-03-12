@@ -12,6 +12,12 @@ export const profile_config: Profile_config = {
     email: 'profile-email',
     phone: 'profile-phone',
     address: 'profile-address'
+  },
+  button: {
+    type: 'button',
+    class: 'btn-edit-profile',
+    text: 'Agregar o editar perfil',
+    dataset: 'add_profile'
   }
 }
 

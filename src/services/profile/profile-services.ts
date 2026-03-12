@@ -14,5 +14,10 @@ export async function getProfile(TOKEN: string) {
   });
 
   const data: Profile[] = await response.json();
+
   return data
 }
+
+
+
+
