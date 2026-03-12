@@ -42,30 +42,43 @@ export const form_total_aq: Form_Field[] = [
     }
   }, {
     label: {
-      for: "total_subtotal_2",
-      content: "Subtotal 2",
-      class: { specific: "faq-total-label-subtotal-2", common: "faq-total-label" }
+      for: "total_net",
+      content: "Neto",
+      class: { specific: "faq-total-label-total_net", common: "faq-total-label" }
     },
     input: {
       type: "text",
-      id: "total_subtotal_2",
-      name: "total_subtotal_2",
+      id: "total_net",
+      name: "total_net",
       placeholder: "$000000...",
-      class: { specific: "faq-total-input-subtotal-2", common: "faq-total-input" }
+      class: { specific: "faq-total-input-total_net", common: "faq-total-input" }
     }
   }, {
     label: {
-      for: "total_tax",
+      for: "total_tax_rate",
       content: "Impuestos",
-      class: { specific: "faq-total-label-tax", common: "faq-total-label" }
+      class: { specific: "faq-total-label-tax-rate", common: "faq-total-label" }
     },
     input: {
       type: "text",
-      id: "total_tax",
-      name: "total_tax",
+      id: "total_tax_rate",
+      name: "total_tax_rate",
       placeholder: "19...",
-      class: { specific: "faq-total-input-tax", common: "faq-total-input" }
+      class: { specific: "faq-total-input-tax-rate", common: "faq-total-input" }
     },
+  }, {
+    label: {
+      for: "total_tax_amount",
+      content: "Total Impuestos",
+      class: { specific: "faq-total-label-tax-amount", common: "faq-total-label" }
+    },
+    input: {
+      type: "text",
+      id: "total_tax_amount",
+      name: "total_tax_amount",
+      placeholder: "19...",
+      class: { specific: "faq-total-input-tax-amount", common: "faq-total-input" }
+    }
   }, {
     label: {
       for: "total_total",

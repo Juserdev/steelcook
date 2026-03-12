@@ -24,6 +24,7 @@ import { create_datalist } from '../utils/create-datalist'
 import { handler_client_autofill } from '../handlers/handler-client-autofill'
 import { handler_product_autofill } from '../handlers/handler-product-autofill'
 import { handler_product_total } from '../handlers/handler-product-total'
+import { handler_total_discount } from '../handlers/handler-total-discount'
 
 export function quotation_form(
   TOKEN: string,
@@ -88,9 +89,38 @@ export function quotation_form(
   const section_total = create_form_section(section_types.total, form)
   create_form_fields(form_total_aq, section_total, 'total')
 
-  // Boton que crea el total de los productos y el total total
+  // funcion que crea el total de los productos y el total total
   handler_product_total(section_products, section_total)
 
+  // funcion para ejecucion e formulas en el total
+  handler_total_discount(section_total)
+
+  function handler_total_tax_amount(section: HTMLElement) {
+
+    section.addEventListener('input', e => {
+
+      const target = e.target as HTMLInputElement
+
+      if (target.name !== 'total_tax_rate' && target.name !== 'total_discount') return
+
+      const input_net = section.querySelector<HTMLInputElement>('[name="total_net"]')
+      const input_tax_rate = section.querySelector<HTMLInputElement>('[name="total_tax_rate"]')
+      const input_tax_amount = section.querySelector<HTMLInputElement>('[name="total_tax_amount"]')
+      const input_total = section.querySelector<HTMLInputElement>('[name="total_total"]')
+
+      if (!input_net || !input_tax_rate || !input_tax_amount || !input_total) return
+
+      const result = (+input_net.value * +input_tax_rate.value / 100).toFixed(2)
+
+      input_tax_amount.value = result
+
+      input_total.value = String(+input_net.value + +input_tax_amount.value)
+
+    })
+
+  }
+
+  handler_total_tax_amount(section_total)
 
   // Boton submit
 

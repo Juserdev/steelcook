@@ -1,28 +1,33 @@
 export function handler_product_total(section: HTMLElement, section_total: HTMLElement) {
 
   section.addEventListener('input', (e) => {
+
     const target = e.target as HTMLInputElement
 
     let result = 0
+
     if (target.name === 'product_quantites') {
 
-      const quantites = Array.from(section.querySelectorAll<HTMLInputElement>('[name="product_quantites"]'))
+      const row = target.closest('.container-product-aq') as HTMLDivElement
+      if (!row) return
 
-      const i = quantites.indexOf(target)
+      const quantites = row.querySelector<HTMLInputElement>('[name="product_quantites"]')
+      const price = row.querySelector<HTMLInputElement>('[name="product_prices"]')
+      const totals = row.querySelector<HTMLInputElement>('[name="product_totals"]')
 
-      if (i === -1) return
-      const prices = section.querySelectorAll<HTMLInputElement>('[name="product_prices"]')
-      const totals = section.querySelectorAll<HTMLInputElement>('[name="product_totals"]')
+      if (!quantites || !price || !totals) return
 
-      const total = String(+prices[i].value * +quantites[i].value)
-      totals[i].value = total
+      const total = String(+price.value * +quantites.value)
+      totals.value = String(total)
 
-      totals.forEach(t => { result += +t.value })
+      const total_subtotal = section.querySelectorAll<HTMLInputElement>('[name="product_totals"]')
+      total_subtotal.forEach(t => { result += +t.value })
 
+
+      const subtotal = section_total.querySelector<HTMLInputElement>('[name="total_subtotal"]')
+      if (subtotal) subtotal.value = String(result)
 
     }
 
-    const subtotal = section_total.querySelector<HTMLInputElement>('[name="total_subtotal"]')
-    if (subtotal) subtotal.value = String(result)
   })
 }

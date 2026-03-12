@@ -22,7 +22,10 @@ export interface Quotations {
   items: Items_Snapshot[]
   public_id: string
   subtotal: number
-  tax: number
+  discount: number
+  net: number
+  tax_rate: number
+  tax_amount: number
   total: number
   quote_settings: QS_Snapshot
   created_at: string
@@ -51,8 +54,9 @@ export interface Send_Create_Quotation {
   items: Send_Quote_Product[]
   subtotal: number
   discount: number
-  subtotal_2: number
-  tax: number
+  net: number
+  tax_rate: number
+  tax_amount: number
   total: number
   quote_settings: Send_Quote_Settings
 }

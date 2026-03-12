@@ -70,8 +70,9 @@ export function extract_quotation_form(form: HTMLFormElement): Send_Create_Quota
 
   const dq_total_subtotal = Number(formData.get('total_subtotal'))
   const dq_total_discount = Number(formData.get('total_discount'))
-  const dq_total_subtotal_2 = Number(formData.get('total_subtotal_2'))
-  const dq_total_tax = Number(formData.get('total_tax'))
+  const dq_total_net = Number(formData.get('total_net'))
+  const dq_total_tax_rate = Number(formData.get('total_tax_rate'))
+  const dq_total_tax_amount = Number(formData.get('total_tax_amount'))
   const dq_total_total = Number(formData.get('total_total'))
 
   const new_quote: Send_Create_Quotation = {
@@ -82,8 +83,9 @@ export function extract_quotation_form(form: HTMLFormElement): Send_Create_Quota
     items: dq_items,
     subtotal: dq_total_subtotal,
     discount: dq_total_discount,
-    subtotal_2: dq_total_subtotal_2,
-    tax: dq_total_tax,
+    net: dq_total_net,
+    tax_rate: dq_total_tax_rate,
+    tax_amount: dq_total_tax_amount,
     total: dq_total_total
   }
 
