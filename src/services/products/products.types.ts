@@ -22,3 +22,7 @@ export interface Products_Config {
 }
 
 export interface Create_Product extends Omit<Products, 'created_at' | 'id'> { }
+export interface Send_Quote_Product extends Omit<Products, 'created_at' | 'id'> {
+  quantity: number
+  total: number
+}

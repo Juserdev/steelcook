@@ -18,7 +18,7 @@ export const clients_config: Clients_config = {
 
 export const client_title_sheets: Titles_Sheets[] = [
   {
-    title: "NOMLBRE",
+    title: "NOMBRE",
     class: "cliente-sheet-name",
     common_class: "client-sheet",
   }, {

@@ -9,8 +9,7 @@ export function handle_create_product(TOKEN: string, form: HTMLFormElement) {
     const code = formData.get('code') as string
     const name = formData.get('name') as string
     const description = formData.get('description') as string
-    let priceStr = formData.get('price') as string
-    const price = +priceStr
+    let price = Number(formData.get('price'))
 
     const new_product: Create_Product = { code, name, description, price }
 

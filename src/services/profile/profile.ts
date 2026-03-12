@@ -42,7 +42,7 @@ export function content_profile(company_profile: Profile[]): HTMLDivElement {
 
     const profile_id = document.createElement('span')
     profile_id.classList.add(profile_config.profile_class.company_id)
-    profile_id.textContent = profile.company_id
+    profile_id.textContent = profile.company_id.toString()
 
     const profile_email = document.createElement('span')
     profile_email.classList.add(profile_config.profile_class.email)
@@ -50,7 +50,7 @@ export function content_profile(company_profile: Profile[]): HTMLDivElement {
 
     const profile_phone = document.createElement('span')
     profile_phone.classList.add(profile_config.profile_class.phone)
-    profile_phone.textContent = profile.phone
+    profile_phone.textContent = String(profile.phone ?? '')
 
     const profile_address = document.createElement('span')
     profile_address.classList.add(profile_config.profile_class.address)

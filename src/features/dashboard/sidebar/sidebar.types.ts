@@ -1,4 +1,4 @@
-export type ButtonKey = 'home' | 'profile' | 'clients' | 'products' | 'quotations'
+export type ButtonKey = 'home' | 'profile' | 'clients' | 'products' | 'quotations' | 'quote-settings'
 
 export interface ButtonContainer {
   container_class: string
