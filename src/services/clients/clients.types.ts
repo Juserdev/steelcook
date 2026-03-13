@@ -1,11 +1,11 @@
 export interface Clients {
   address: string
-  client_id: string
+  client_id: number | null
   created_at: string
   email: string
-  id: string
+  id: number
   name: string
-  phone: string
+  phone: number | null
 }
 
 export interface Clients_config {
@@ -23,3 +23,4 @@ export interface Clients_config {
 }
 
 export interface Create_Client extends Omit<Clients, "created_at" | "id"> { }
+export interface Send_Quote_Client extends Omit<Clients, "created_at" | "id"> { }

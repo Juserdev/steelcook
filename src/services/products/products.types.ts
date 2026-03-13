@@ -7,7 +7,7 @@ export interface Products {
   code: string
 }
 
-export interface Products_config {
+export interface Products_Config {
   products_content_class: { common_class: string, class: string }
   title: { class_1: string, class_2: string, text: string }
   products_class: {
@@ -17,5 +17,12 @@ export interface Products_config {
     description: string
     price: string
   }
+  add_product_btn: { class: string, text: string }
 
+}
+
+export interface Create_Product extends Omit<Products, 'created_at' | 'id'> { }
+export interface Send_Quote_Product extends Omit<Products, 'created_at' | 'id'> {
+  quantity: number
+  total: number
 }

@@ -12,13 +12,13 @@ export const clients_config: Clients_config = {
     address: 'client-address',
     phone: 'client-phone'
   },
-  add_client_btn: { class: 'add-client_btn', text: 'Agregar Cliente' }
+  add_client_btn: { class: 'add-client-btn', text: 'Agregar Cliente' }
 
 }
 
 export const client_title_sheets: Titles_Sheets[] = [
   {
-    title: "NOMLBRE",
+    title: "NOMBRE",
     class: "cliente-sheet-name",
     common_class: "client-sheet",
   }, {

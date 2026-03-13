@@ -4,7 +4,6 @@ export type Button_Type = "submit" | "reset" | "button"
 export interface Form {
   method: Method
   class: string
-
 }
 
 export interface Class_Name {
@@ -24,6 +23,7 @@ export interface Input {
   name: string
   placeholder: string
   class: Class_Name
+  list?: string
 }
 
 export interface Form_Field {
@@ -37,7 +37,7 @@ export interface Button_Form {
   class: string
 }
 
-export interface Form_Add_Client {
+export interface Form_Add {
   form: Form
   fields: Form_Field[]
   button: Button_Form

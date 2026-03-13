@@ -1,5 +1,5 @@
-import { form_add_client } from './form/form-config'
-import { handle_create_client } from './form/form-controller'
+import { form_add_client } from '@/services/clients/components/form/form-config'
+import { handle_create_client } from '@/services/clients/components/form/form-controller'
 
 export function clients_form(TOKEN: string, header: HTMLDivElement) {
 

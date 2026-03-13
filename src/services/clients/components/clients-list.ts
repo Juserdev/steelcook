@@ -4,7 +4,7 @@ import { client_title_sheets, clients_config } from '../clients-config'
 export function clients_list(clients: Clients[], header: HTMLDivElement) {
 
   const list_container = document.createElement('div')
-  list_container.classList.add("list-container")
+  list_container.classList.add("list-container-client")
 
   const clients_titles_sheet_container = document.createElement("div")
   clients_titles_sheet_container.classList.add("quotations-titles-sheet")
@@ -31,7 +31,7 @@ export function clients_list(clients: Clients[], header: HTMLDivElement) {
 
     const client_id = document.createElement('span')
     client_id.classList.add(clients_config.clients_class.id)
-    client_id.textContent = client.client_id
+    client_id.textContent = String(client.client_id ?? '')
 
     const email = document.createElement('span')
     email.classList.add(clients_config.clients_class.email)
@@ -43,7 +43,7 @@ export function clients_list(clients: Clients[], header: HTMLDivElement) {
 
     const phone = document.createElement('span')
     phone.classList.add(clients_config.clients_class.phone)
-    phone.textContent = client.phone
+    phone.textContent = String(client.phone ?? '')
 
     clients_file.appendChild(name)
     clients_file.appendChild(client_id)
