@@ -1,12 +1,11 @@
-import { form_add_product } from "./form/form-add-product.config"
-import { handle_create_product } from "./form/form-controller"
+import { form_edit_product } from "./form/form-edit-product.config"
 
-export function product_form_add(TOKEN: string, header: HTMLDivElement) {
+export function product_form_edit(header: HTMLDivElement): HTMLFormElement {
   const form = document.createElement('form')
-  form.method = form_add_product.form.method
-  form.classList.add(form_add_product.form.class, 'active')
+  form.method = form_edit_product.form.method
+  form.classList.add(form_edit_product.form.class, 'active')
 
-  form_add_product.fields.forEach(files => {
+  form_edit_product.fields.forEach(files => {
     const { label: labels, input: inputs } = files
 
     const label = document.createElement('label')
@@ -27,14 +26,13 @@ export function product_form_add(TOKEN: string, header: HTMLDivElement) {
   })
 
   const btn = document.createElement('button')
-  btn.type = form_add_product.button.type
-  btn.textContent = form_add_product.button.text
-  btn.classList.add(form_add_product.button.class)
+  btn.type = form_edit_product.button.type
+  btn.textContent = form_edit_product.button.text
+  btn.classList.add(form_edit_product.button.class)
 
   form.appendChild(btn)
 
   header.appendChild(form)
 
-  handle_create_product(TOKEN, form)
-
+  return form
 }

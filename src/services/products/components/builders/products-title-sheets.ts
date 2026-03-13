@@ -10,6 +10,11 @@ export function products_title_sheets(products: Products[], container: HTMLDivEl
 
     const products_file = document.createElement('div')
     products_file.classList.add(products_config.products_class.file)
+    products_file.dataset.id = product.id
+    products_file.dataset.code = product.code
+    products_file.dataset.name = product.name
+    products_file.dataset.description = product.description
+    products_file.dataset.price = String(product.price)
 
     const product_code = document.createElement('span')
     product_code.classList.add(products_config.products_class.code)
@@ -42,7 +47,6 @@ export function products_title_sheets(products: Products[], container: HTMLDivEl
 
     icons_container.appendChild(edit)
     icons_container.appendChild(remove)
-
 
     products_file.appendChild(product_code)
     products_file.appendChild(product_name)

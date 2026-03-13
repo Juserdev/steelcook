@@ -7,6 +7,9 @@ export function products_list(products: Products[], header: HTMLDivElement) {
   const list_container = products_title()
   products_title_sheets(products, list_container)
   header.appendChild(list_container)
+
+
+
   return list_container
 
 }
