@@ -1,7 +1,7 @@
 import { createClient } from '@/services/clients/clients-services'
 import type { Create_Client } from '@/services/clients/clients.types'
 
-export function handle_create_client(TOKEN: string, form: HTMLFormElement) {
+export function handle_client_create(TOKEN: string, form: HTMLFormElement) {
   form.addEventListener('submit', async (e) => {
     e.preventDefault()
     const formData = new FormData(form)
