@@ -1,6 +1,7 @@
 import type { Profile } from "../../profile.types"
 import { form_profile_config } from "../config/form-profile-config"
 import { handler_create_profile } from "../handlers/handler-create-profle"
+import { fill_profile_form_fileds } from "./utils/fill-profile-form-fields"
 
 export function profile_form(content: HTMLDivElement, TOKEN: string, profile: Profile[]) {
 
@@ -40,22 +41,8 @@ export function profile_form(content: HTMLDivElement, TOKEN: string, profile: Pr
 
   content.appendChild(form)
 
-  const company = form.elements.namedItem('profile_company') as HTMLInputElement
-  const id = form.elements.namedItem('profile_id') as HTMLInputElement
-  const email = form.elements.namedItem('profile_email') as HTMLInputElement
-  const phone = form.elements.namedItem('profile_phone') as HTMLInputElement
-  const address = form.elements.namedItem('profile_address') as HTMLInputElement
-  const logo = form.elements.namedItem('profile_logo') as HTMLInputElement
-
-  company.value = profile[0].company
-  id.value = String(profile[0].company_id)
-  email.value = profile[0].email
-  phone.value = String(profile[0].phone)
-  address.value = profile[0].address
-  logo.value = profile[0].logo ?? ''
+  fill_profile_form_fileds(form, profile)
 
   handler_create_profile(form, TOKEN!, profile)
-
-
 
 }
