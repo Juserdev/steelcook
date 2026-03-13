@@ -9,8 +9,15 @@ export interface Clients {
 }
 
 export interface Clients_config {
-  clients_container_class: { common_class: string, class: string }
-  title: { class_1: string, class_2: string, text: string }
+  clients_container_class: {
+    common_class: string,
+    class: string
+  }
+  title: {
+    class_1: string,
+    class_2: string,
+    text: string
+  }
   clients_class: {
     file: string
     name: string
@@ -19,7 +26,23 @@ export interface Clients_config {
     address: string
     phone: string
   }
-  add_client_btn: { class: string, text: string }
+  add_client_btn: {
+    class: string,
+    text: string
+  }
+  icons: {
+    container_class: string
+    edit: {
+      src: string
+      alt: string
+      class: string
+    }
+    remove: {
+      src: string
+      alt: string
+      class: string
+    }
+  }
 }
 
 export interface Create_Client extends Omit<Clients, "created_at" | "id"> { }
