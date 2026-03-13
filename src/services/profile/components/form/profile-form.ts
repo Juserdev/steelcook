@@ -1,7 +1,8 @@
+import type { Profile } from "../../profile.types"
 import { form_profile_config } from "../config/form-profile-config"
 import { handler_create_profile } from "../handlers/handler-create-profle"
 
-export function profile_form(content: HTMLDivElement, TOKEN: string) {
+export function profile_form(content: HTMLDivElement, TOKEN: string, profile: Profile[]) {
 
   const form = document.createElement('form')
   form.classList.add(form_profile_config.form.class)
@@ -39,7 +40,21 @@ export function profile_form(content: HTMLDivElement, TOKEN: string) {
 
   content.appendChild(form)
 
-  handler_create_profile(form, TOKEN!)
+  const company = form.elements.namedItem('profile_company') as HTMLInputElement
+  const id = form.elements.namedItem('profile_id') as HTMLInputElement
+  const email = form.elements.namedItem('profile_email') as HTMLInputElement
+  const phone = form.elements.namedItem('profile_phone') as HTMLInputElement
+  const address = form.elements.namedItem('profile_address') as HTMLInputElement
+  const logo = form.elements.namedItem('profile_logo') as HTMLInputElement
+
+  company.value = profile[0].company
+  id.value = String(profile[0].company_id)
+  email.value = profile[0].email
+  phone.value = String(profile[0].phone)
+  address.value = profile[0].address
+  logo.value = profile[0].logo ?? ''
+
+  handler_create_profile(form, TOKEN!, profile)
 
 
 

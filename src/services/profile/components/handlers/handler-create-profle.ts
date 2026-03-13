@@ -1,6 +1,7 @@
-import type { Send_Profile } from "../../profile.types"
+import { editProfile } from "../../profile-services"
+import type { Profile, Send_Profile } from "../../profile.types"
 
-export function handler_create_profile(form: HTMLFormElement, TOKEN: string) {
+export function handler_create_profile(form: HTMLFormElement, TOKEN: string, profile: Profile[]) {
   form.addEventListener('submit', async (e) => {
     e.preventDefault()
 
@@ -23,10 +24,13 @@ export function handler_create_profile(form: HTMLFormElement, TOKEN: string) {
       logo
     }
 
-    console.log(new_profile)
-    console.log(TOKEN)
+    const id = profile[0]?.id
 
+    if (!id) return
 
+    await editProfile(TOKEN!, id, new_profile)
+
+    window.location.reload()
   })
 
 }

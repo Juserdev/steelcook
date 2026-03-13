@@ -12,7 +12,7 @@ export function content_profile(TOKEN: string, company_profile: Profile[]): HTML
   const list_container = profile_title_sheet(company_profile)
   profile_view(company_profile, list_container)
   profile_container.appendChild(list_container)
-  profile_form(profile_container, TOKEN!)
+  profile_form(profile_container, TOKEN!, company_profile)
 
 
 
