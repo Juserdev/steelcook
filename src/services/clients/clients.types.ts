@@ -3,7 +3,7 @@ export interface Clients {
   client_id: number | null
   created_at: string
   email: string
-  id: number
+  id: string
   name: string
   phone: number | null
 }
@@ -46,4 +46,5 @@ export interface Clients_config {
 }
 
 export interface Create_Client extends Omit<Clients, "created_at" | "id"> { }
+export interface Edit_Client extends Omit<Clients, "created_at"> { }
 export interface Send_Quote_Client extends Omit<Clients, "created_at" | "id"> { }

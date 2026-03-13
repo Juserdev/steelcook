@@ -1,7 +1,7 @@
-import { form_add_client } from '@/services/clients/components/form/form-config'
-import { handle_create_client } from '@/services/clients/components/form/form-controller'
+import { form_add_client } from '@/services/clients/components/form/form-add-client.config'
+import { handle_client_create } from '@/services/clients/components/handlers/handle-client-create'
 
-export function clients_form(TOKEN: string, header: HTMLDivElement) {
+export function clients_form_add(TOKEN: string, header: HTMLDivElement) {
 
   const form = document.createElement('form')
   form.method = form_add_client.form.method
@@ -36,6 +36,6 @@ export function clients_form(TOKEN: string, header: HTMLDivElement) {
 
   header.appendChild(form)
 
-  handle_create_client(TOKEN, form)
+  handle_client_create(TOKEN, form)
 
 }
