@@ -1,14 +1,3 @@
-export function product_toggle() {
+import { toggle_form } from "@/utils/toggle-form"
 
-  const addProductBtn = document.querySelector<HTMLButtonElement>('[data-add_product]')
-  const list_container = document.querySelector<HTMLDivElement>('.list-container-product')
-  const form = document.querySelector<HTMLFormElement>('.form-add-products')
-
-  if (!addProductBtn || !list_container || !form) return
-
-  addProductBtn.addEventListener('click', () => {
-    list_container.classList.add('active')
-    form.classList.remove('active')
-  })
-
-}
+export function product_toggle() { toggle_form('[data-add_product]', '.list-container-product', '.form-add-products') }

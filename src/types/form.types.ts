@@ -1,10 +1,9 @@
-export type Method = 'POST' | 'GET' | 'DELETE' | 'PUT'
+export type Method = 'POST' | 'GET' | 'DELETE' | 'PUT' | 'PATCH'
 export type Button_Type = "submit" | "reset" | "button"
 
 export interface Form {
   method: Method
   class: string
-
 }
 
 export interface Class_Name {
@@ -24,6 +23,7 @@ export interface Input {
   name: string
   placeholder: string
   class: Class_Name
+  list?: string
 }
 
 export interface Form_Field {
