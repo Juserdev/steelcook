@@ -14,6 +14,7 @@ import { product_toggle } from "@/services/products/components/products-toggle"
 import '@/styles/dashboard.css'
 import { content_quote_settings } from "@/services/quote-settings/quote-settings"
 import { quotations_toggle } from "@/services/quotations/components/quotations-toggle"
+import { profile_toggle } from "@/services/profile/components/profile-toggle"
 
 const TOKEN = localStorage.getItem('access_token')
 
@@ -24,7 +25,7 @@ const app = document.querySelector<HTMLDivElement>("#app")!
 
 const sidebar_container = sidebar(profile)
 const home_content = content_home(clients, products, quotations)
-const profile_content = content_profile(profile)
+const profile_content = content_profile(TOKEN!, profile)
 const clients_content = content_clients(TOKEN!, clients)
 const products_content = content_products(TOKEN!, products)
 const quote_settings_content = content_quote_settings(quote_settings)
@@ -54,3 +55,4 @@ showQuotationPublic()
 client_toggle()
 product_toggle()
 quotations_toggle()
+profile_toggle()
