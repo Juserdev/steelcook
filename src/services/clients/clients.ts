@@ -5,6 +5,7 @@ import { clients_form_add } from './components/clients-add-form';
 import { clients_list } from './components/clients-list';
 import { client_form_edit } from './components/client-edit-form';
 import { handle_client_edit_open } from './components/handlers/handle-client-edit-open';
+import { handle_client_edit } from './components/handlers/handle-client-edit';
 
 
 
@@ -17,6 +18,9 @@ export function content_clients(TOKEN: string, clients: Clients[]): HTMLDivEleme
   const form_edit = client_form_edit(client_header)
 
   handle_client_edit_open(list, form_edit)
+  handle_client_edit(TOKEN!, form_edit)
+
+
 
   return client_header
 } 

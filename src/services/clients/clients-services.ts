@@ -1,5 +1,5 @@
 import { SUPABASE_KEY, SUPABASE_URL } from "../auth-service";
-import type { Clients, Create_Client, Edit_Client } from "./clients.types";
+import type { Clients, Create_Client } from "./clients.types";
 
 export async function getClients(TOKEN: string) {
 
@@ -39,8 +39,7 @@ export async function createClient(TOKEN: string, client: Create_Client) {
   return data[0];
 }
 
-
-export async function editClient(TOKEN: string, id: string, client: Edit_Client) {
+export async function editClient(TOKEN: string, id: string, client: Create_Client) {
 
   const response = await fetch(`${SUPABASE_URL}/rest/v1/clients?id=eq.${id}`, {
     method: "PATCH",
@@ -60,4 +59,21 @@ export async function editClient(TOKEN: string, id: string, client: Edit_Client)
   const data: Clients[] = await response.json();
 
   return data[0];
+}
+
+export async function deleteClient(TOKEN: string, id: string) {
+
+  const response = await fetch(`${SUPABASE_URL}/rest/v1/clients?id=eq.${id}`, {
+    method: "DELETE",
+    headers: {
+      "Authorization": `Bearer ${TOKEN}`,
+      "apikey": SUPABASE_KEY,
+      "Content-Type": "application/json"
+    }
+  });
+
+  if (!response.ok) {
+    throw new Error("Error deleting client");
+  }
+
 }
