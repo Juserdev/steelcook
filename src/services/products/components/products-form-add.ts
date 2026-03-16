@@ -1,7 +1,7 @@
-import { form_add_product } from "./form/form-config"
+import { form_add_product } from "./form/form-add-product.config"
 import { handle_create_product } from "./form/form-controller"
 
-export function product_form(TOKEN: string, header: HTMLDivElement) {
+export function product_form_add(TOKEN: string, header: HTMLDivElement) {
   const form = document.createElement('form')
   form.method = form_add_product.form.method
   form.classList.add(form_add_product.form.class, 'active')

@@ -38,3 +38,42 @@ export async function createProduct(TOKEN: string, product: Create_Product) {
 
   return data[0];
 }
+
+export async function editProducts(TOKEN: string, id: string, client: Create_Product) {
+
+  const response = await fetch(`${SUPABASE_URL}/rest/v1/products?id=eq.${id}`, {
+    method: "PATCH",
+    headers: {
+      "Authorization": `Bearer ${TOKEN}`,
+      "apikey": SUPABASE_KEY,
+      "Content-Type": "application/json",
+      "Prefer": "return=representation"
+    },
+    body: JSON.stringify(client)
+  });
+
+  if (!response.ok) {
+    throw new Error("Error updating products");
+  }
+
+  const data: Products[] = await response.json();
+
+  return data[0];
+}
+
+export async function deleteProducts(TOKEN: string, id: string) {
+
+  const response = await fetch(`${SUPABASE_URL}/rest/v1/products?id=eq.${id}`, {
+    method: "DELETE",
+    headers: {
+      "Authorization": `Bearer ${TOKEN}`,
+      "apikey": SUPABASE_KEY,
+      "Content-Type": "application/json"
+    }
+  });
+
+  if (!response.ok) {
+    throw new Error("Error deleting products");
+  }
+
+}

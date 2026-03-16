@@ -1,4 +1,4 @@
-import { deleteClient } from "../../clients-services"
+import { deleteClient } from '@/services/clients/clients-services'
 
 export function handle_client_delete(TOKEN: string, container: HTMLDivElement) {
 
@@ -15,7 +15,7 @@ export function handle_client_delete(TOKEN: string, container: HTMLDivElement) {
 
       const id = content.dataset.id
 
-      await deleteClient(TOKEN!, id!)
+      await deleteClient(TOKEN, id!)
 
       window.location.reload()
     })
