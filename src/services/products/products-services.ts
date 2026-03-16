@@ -60,3 +60,20 @@ export async function editProducts(TOKEN: string, id: string, client: Create_Pro
 
   return data[0];
 }
+
+export async function deleteProducts(TOKEN: string, id: string) {
+
+  const response = await fetch(`${SUPABASE_URL}/rest/v1/products?id=eq.${id}`, {
+    method: "DELETE",
+    headers: {
+      "Authorization": `Bearer ${TOKEN}`,
+      "apikey": SUPABASE_KEY,
+      "Content-Type": "application/json"
+    }
+  });
+
+  if (!response.ok) {
+    throw new Error("Error deleting products");
+  }
+
+}
