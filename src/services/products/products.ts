@@ -1,4 +1,5 @@
 import { handle_product_edit_open } from "./components/handlers/handle-product-edit-open"
+import { handle_product_edit } from "./components/handlers/handle-product.edit"
 import { products_header } from "./components/products-dashbaord"
 import { product_form_add } from "./components/products-form-add"
 import { product_form_edit } from "./components/products-form-edit"
@@ -14,6 +15,7 @@ export function content_products(TOKEN: string, products: Products[]): HTMLDivEl
   const form_edit = product_form_edit(product_header)
 
   handle_product_edit_open(list, form_edit)
+  handle_product_edit(TOKEN, form_edit)
 
 
 
