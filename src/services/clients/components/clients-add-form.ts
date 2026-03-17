@@ -4,7 +4,7 @@ import { handle_client_create } from '@/services/clients/components/handlers/han
 export function clients_form_add(TOKEN: string, header: HTMLDivElement) {
 
   const form = document.createElement('form')
-  form.method = form_add_client.form.method
+  form.method = form_add_client.form.method.post
   form.classList.add(form_add_client.form.class, 'active')
 
   form_add_client.fields.forEach(files => {

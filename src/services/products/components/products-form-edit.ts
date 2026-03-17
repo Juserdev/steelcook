@@ -2,7 +2,7 @@ import { form_edit_product } from "./form/form-edit-product.config"
 
 export function product_form_edit(header: HTMLDivElement): HTMLFormElement {
   const form = document.createElement('form')
-  form.method = form_edit_product.form.method
+  form.method = form_edit_product.form.method.edit
   form.classList.add(form_edit_product.form.class, 'active')
 
   form_edit_product.fields.forEach(files => {

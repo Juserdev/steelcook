@@ -2,7 +2,10 @@ import type { Form_Add } from "@/types/form.types";
 
 export const form_edit_product: Form_Add = {
   form: {
-    method: 'PATCH',
+    method: {
+      post: 'POST',
+      edit: 'PUT'
+    },
     class: "form-edit-products"
   },
   fields: [

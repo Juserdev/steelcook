@@ -13,7 +13,6 @@ import { create_form_fields } from './builders/create-form-fields'
 import { quotation_btn_submit } from '../config/quotation-btn-submit.confing'
 import { create_btns } from './builders/create-form-btns'
 import { handler_product_add } from '../handlers/handler-product-add'
-import { handler_submit } from '../handlers/handler-submit'
 import type { Profile } from '@/services/profile/profile.types'
 import type { Quote_Settings } from '@/services/quote-settings/quote-settings-types'
 import { fill_form_fileds } from '../utils/fill_form_fileds'
@@ -25,15 +24,15 @@ import { handler_client_autofill } from '../handlers/handler-client-autofill'
 import { handler_product_autofill } from '../handlers/handler-product-autofill'
 import { handler_product_total } from '../handlers/handler-product-total'
 import { handler_total_discount } from '../handlers/handler-total-discount'
+import { handler_total_tax_amount } from '../config/handler-total-tax-amount'
 
 export function quotation_form(
-  TOKEN: string,
   header: HTMLDivElement,
   profile: Profile[],
   quote_settings: Quote_Settings[],
   clients: Clients[],
   products: Products[]
-) {
+): HTMLFormElement {
 
   const form = create_form()
 
@@ -95,31 +94,6 @@ export function quotation_form(
   // funcion para ejecucion e formulas en el total
   handler_total_discount(section_total)
 
-  function handler_total_tax_amount(section: HTMLElement) {
-
-    section.addEventListener('input', e => {
-
-      const target = e.target as HTMLInputElement
-
-      if (target.name !== 'total_tax_rate' && target.name !== 'total_discount') return
-
-      const input_net = section.querySelector<HTMLInputElement>('[name="total_net"]')
-      const input_tax_rate = section.querySelector<HTMLInputElement>('[name="total_tax_rate"]')
-      const input_tax_amount = section.querySelector<HTMLInputElement>('[name="total_tax_amount"]')
-      const input_total = section.querySelector<HTMLInputElement>('[name="total_total"]')
-
-      if (!input_net || !input_tax_rate || !input_tax_amount || !input_total) return
-
-      const result = (+input_net.value * +input_tax_rate.value / 100).toFixed(2)
-
-      input_tax_amount.value = result
-
-      input_total.value = String(+input_net.value + +input_tax_amount.value)
-
-    })
-
-  }
-
   handler_total_tax_amount(section_total)
 
   // Boton submit
@@ -127,8 +101,8 @@ export function quotation_form(
   const btn_submit = create_btns(form, quotation_btn_submit)
   form.appendChild(btn_submit)
 
-  // handler submit
-  handler_submit(form, TOKEN)
 
   header.appendChild(form)
+
+  return form
 }

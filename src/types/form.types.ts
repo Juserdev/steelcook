@@ -2,8 +2,15 @@ export type Method = 'POST' | 'GET' | 'DELETE' | 'PUT' | 'PATCH'
 export type Button_Type = "submit" | "reset" | "button"
 
 export interface Form {
-  method: Method
+  method: {
+    post: Method
+    edit: Method
+  }
   class: string
+  mode: {
+    add: string
+    edit: string
+  }
 }
 
 export interface Class_Name {

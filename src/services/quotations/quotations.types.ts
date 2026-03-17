@@ -33,8 +33,16 @@ export interface Quotations {
 
 
 export interface Quotations_Config {
-  quotations_container_class: { common_class: string, class: string },
-  title: { class_1: string, class_2: string, text: string, text_button: string },
+  quotations_container_class: {
+    common_class: string,
+    class: string
+  },
+  title: {
+    class_1: string,
+    class_2: string,
+    text: string,
+    text_button: string
+  },
   quotations_class: {
     file: string
     id: string
@@ -44,7 +52,23 @@ export interface Quotations_Config {
     date: string
     button: string
   }
-  add_quotation_btn: { class: string, text: string }
+  add_quotation_btn: {
+    class: string,
+    text: string
+  }
+  icons: {
+    container_class: string
+    edit: {
+      src: string
+      alt: string
+      class: string
+    }
+    remove: {
+      src: string
+      alt: string
+      class: string
+    }
+  }
 }
 
 export interface Send_Create_Quotation {

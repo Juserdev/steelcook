@@ -1,10 +1,19 @@
 import type { Titles_Sheets } from "@/types/ui.types";
 import type { Quotations_Config } from "@/services/quotations/quotations.types";
+import { icons } from "@/types/icons.config";
 
 
 export const quotations_config: Quotations_Config = {
-  quotations_container_class: { common_class: 'section-content', class: 'quotations-content' },
-  title: { class_1: 'title', class_2: 'quotation-title', text: 'Cotizaciones', text_button: "Ver cotización" },
+  quotations_container_class: {
+    common_class: 'section-content',
+    class: 'quotations-content'
+  },
+  title: {
+    class_1: 'title',
+    class_2: 'quotation-title',
+    text: 'Cotizaciones',
+    text_button: "Ver cotización"
+  },
   quotations_class: {
     file: 'quotation-file',
     id: 'quotation-id',
@@ -14,7 +23,22 @@ export const quotations_config: Quotations_Config = {
     date: 'quotation-date',
     button: "quotation-vew-btn"
   },
-  add_quotation_btn: { class: 'add-quotation-btn', text: 'Agregar cotizacion' }
+  add_quotation_btn: {
+    class: 'add-quotation-btn',
+    text: 'Agregar cotizacion'
+  }, icons: {
+    container_class: 'conatiner-quotation-icons',
+    edit: {
+      src: icons.edit,
+      alt: 'icon edit',
+      class: 'icon-edit'
+    },
+    remove: {
+      src: icons.remove,
+      alt: 'icon delete',
+      class: 'icon-delete'
+    }
+  }
 }
 
 export const quotation_titles_sheets: Titles_Sheets[] = [

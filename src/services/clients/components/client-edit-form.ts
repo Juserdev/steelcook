@@ -2,7 +2,7 @@ import { form_edit_client } from "./form/form-edit-client.config"
 
 export function client_form_edit(header: HTMLDivElement): HTMLFormElement {
   const form = document.createElement('form')
-  form.method = form_edit_client.form.method
+  form.method = form_edit_client.form.method.edit
   form.classList.add(form_edit_client.form.class, 'active')
 
   form_edit_client.fields.forEach(files => {

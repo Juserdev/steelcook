@@ -8,8 +8,6 @@ export function products_list(products: Products[], header: HTMLDivElement) {
   products_title_sheets(products, list_container)
   header.appendChild(list_container)
 
-
-
   return list_container
 
 }
