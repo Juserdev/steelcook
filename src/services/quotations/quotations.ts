@@ -28,9 +28,7 @@ export function content_quotations(
 
   handler_submit(form, TOKEN)
 
-
-
-  handle_quotation_edit_open(quotation_header, form, fill_quotation_form)
+  handle_quotation_edit_open(quoatations, quotation_header, form, fill_quotation_form)
 
 
 

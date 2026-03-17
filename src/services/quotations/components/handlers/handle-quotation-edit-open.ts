@@ -1,7 +1,10 @@
+import type { Quotations } from "../../quotations.types";
+
 export function handle_quotation_edit_open(
+  quotations: Quotations[],
   container: HTMLDivElement,
   form: HTMLFormElement,
-  onEdit: (id: string, form: HTMLFormElement) => void
+  onEdit: (id: string, form: HTMLFormElement, quotations: Quotations[]) => void
 ) {
 
   const icon_edit = container.querySelectorAll<HTMLImageElement>('.icon-edit')
@@ -20,7 +23,7 @@ export function handle_quotation_edit_open(
       form.classList.remove('active')
       list.classList.add('active')
 
-      onEdit(id, form)
+      onEdit(id, form, quotations)
 
 
     })

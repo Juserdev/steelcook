@@ -6,7 +6,11 @@ export const form_edit_product: Form_Add = {
       post: 'POST',
       edit: 'PUT'
     },
-    class: "form-edit-products"
+    class: "form-edit-products",
+    mode: {
+      add: 'add',
+      edit: 'edit',
+    }
   },
   fields: [
     {
