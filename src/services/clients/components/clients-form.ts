@@ -1,11 +1,13 @@
 import { form_add_client } from '@/services/clients/components/form/form-add-client.config'
-import { handle_client_create } from '@/services/clients/components/handlers/handle-client-create'
 
-export function clients_form_add(TOKEN: string, header: HTMLDivElement) {
+import type { Form_Mode } from '@/services/quotations/quotations.types'
+
+export function clients_form(header: HTMLDivElement) {
 
   const form = document.createElement('form')
   form.method = form_add_client.form.method.post
   form.classList.add(form_add_client.form.class, 'active')
+  form.dataset.mode = 'add' as Form_Mode
 
   form_add_client.fields.forEach(files => {
     const { label: labels, input: inputs } = files
@@ -36,6 +38,7 @@ export function clients_form_add(TOKEN: string, header: HTMLDivElement) {
 
   header.appendChild(form)
 
-  handle_client_create(TOKEN, form)
+
+  return form
 
 }

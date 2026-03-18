@@ -4,9 +4,13 @@ export const form_edit_client: Form_Add = {
   form: {
     method: {
       post: 'POST',
-      edit: 'PUT'
+      edit: 'PATCH'
     },
-    class: 'form-edit-clients'
+    class: 'form-edit-clients',
+    mode: {
+      add: 'add',
+      edit: 'edit'
+    }
   },
   fields: [
     {

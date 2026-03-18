@@ -1,7 +1,7 @@
-import type { Quotations } from "../../quotations.types"
-import { form_aq } from "../config/quotation-form-aq.config"
-import { form_product_aq } from "../config/quotation-product.config"
-import { create_form_fields } from "./builders/create-form-fields"
+import { form_aq } from "@/services/quotations/components/config/quotation-form-aq.config"
+import { form_product_aq } from "@/services/quotations/components/config/quotation-product.config"
+import { create_form_fields } from "@/services/quotations/components/form/builders/create-form-fields"
+import type { Quotations } from "@/services/quotations/quotations.types"
 
 
 export function fill_quotation_form(id: string, form: HTMLFormElement, quotations: Quotations[]) {
