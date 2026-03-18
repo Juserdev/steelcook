@@ -1,20 +1,20 @@
 import { sidebar } from "@/features/dashboard/sidebar/sidebar"
-import { content_home } from "./main-content/home/home"
-import { initDashboardNavigation } from "./navigation/dashboard-navigation"
 import { content_clients } from "@/services/clients/clients"
-import { loadDashboardData } from "./dashboard-data"
 import { content_products } from "@/services/products/products"
 import { content_profile } from "@/services/profile/profile"
 import { content_quotations } from "@/services/quotations/quotations"
+import { loadDashboardData } from "./dashboard-data"
+import { content_home } from "./main-content/home/home"
+import { initDashboardNavigation } from "./navigation/dashboard-navigation"
 import { showQuotationPublic } from "./navigation/dashboard-public-links"
 
 import { client_toggle } from "@/services/clients/components/clients-toggle"
 import { product_toggle } from "@/services/products/components/products-toggle"
 
-import '@/styles/dashboard.css'
-import { content_quote_settings } from "@/services/quote-settings/quote-settings"
-import { quotations_toggle } from "@/services/quotations/components/quotations-toggle"
 import { profile_toggle } from "@/services/profile/components/profile-toggle"
+import { quotations_toggle } from "@/services/quotations/components/quotations-toggle"
+import { content_quote_settings } from "@/services/quote-settings/quote-settings"
+import '@/styles/dashboard.css'
 
 const TOKEN = localStorage.getItem('access_token')
 

@@ -2,7 +2,7 @@ import { createQuotation, editQuotation } from "../../quotations-service"
 import type { Form_Mode } from "../../quotations.types"
 import { extract_quotation_form } from "../utils/extract-quotation-form"
 
-export function handler_submit(form: HTMLFormElement, TOKEN: string) {
+export function handle_submit(form: HTMLFormElement, TOKEN: string) {
   form.addEventListener('submit', async (e) => {
     e.preventDefault()
 

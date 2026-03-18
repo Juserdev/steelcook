@@ -1,7 +1,7 @@
 import type { Clients } from "@/services/clients/clients.types"
-import type { HomeContent } from "./home.types"
 import type { Products } from "@/services/products/products.types"
 import type { Quotations } from "@/services/quotations/quotations.types"
+import type { HomeContent } from "@features/dashboard/main-content/home/home.types"
 
 
 export function homeContentConfig(clients: Clients[], products: Products[], quotations: Quotations[]) {
