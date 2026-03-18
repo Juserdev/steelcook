@@ -61,3 +61,20 @@ export async function editQuotation(TOKEN: string, id: string, quotation: Send_C
 
   return data
 }
+
+export async function deleteQuotation(TOKEN: string, id: string) {
+
+  const response = await fetch(`${SUPABASE_URL}/rest/v1/quotations?id=eq.${id}`, {
+    method: "DELETE",
+    headers: {
+      "Authorization": `Bearer ${TOKEN}`,
+      "apikey": SUPABASE_KEY,
+      "Content-Type": "application/json"
+    }
+  });
+
+  if (!response.ok) {
+    throw new Error("Error deleting products");
+  }
+
+}

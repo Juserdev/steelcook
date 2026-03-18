@@ -9,4 +9,6 @@ export function quotation_list(quotations: Quotations[], header: HTMLDivElement)
 
   header.appendChild(list_container)
 
+  return list_container
+
 }

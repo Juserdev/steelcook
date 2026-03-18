@@ -4,6 +4,7 @@ import type { Profile } from "../profile/profile.types"
 import type { Quote_Settings } from "../quote-settings/quote-settings-types"
 import { fill_quotation_form } from "./components/form/fill-quotation-form"
 import { quotation_form } from "./components/form/quotation-form"
+import { handle_quotation_delete } from "./components/handlers/handle-quotation-delete"
 import { handle_quotation_edit_open } from "./components/handlers/handle-quotation-edit-open"
 import { handler_submit } from "./components/handlers/handler-submit"
 import { quotation_list } from "./components/quotation-list"
@@ -23,12 +24,15 @@ export function content_quotations(
 ): HTMLDivElement {
 
   const quotation_header = quotation_headers()
-  quotation_list(quoatations, quotation_header)
+  const list = quotation_list(quoatations, quotation_header)
   const form = quotation_form(quotation_header, profile, quote_settings, clients, products)
 
   handler_submit(form, TOKEN)
 
+  console.log(list)
+
   handle_quotation_edit_open(quoatations, quotation_header, form, fill_quotation_form)
+  handle_quotation_delete(TOKEN, list)
 
 
 
