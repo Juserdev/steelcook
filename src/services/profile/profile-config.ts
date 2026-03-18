@@ -2,8 +2,15 @@ import type { Titles_Sheets } from "@/types/ui.types";
 import type { Profile_config } from "./profile.types";
 
 export const profile_config: Profile_config = {
-  profile_content_class: { common_class: 'section-content', class: 'profile-content' },
-  title: { class_1: 'title', class_2: 'profile-title', text: 'Perfil' },
+  profile_content_class: {
+    common_class: 'section-content',
+    class: 'profile-content'
+  },
+  title: {
+    class_1: 'title',
+    class_2: 'profile-title',
+    text: 'Perfil'
+  },
   logo: 'profile-logo',
   profile_class: {
     file: 'profile-logo',

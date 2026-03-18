@@ -1,4 +1,4 @@
-import { quote_settings_config } from "../quote-settings-config"
+import { quote_settings_config } from "./config/quote-settings.config"
 
 
 export function quote_settings_header(): HTMLDivElement {
@@ -14,7 +14,7 @@ export function quote_settings_header(): HTMLDivElement {
   const add_quotation_btn = document.createElement("button")
   add_quotation_btn.classList.add(quote_settings_config.add_qs_btn.class)
   add_quotation_btn.textContent = quote_settings_config.add_qs_btn.text
-  add_quotation_btn.dataset.add_product = "add_product"
+  add_quotation_btn.dataset.add_quote_settings = quote_settings_config.add_qs_btn.dataset
 
   quote_Settings_container.appendChild(title)
   quote_Settings_container.appendChild(add_quotation_btn)
