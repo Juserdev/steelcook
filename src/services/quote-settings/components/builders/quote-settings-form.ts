@@ -1,14 +1,16 @@
-import { form_add_client } from '@/services/clients/components/form/form-add-client.config'
-import type { Form_Mode } from '@/services/quotations/quotations.types'
+import type { Form_Mode } from "@/services/quotations/quotations.types"
+import { form_add_quote_settings } from "@/services/quote-settings/components/config/form-add-quote-settings.config"
 
-export function clients_form(header: HTMLDivElement): HTMLFormElement {
+export function settings_form(header: HTMLDivElement): HTMLFormElement {
+  const form_mm = form_add_quote_settings.form
+  const qs_fields = form_add_quote_settings.fields
 
   const form = document.createElement('form')
-  form.method = form_add_client.form.method.post
-  form.classList.add(form_add_client.form.class, 'active')
+  form.method = form_mm.method.edit
+  form.classList.add(form_add_quote_settings.form.class, 'active')
   form.dataset.mode = 'add' as Form_Mode
 
-  form_add_client.fields.forEach(files => {
+  qs_fields.forEach(files => {
     const { label: labels, input: inputs } = files
 
     const label = document.createElement('label')
@@ -25,13 +27,12 @@ export function clients_form(header: HTMLDivElement): HTMLFormElement {
 
     form.appendChild(label)
     form.appendChild(input)
-
   })
 
   const btn = document.createElement('button')
-  btn.type = form_add_client.button.type
-  btn.textContent = form_add_client.button.text
-  btn.classList.add(form_add_client.button.class)
+  btn.type = form_add_quote_settings.button.type
+  btn.textContent = form_add_quote_settings.button.text
+  btn.classList.add(form_add_quote_settings.button.class)
 
   form.appendChild(btn)
 
@@ -39,5 +40,4 @@ export function clients_form(header: HTMLDivElement): HTMLFormElement {
 
 
   return form
-
 }

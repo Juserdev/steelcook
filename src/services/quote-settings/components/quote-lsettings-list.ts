@@ -1,5 +1,5 @@
-import { quote_settings_config } from "../quote-settings-config";
 import type { Quote_Settings } from "../quote-settings-types";
+import { quote_settings_config } from "./config/quote-settings.config";
 
 export function quote_settings_list(quote_settings: Quote_Settings[], header: HTMLDivElement) {
   const list_contaier = document.createElement("div")
@@ -11,6 +11,7 @@ export function quote_settings_list(quote_settings: Quote_Settings[], header: HT
 
     const content = document.createElement("div")
     content.classList.add(quote_settings_config.qs.content)
+    content.dataset.id = qs.id
 
     const observations_title = document.createElement('h2')
     observations_title.classList.add(qs_config.observations.class)
@@ -57,8 +58,31 @@ export function quote_settings_list(quote_settings: Quote_Settings[], header: HT
     content.appendChild(transport_text)
 
     list_contaier.appendChild(content)
+
+    const icon_edit = quote_settings_config.icons.edit
+    const icon_remove = quote_settings_config.icons.remove
+
+    const icons_container = document.createElement('div')
+    icons_container.classList.add(quote_settings_config.icons.container_class)
+
+    const edit = document.createElement('img')
+    edit.src = icon_edit.src
+    edit.alt = icon_edit.alt
+    edit.classList.add(icon_edit.class)
+
+    const remove = document.createElement('img')
+    remove.src = icon_remove.src
+    remove.alt = icon_remove.alt
+    remove.classList.add(icon_remove.class)
+
+    icons_container.appendChild(edit)
+    icons_container.appendChild(remove)
+
+    content.appendChild(icons_container)
   })
 
 
   header.appendChild(list_contaier)
+
+  return list_contaier
 }

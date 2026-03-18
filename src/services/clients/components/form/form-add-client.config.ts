@@ -50,7 +50,7 @@ export const form_add_client: Form_Add = {
         id: "email",
         name: "email",
         placeholder: "mail@mail.com",
-        class: { specific: "fac-input-mail", common: "fac-input" }
+        class: { specific: "fac-input-email", common: "fac-input" }
       }
     }, {
       label: {

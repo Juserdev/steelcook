@@ -3,16 +3,21 @@ import { content_clients } from "@/services/clients/clients"
 import { content_products } from "@/services/products/products"
 import { content_profile } from "@/services/profile/profile"
 import { content_quotations } from "@/services/quotations/quotations"
-import { loadDashboardData } from "./dashboard-data"
-import { content_home } from "./main-content/home/home"
-import { initDashboardNavigation } from "./navigation/dashboard-navigation"
-import { showQuotationPublic } from "./navigation/dashboard-public-links"
+// import { loadDashboardData } from "./dashboard-data"
+// import { content_home } from "./main-content/home/home"
+// import { initDashboardNavigation } from "./navigation/dashboard-navigation"
+// import { showQuotationPublic } from "./navigation/dashboard-public-links"
 
 import { client_toggle } from "@/services/clients/components/clients-toggle"
 import { product_toggle } from "@/services/products/components/products-toggle"
 
+import { loadDashboardData } from "@/features/dashboard/dashboard-data"
+import { content_home } from "@/features/dashboard/main-content/home/home"
+import { initDashboardNavigation } from "@/features/dashboard/navigation/dashboard-navigation"
+import { showQuotationPublic } from "@/features/dashboard/navigation/dashboard-public-links"
 import { profile_toggle } from "@/services/profile/components/profile-toggle"
 import { quotations_toggle } from "@/services/quotations/components/quotations-toggle"
+import { quote_settings_toggle } from "@/services/quote-settings/components/quote-settings-toggle"
 import { content_quote_settings } from "@/services/quote-settings/quote-settings"
 import '@/styles/dashboard.css'
 
@@ -28,7 +33,7 @@ const home_content = content_home(clients, products, quotations)
 const profile_content = content_profile(TOKEN!, profile)
 const clients_content = content_clients(TOKEN!, clients)
 const products_content = content_products(TOKEN!, products)
-const quote_settings_content = content_quote_settings(quote_settings)
+const quote_settings_content = content_quote_settings(TOKEN!, quote_settings)
 const quotation_content = content_quotations(TOKEN!, quotations, profile, quote_settings, clients, products)
 
 const right_container = document.createElement("div")
@@ -56,3 +61,4 @@ client_toggle()
 product_toggle()
 quotations_toggle()
 profile_toggle()
+quote_settings_toggle()
