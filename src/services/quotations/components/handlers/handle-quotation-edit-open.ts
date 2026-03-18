@@ -17,6 +17,7 @@ export function handle_quotation_edit_open(
       const list = container.querySelector<HTMLDivElement>('.list-container-quotations')
 
       const id = content.dataset.id
+      form.dataset.id = id
 
       if (!list || !content || !id) return
 

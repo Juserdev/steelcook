@@ -3,6 +3,8 @@ import type { Products, Send_Quote_Product } from "@/services/products/products.
 import type { Profile, Send_Quote_Profile } from "@/services/profile/profile.types"
 import type { Quote_Settings, Send_Quote_Settings } from "../quote-settings/quote-settings-types"
 
+export type Form_Mode = 'add' | 'edit'
+
 interface Client_Snapshot extends Omit<Clients, "created_at"> { }
 interface Profile_Snapshot extends Omit<Profile, "created_at"> { }
 interface Items_Snapshot extends Omit<Products, "created_at"> {
@@ -10,6 +12,7 @@ interface Items_Snapshot extends Omit<Products, "created_at"> {
   subtotal: number
   total: number
 }
+
 export interface QS_Snapshot extends Omit<Quote_Settings, 'created_at' | 'id'> { }
 
 

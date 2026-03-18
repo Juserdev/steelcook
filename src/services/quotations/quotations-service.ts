@@ -31,14 +31,33 @@ export async function createQuotation(TOKEN: string, quotation: Send_Create_Quot
   });
 
   if (!response.ok) {
-    // throw new Error("Error creating product");
     const errorText = await response.text()
     console.error('supabase error response: ', errorText)
     throw new Error(`Èrror creating quotation: ${errorText}`)
   }
 
-  // const data: Send_Create_Quotation[] = await response.json();
+
   const data = await response.json() as Send_Create_Quotation[]
 
   return data[0];
+}
+
+
+export async function editQuotation(TOKEN: string, id: string, quotation: Send_Create_Quotation) {
+
+  const response = await fetch(`${SUPABASE_URL}/rest/v1/quotations?id=eq.${id}`, {
+    method: "PATCH",
+    headers: {
+      "Authorization": `Bearer ${TOKEN}`,
+      "apikey": SUPABASE_KEY,
+      "Content-Type": "application/json",
+      "Accept": "application/json",
+      "Prefer": "return=representation"
+    },
+    body: JSON.stringify(quotation)
+  })
+
+  const data: Send_Create_Quotation = await response.json()
+
+  return data
 }

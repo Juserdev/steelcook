@@ -13,6 +13,7 @@ export function toggle_form(
   btn.addEventListener('click', () => {
     list.classList.add('active')
     form.classList.remove('active')
+    form.dataset.mode = 'add'
   })
 
 }
