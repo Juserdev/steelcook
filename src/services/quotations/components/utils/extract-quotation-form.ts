@@ -50,7 +50,7 @@ export function extract_quotation_form(form: HTMLFormElement): Send_Create_Quota
     address: dq_client_address
   }
 
-  const dq_product_codes = formData.getAll('product_codes')
+  const dq_product_codes = formData.getAll('product_code')
   const dq_product_names = formData.getAll('product_names')
   const dq_product_descriptions = formData.getAll('product_descriptions')
   const dq_product_prices = formData.getAll('product_prices')

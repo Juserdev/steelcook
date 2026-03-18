@@ -3,6 +3,8 @@ import type { Products, Send_Quote_Product } from "@/services/products/products.
 import type { Profile, Send_Quote_Profile } from "@/services/profile/profile.types"
 import type { Quote_Settings, Send_Quote_Settings } from "../quote-settings/quote-settings-types"
 
+export type Form_Mode = 'add' | 'edit'
+
 interface Client_Snapshot extends Omit<Clients, "created_at"> { }
 interface Profile_Snapshot extends Omit<Profile, "created_at"> { }
 interface Items_Snapshot extends Omit<Products, "created_at"> {
@@ -10,6 +12,7 @@ interface Items_Snapshot extends Omit<Products, "created_at"> {
   subtotal: number
   total: number
 }
+
 export interface QS_Snapshot extends Omit<Quote_Settings, 'created_at' | 'id'> { }
 
 
@@ -33,8 +36,16 @@ export interface Quotations {
 
 
 export interface Quotations_Config {
-  quotations_container_class: { common_class: string, class: string },
-  title: { class_1: string, class_2: string, text: string, text_button: string },
+  quotations_container_class: {
+    common_class: string,
+    class: string
+  },
+  title: {
+    class_1: string,
+    class_2: string,
+    text: string,
+    text_button: string
+  },
   quotations_class: {
     file: string
     id: string
@@ -44,7 +55,23 @@ export interface Quotations_Config {
     date: string
     button: string
   }
-  add_quotation_btn: { class: string, text: string }
+  add_quotation_btn: {
+    class: string,
+    text: string
+  }
+  icons: {
+    container_class: string
+    edit: {
+      src: string
+      alt: string
+      class: string
+    }
+    remove: {
+      src: string
+      alt: string
+      class: string
+    }
+  }
 }
 
 export interface Send_Create_Quotation {

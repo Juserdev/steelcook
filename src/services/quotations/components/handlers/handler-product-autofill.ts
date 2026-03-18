@@ -22,6 +22,7 @@ export function handler_product_autofill(section: HTMLElement, products: Product
       names[i].value = product_selected.name
       descriptions[i].value = product_selected.description
       prices[i].value = String(product_selected.price)
+
     }
   })
 }
