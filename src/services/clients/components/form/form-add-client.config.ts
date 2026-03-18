@@ -2,8 +2,15 @@ import type { Form_Add } from "@/types/form.types";
 
 export const form_add_client: Form_Add = {
   form: {
-    method: "POST",
-    class: "form-add-clients"
+    method: {
+      post: 'POST',
+      edit: 'PATCH'
+    },
+    class: "form-add-clients",
+    mode: {
+      add: 'add',
+      edit: 'edit'
+    }
   },
   fields: [
     {

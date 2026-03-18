@@ -19,6 +19,9 @@
       ],
       "@utils/*": [
         "src/utils/*"
+      ],
+      "@shared/*": [
+        "src/shared/*"
       ]
     },
     "target": "ES2022",

@@ -1,10 +1,12 @@
-import type { Quotations } from "../../quotations.types";
-
-export function handle_quotation_edit_open(
-  quotations: Quotations[],
+export function handle_edit_open<T>(
+  option: T[],
   container: HTMLDivElement,
   form: HTMLFormElement,
-  onEdit: (id: string, form: HTMLFormElement, quotations: Quotations[]) => void
+  selectors: {
+    item: string,
+    list: string,
+  },
+  onEdit: (id: string, form: HTMLFormElement, option: T[]) => void
 ) {
 
   const icon_edit = container.querySelectorAll<HTMLImageElement>('.icon-edit')
@@ -13,8 +15,8 @@ export function handle_quotation_edit_open(
     edit.addEventListener('click', e => {
       const target = e.target as HTMLImageElement
 
-      const content = target.closest('.quotation-file') as HTMLDivElement
-      const list = container.querySelector<HTMLDivElement>('.list-container-quotations')
+      const content = target.closest(`.${selectors.item}`) as HTMLDivElement
+      const list = container.querySelector<HTMLDivElement>(`.${selectors.list}`)
 
       const id = content.dataset.id
       form.dataset.id = id
@@ -24,7 +26,7 @@ export function handle_quotation_edit_open(
       form.classList.remove('active')
       list.classList.add('active')
 
-      onEdit(id, form, quotations)
+      onEdit(id, form, option)
 
 
     })
