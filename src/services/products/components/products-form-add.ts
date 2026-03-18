@@ -1,7 +1,6 @@
 import { form_add_product } from "./form/form-add-product.config"
-import { handle_create_product } from "./form/form-controller"
 
-export function product_form_add(TOKEN: string, header: HTMLDivElement) {
+export function product_form(header: HTMLDivElement) {
   const form = document.createElement('form')
   form.method = form_add_product.form.method.post
   form.classList.add(form_add_product.form.class, 'active')
@@ -35,6 +34,5 @@ export function product_form_add(TOKEN: string, header: HTMLDivElement) {
 
   header.appendChild(form)
 
-  handle_create_product(TOKEN, form)
-
+  return form
 }
