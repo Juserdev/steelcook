@@ -26,6 +26,9 @@ export function clients_form(header: HTMLDivElement): HTMLFormElement {
     form.appendChild(label)
     form.appendChild(input)
 
+    const mandatory_inputs = ['name', 'phone']
+    if (mandatory_inputs.includes(input.id)) input.required = true
+
   })
 
   const btn = document.createElement('button')
