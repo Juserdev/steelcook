@@ -38,7 +38,7 @@ export const quote_settings_config = {
   add_qs_btn: {
     type: 'button',
     class: 'btn-edit-quote-settings',
-    text: 'Editar configuraciones',
+    text: 'Agregar configuraciones',
     dataset: 'add_quote_settings'
   },
   icons: {
