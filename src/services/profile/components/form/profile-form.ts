@@ -1,13 +1,13 @@
-import type { Profile } from "../../profile.types"
-import { form_profile_config } from "../config/form-profile-config"
-import { handler_create_profile } from "../handlers/handler-create-profle"
-import { fill_profile_form_fileds } from "./utils/fill-profile-form-fields"
+import { form_profile_config } from "@/services/profile/components/config/form-profile-config"
+import type { Form_Mode } from "@/services/quotations/quotations.types"
 
-export function profile_form(content: HTMLDivElement, TOKEN: string, profile: Profile[]) {
+
+export function profile_form(content: HTMLDivElement): HTMLFormElement {
 
   const form = document.createElement('form')
   form.classList.add(form_profile_config.form.class)
-  form.method = form_profile_config.form.method
+  form.method = form_profile_config.form.method.post
+  form.dataset.mode = form_profile_config.form.mode.add as Form_Mode
 
   form_profile_config.fields.forEach(profile => {
     const { label: labels, input: inputs } = profile
@@ -41,8 +41,8 @@ export function profile_form(content: HTMLDivElement, TOKEN: string, profile: Pr
 
   content.appendChild(form)
 
-  fill_profile_form_fileds(form, profile)
-
-  handler_create_profile(form, TOKEN!, profile)
+  return form
 
 }
+
+

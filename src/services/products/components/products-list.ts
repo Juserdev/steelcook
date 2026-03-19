@@ -1,6 +1,6 @@
-import type { Products } from "../products.types";
-import { products_title } from "./builders/products-title";
-import { products_title_sheets } from "./builders/products-title-sheets";
+import { products_title } from "@/services/products/components/builders/products-title"
+import { products_title_sheets } from "@/services/products/components/builders/products-title-sheets"
+import type { Products } from "@/services/products/products.types"
 
 export function products_list(products: Products[], header: HTMLDivElement) {
 
@@ -11,3 +11,4 @@ export function products_list(products: Products[], header: HTMLDivElement) {
   return list_container
 
 }
+

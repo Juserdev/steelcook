@@ -56,3 +56,20 @@ export async function editProfile(TOKEN: string, id: string, profile: Send_Profi
 
   return data
 }
+
+export async function deleteProfile(TOKEN: string, id: string) {
+
+  const response = await fetch(`${SUPABASE_URL}/rest/v1/profile?id=eq.${id}`, {
+    method: "DELETE",
+    headers: {
+      "Authorization": `Bearer ${TOKEN}`,
+      "apikey": SUPABASE_KEY,
+      "Content-Type": "application/json"
+    }
+  });
+
+  if (!response.ok) {
+    throw new Error("Error deleting profile");
+  }
+
+}

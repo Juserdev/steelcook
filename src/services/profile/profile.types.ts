@@ -36,6 +36,19 @@ export interface Profile_config {
     text: string
     dataset: string
   }
+  icons: {
+    container_class: string
+    edit: {
+      src: string
+      alt: string
+      class: string
+    }
+    remove: {
+      src: string
+      alt: string
+      class: string
+    }
+  }
 }
 
 export interface Send_Quote_Profile extends Omit<Profile, 'created_at' | 'id' | 'logo'> { }
