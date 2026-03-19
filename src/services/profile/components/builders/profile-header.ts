@@ -1,6 +1,6 @@
-import { profile_config } from "../../profile-config"
+import { profile_config } from "@/services/profile/profile-config"
 
-export function profile_title(): HTMLDivElement {
+export function profile_header(): HTMLDivElement {
   const container = document.createElement('div')
   container.classList.add(profile_config.profile_content_class.common_class, profile_config.profile_content_class.class, 'active')
 

@@ -1,7 +1,7 @@
-import { profile_config, profile_titles_sheets } from "../../profile-config";
-import type { Profile } from "../../profile.types";
+import { profile_config, profile_titles_sheets } from "@/services/profile/profile-config"
+import type { Profile } from "@/services/profile/profile.types"
 
-export function profile_title_sheet(company_profile: Profile[]) {
+export function profile_titles(company_profile: Profile[]) {
   const list_container_profile = document.createElement('div')
   list_container_profile.classList.add('list-container-profile')
 
@@ -26,4 +26,5 @@ export function profile_title_sheet(company_profile: Profile[]) {
   });
 
   return list_container_profile
+
 }

@@ -1,3 +1,4 @@
+import { icons } from "@/types/icons.config";
 import type { Titles_Sheets } from "@/types/ui.types";
 import type { Profile_config } from "./profile.types";
 
@@ -13,7 +14,7 @@ export const profile_config: Profile_config = {
   },
   logo: 'profile-logo',
   profile_class: {
-    file: 'profile-logo',
+    file: 'profile-file',
     company: 'profile-company',
     company_id: 'profile-id',
     email: 'profile-email',
@@ -25,6 +26,19 @@ export const profile_config: Profile_config = {
     class: 'btn-edit-profile',
     text: 'Agregar o editar perfil',
     dataset: 'add_profile'
+  },
+  icons: {
+    container_class: 'conatiner-profile-icons',
+    edit: {
+      src: icons.edit,
+      alt: 'icon edit',
+      class: 'icon-edit'
+    },
+    remove: {
+      src: icons.remove,
+      alt: 'icon delete',
+      class: 'icon-delete'
+    }
   }
 }
 

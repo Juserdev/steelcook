@@ -2,8 +2,15 @@ import type { Form_Add } from "@/types/form.types";
 
 export const form_profile_config: Form_Add = {
   form: {
-    method: "POST",
-    class: 'form-add-profile'
+    method: {
+      post: "POST",
+      edit: 'PATCH'
+    },
+    class: 'form-add-profile',
+    mode: {
+      add: 'add',
+      edit: 'edit',
+    }
   },
   fields: [
     {
