@@ -1,6 +1,6 @@
 import { buttons } from '@/features/dashboard/sidebar/sidebar.config'
-import type { Profile } from '@/services/profile/profile.types'
 import '@/features/dashboard/sidebar/sidebar.css'
+import type { Profile } from '@/services/profile/profile.types'
 
 export function sidebar(profile: Profile[]): HTMLDivElement {
   const sidebar = document.createElement("div")
@@ -8,7 +8,7 @@ export function sidebar(profile: Profile[]): HTMLDivElement {
 
   const logo = document.createElement("img")
   logo.classList.add("logo")
-  logo.src = `${profile[0]!.logo}`
+  logo.src = profile[0]?.logo ?? ''
 
   sidebar.appendChild(logo)
 

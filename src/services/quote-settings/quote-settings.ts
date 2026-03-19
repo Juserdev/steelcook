@@ -14,7 +14,6 @@ export function content_quote_settings(TOKEN: string, quote_settings: Quote_Sett
   const qs_header = quote_settings_header()
   const list = quote_settings_list(quote_settings, qs_header)
   const form = settings_form(qs_header)
-  console.log(list)
 
   handle_submit(TOKEN, form, extract_quote_settings, createQuoteSettings, editQuoteSettings)
   handle_edit_open(quote_settings, qs_header, form, { item: 'qs-file', list: 'list-qs-file' }, fill_quote_settings_form)
