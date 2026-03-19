@@ -1,5 +1,6 @@
 import { form_add_client } from '@/services/clients/components/form/form-add-client.config'
 import type { Form_Mode } from '@/services/quotations/quotations.types'
+import { add_required_inputs } from '@/utils/add-required-inputs'
 
 export function clients_form(header: HTMLDivElement): HTMLFormElement {
 
@@ -26,8 +27,7 @@ export function clients_form(header: HTMLDivElement): HTMLFormElement {
     form.appendChild(label)
     form.appendChild(input)
 
-    const mandatory_inputs = ['name', 'phone']
-    if (mandatory_inputs.includes(input.id)) input.required = true
+    add_required_inputs(input, 'name', 'phone')
 
   })
 
