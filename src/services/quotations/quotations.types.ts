@@ -96,3 +96,8 @@ export interface Ids_Required {
   total_id_required: string[]
 }
 
+export interface Ids_Readonly {
+  products_id_readonly: string[]
+  totals_id_readonly: string[]
+}
+
