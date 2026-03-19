@@ -27,6 +27,8 @@ export function profile_form(content: HTMLDivElement): HTMLFormElement {
     input.placeholder = inputs.placeholder
     input.classList.add(inputs.class.common, inputs.class.specific)
 
+    if (input.id === 'profile_company') input.required = true
+
     container.appendChild(label)
     container.appendChild(input)
     form.appendChild(container)
@@ -41,8 +43,7 @@ export function profile_form(content: HTMLDivElement): HTMLFormElement {
 
   content.appendChild(form)
 
+
   return form
 
 }
-
-
