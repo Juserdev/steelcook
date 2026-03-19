@@ -7,7 +7,7 @@ export function profile_title_sheet(company_profile: Profile[]) {
 
   const profile_logo = document.createElement('img')
   profile_logo.classList.add(profile_config.logo)
-  profile_logo.src = company_profile[0].logo!
+  profile_logo.src = company_profile[0]?.logo ?? ''
 
   list_container_profile.appendChild(profile_logo)
 

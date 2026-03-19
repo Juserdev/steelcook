@@ -9,10 +9,10 @@ export function fill_profile_form_fileds(form: HTMLFormElement, profile: Profile
   const address = form.elements.namedItem('profile_address') as HTMLInputElement
   const logo = form.elements.namedItem('profile_logo') as HTMLInputElement
 
-  company.value = profile[0].company
-  id.value = String(profile[0].company_id)
-  email.value = profile[0].email
-  phone.value = String(profile[0].phone)
-  address.value = profile[0].address
-  logo.value = profile[0].logo ?? ''
+  company.value = profile[0]?.company ?? ''
+  id.value = profile[0]?.company_id != null ? String(profile[0].company_id) : ''
+  email.value = profile[0]?.email ?? ''
+  phone.value = profile[0]?.phone != null ? String(profile[0].phone) : ''
+  address.value = profile[0]?.address ?? ''
+  logo.value = profile[0]?.logo ?? ''
 }
