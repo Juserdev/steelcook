@@ -1,6 +1,7 @@
 import type { Form_Field } from "@/types/form.types"
+import { add_required_inputs } from "@/utils/add-required-inputs"
 
-export function create_form_fields(form: Form_Field[], section: HTMLElement, class_id: string) {
+export function create_form_fields(form: Form_Field[], section: HTMLElement, class_id: string, ids: string[]) {
   const container = document.createElement("div")
   container.classList.add(`container-${class_id}-aq`)
 
@@ -18,12 +19,15 @@ export function create_form_fields(form: Form_Field[], section: HTMLElement, cla
     input.name = inputs.name
     input.placeholder = inputs.placeholder
 
+    add_required_inputs(input, ids)
+
     if (inputs.list) {
       input.setAttribute('list', inputs.list)
 
       const datalist = document.createElement('datalist')
       datalist.id = inputs.list
       datalist.classList.add(inputs.list)
+
 
       container.appendChild(label)
       container.appendChild(input)
