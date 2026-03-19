@@ -19,6 +19,7 @@ export function product_form(header: HTMLDivElement) {
     input.name = inputs.name
     input.placeholder = inputs.placeholder
     input.classList.add(inputs.class.specific, inputs.class.common)
+    input.required = true
 
     form.appendChild(label)
     form.appendChild(input)

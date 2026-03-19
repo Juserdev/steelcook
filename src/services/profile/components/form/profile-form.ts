@@ -1,5 +1,6 @@
 import { form_profile_config } from "@/services/profile/components/config/form-profile-config"
 import type { Form_Mode } from "@/services/quotations/quotations.types"
+import { add_required_inputs } from "@/utils/add-required-inputs"
 
 
 export function profile_form(content: HTMLDivElement): HTMLFormElement {
@@ -27,12 +28,12 @@ export function profile_form(content: HTMLDivElement): HTMLFormElement {
     input.placeholder = inputs.placeholder
     input.classList.add(inputs.class.common, inputs.class.specific)
 
-    const mandatory_inputs = ['profile_company']
-    if (mandatory_inputs.includes(input.id)) input.required = true
+    add_required_inputs(input, 'profile_company')
 
     container.appendChild(label)
     container.appendChild(input)
     form.appendChild(container)
+
   })
 
   const button = document.createElement('button')
