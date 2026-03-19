@@ -8,6 +8,7 @@ import type { Quote_Settings } from '@/services/quote-settings/quote-settings-ty
 import { handle_delete_from_list } from '@/shared/handlers/handle-delete-from-list'
 import { handle_edit_open } from '@/shared/handlers/handle-edit-open'
 import { handle_submit } from '@/shared/handlers/handle-submit'
+import { toggle_add_btn_visibility } from '@/utils/toggle-add-btn-visibility'
 
 export function content_quote_settings(TOKEN: string, quote_settings: Quote_Settings[]): HTMLDivElement {
 
@@ -19,5 +20,8 @@ export function content_quote_settings(TOKEN: string, quote_settings: Quote_Sett
   handle_edit_open(quote_settings, qs_header, form, { item: 'qs-file', list: 'list-qs-file' }, fill_quote_settings_form)
   handle_delete_from_list(TOKEN, list, 'qs', deleteQuoteSettings)
 
+  toggle_add_btn_visibility(qs_header, quote_settings, 'add_quote_settings')
+
   return qs_header
+
 }
