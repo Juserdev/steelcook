@@ -88,3 +88,11 @@ export interface Send_Create_Quotation {
   quote_settings: Send_Quote_Settings
 }
 
+export interface Ids_Required {
+  profile_id_required: string[]
+  settings_id_required: string[]
+  clients_id_required: string[]
+  products_id_required: string[]
+  total_id_required: string[]
+}
+
