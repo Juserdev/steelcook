@@ -26,5 +26,4 @@ export async function get_public_quotation(public_id: string) {
     console.error(error)
   }
 
-
 }

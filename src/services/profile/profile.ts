@@ -19,8 +19,6 @@ export function content_profile(TOKEN: string, profile: Profile[]): HTMLDivEleme
   const list = profile_list(profile, profile_container)
   const form = profile_form(profile_container)
 
-  console.log(list)
-
   handle_submit(TOKEN, form, extract_profile_form, createProfile, editProfile)
   handle_edit_open(profile, profile_container, form, { item: 'profile-file', list: 'list-container-profile' }, fill_profile_form)
   handle_delete_from_list(TOKEN, list, 'profile', deleteProfile)
