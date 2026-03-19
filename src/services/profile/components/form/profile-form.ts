@@ -27,7 +27,8 @@ export function profile_form(content: HTMLDivElement): HTMLFormElement {
     input.placeholder = inputs.placeholder
     input.classList.add(inputs.class.common, inputs.class.specific)
 
-    if (input.id === 'profile_company') input.required = true
+    const mandatory_inputs = ['profile_company']
+    if (mandatory_inputs.includes(input.id)) input.required = true
 
     container.appendChild(label)
     container.appendChild(input)
