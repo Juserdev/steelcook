@@ -2,7 +2,13 @@ import type { Form_Field } from "@/types/form.types"
 import { add_readonly_inputs } from "@/utils/add-readOnly-inputs"
 import { add_required_inputs } from "@/utils/add-required-inputs"
 
-export function create_form_fields(form: Form_Field[], section: HTMLElement, class_id: string, required_ids: string[], readOnly_ids?: string[]) {
+export function create_form_fields(
+  form: Form_Field[],
+  section: HTMLElement,
+  class_id: string,
+  required_ids: string[],
+  readOnly_ids?: string[]
+) {
   const container = document.createElement("div")
   container.classList.add(`container-${class_id}-aq`)
 
@@ -36,7 +42,6 @@ export function create_form_fields(form: Form_Field[], section: HTMLElement, cla
       container.appendChild(datalist)
       return
     }
-
 
     input.classList.add(inputs.class.specific, inputs.class.common)
 

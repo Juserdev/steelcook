@@ -107,5 +107,9 @@ export function quotation_form(
 
   header.appendChild(form)
 
+  // input_name_prices.quotation.forEach(name => {
+  //   if (input.name === name) input.dataset.price = 'price'
+  // })
+
   return form
 }
