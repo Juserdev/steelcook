@@ -24,6 +24,8 @@ export function product_form(header: HTMLDivElement) {
     form.appendChild(label)
     form.appendChild(input)
 
+    if (input.name === 'price') input.dataset.input_price = 'input_price'
+
   })
 
   const btn = document.createElement('button')
