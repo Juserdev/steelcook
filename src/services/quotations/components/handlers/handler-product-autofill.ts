@@ -1,4 +1,5 @@
 import type { Products } from "@/services/products/products.types"
+import { format_thousands_with_dots } from "@/utils/format-numeric-input"
 
 export function handler_product_autofill(section: HTMLElement, products: Products[]) {
 
@@ -21,7 +22,7 @@ export function handler_product_autofill(section: HTMLElement, products: Product
 
       names[i].value = product_selected.name
       descriptions[i].value = product_selected.description
-      prices[i].value = String(product_selected.price)
+      prices[i].value = format_thousands_with_dots(String(product_selected.price))
 
     }
   })

@@ -1,3 +1,5 @@
+import { ids_readonly } from "@/services/quotations/components/config/ids-readonly.config"
+import { ids_required } from "@/services/quotations/components/config/ids-required.config"
 import { form_aq } from "@/services/quotations/components/config/quotation-form-aq.config"
 import { form_product_aq } from "@/services/quotations/components/config/quotation-product.config"
 import { create_form_fields } from "@/services/quotations/components/form/builders/create-form-fields"
@@ -15,7 +17,7 @@ export function fill_quotation_form(id: string, form: HTMLFormElement, quotation
 
   const items = quotation.items
 
-  for (let i = 1; i < items.length; i++) { create_form_fields(form_product_aq, section, 'product') }
+  for (let i = 1; i < items.length; i++) { create_form_fields(form_product_aq, section, 'product', ids_required.products_id_required, ids_readonly.products_id_readonly) }
 
 
   const fields = {

@@ -31,8 +31,6 @@ export function content_quotations(
 
   input_to_dataset_price(form, input_name_prices)
 
-
-
   handle_submit(TOKEN, form, extract_quotation_form, createQuotation, editQuotation)
   handle_edit_open(quoatations, quotation_header, form, { item: 'quotation-file', list: 'list-container-quotations' }, fill_quotation_form)
   handle_delete_from_list(TOKEN, list, 'quotation', deleteQuotation)

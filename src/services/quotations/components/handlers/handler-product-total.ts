@@ -1,3 +1,5 @@
+import { format_thousands_with_dots } from "@/utils/format-numeric-input"
+
 export function handler_product_total(section: HTMLElement, section_total: HTMLElement) {
 
   section.addEventListener('input', (e) => {
@@ -17,15 +19,15 @@ export function handler_product_total(section: HTMLElement, section_total: HTMLE
 
       if (!quantites || !price || !totals) return
 
-      const total = String(+price.value * +quantites.value)
-      totals.value = String(total)
+      const total = String(+price.value.split('.').join('') * +quantites.value)
+      totals.value = format_thousands_with_dots(String(total))
 
       const total_subtotal = section.querySelectorAll<HTMLInputElement>('[name="product_totals"]')
-      total_subtotal.forEach(t => { result += +t.value })
+      total_subtotal.forEach(t => { result += +t.value.split('.').join('') })
 
 
       const subtotal = section_total.querySelector<HTMLInputElement>('[name="total_subtotal"]')
-      if (subtotal) subtotal.value = String(result)
+      if (subtotal) subtotal.value = format_thousands_with_dots(String(result))
 
     }
 
