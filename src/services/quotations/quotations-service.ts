@@ -19,6 +19,22 @@ export async function getQuotations(TOKEN: string) {
 
 export async function createQuotation(TOKEN: string, quotation: Send_Create_Quotation) {
 
+  const checkResponse = await fetch(`${SUPABASE_URL}/rest/v1/quotations?quotation_id=eq.${quotation.quotation_id}`, {
+    method: "GET",
+    headers: {
+      "Authorization": `Bearer ${TOKEN}`,
+      "apikey": SUPABASE_KEY,
+      "Content-Type": "application/json",
+      "Accept": "application/json"
+    }
+  });
+
+  const existingProducts: Quotations[] = await checkResponse.json();
+
+  if (existingProducts.length > 0) {
+    throw new Error("El código de la cotizacion ya existe");
+  }
+
   const response = await fetch(`${SUPABASE_URL}/rest/v1/quotations`, {
     method: "POST",
     headers: {
@@ -31,9 +47,10 @@ export async function createQuotation(TOKEN: string, quotation: Send_Create_Quot
   });
 
   if (!response.ok) {
-    const errorText = await response.text()
-    console.error('supabase error response: ', errorText)
-    throw new Error(`Èrror creating quotation: ${errorText}`)
+    const error = await response.json()
+    console.error('supabase error:', error)
+
+    throw new Error(error.message || "Error creating quotation")
   }
 
 

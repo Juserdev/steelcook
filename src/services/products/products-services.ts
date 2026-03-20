@@ -19,6 +19,23 @@ export async function getProducts(TOKEN: string) {
 
 export async function createProduct(TOKEN: string, product: Create_Product) {
 
+  const checkResponse = await fetch(`${SUPABASE_URL}/rest/v1/products?code=eq.${product.code}`, {
+    method: "GET",
+    headers: {
+      "Authorization": `Bearer ${TOKEN}`,
+      "apikey": SUPABASE_KEY,
+      "Content-Type": "application/json",
+      "Accept": "application/json"
+    }
+  });
+
+  const existingProducts: Products[] = await checkResponse.json();
+
+  if (existingProducts.length > 0) {
+    throw new Error("El código del producto ya existe");
+  }
+
+
   const response = await fetch(`${SUPABASE_URL}/rest/v1/products`, {
     method: "POST",
     headers: {
@@ -31,7 +48,10 @@ export async function createProduct(TOKEN: string, product: Create_Product) {
   });
 
   if (!response.ok) {
-    throw new Error("Error creating product");
+    const error = await response.json()
+    console.error('supabase error:', error)
+
+    throw new Error(error.message || "Error creating product")
   }
 
   const data: Products[] = await response.json();

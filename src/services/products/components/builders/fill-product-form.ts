@@ -1,5 +1,6 @@
 import { form_add_product } from "@/services/products/components/form/form-add-product.config";
 import type { Products } from "@/services/products/products.types";
+import { format_thousands_with_dots } from "@/utils/format-numeric-input";
 
 export function fill_product_form(
   id: string,
@@ -25,6 +26,6 @@ export function fill_product_form(
   fields.code!.value = product.code ?? ''
   fields.name!.value = product.name ?? ''
   fields.description!.value = product.description ?? ''
-  fields.price!.value = String(product.price) ?? ''
+  fields.price!.value = format_thousands_with_dots(String(product.price)) ?? ''
 
 }
