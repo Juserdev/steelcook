@@ -19,6 +19,22 @@ export async function getClients(TOKEN: string) {
 
 export async function createClient(TOKEN: string, client: Create_Client) {
 
+  const checkResponse = await fetch(`${SUPABASE_URL}/rest/v1/clients?client_id=eq.${client.client_id}`, {
+    method: "GET",
+    headers: {
+      "Authorization": `Bearer ${TOKEN}`,
+      "apikey": SUPABASE_KEY,
+      "Content-Type": "application/json",
+      "Accept": "application/json"
+    }
+  });
+
+  const existingProducts: Clients[] = await checkResponse.json();
+
+  if (existingProducts.length > 0) {
+    throw new Error("El código del producto ya existe");
+  }
+
   const response = await fetch(`${SUPABASE_URL}/rest/v1/clients`, {
     method: "POST",
     headers: {
@@ -31,7 +47,10 @@ export async function createClient(TOKEN: string, client: Create_Client) {
   });
 
   if (!response.ok) {
-    throw new Error("Error creating client");
+    const error = await response.json()
+    console.error('supabase error:', error)
+
+    throw new Error(error.message || "Error creating client")
   }
 
   const data: Clients[] = await response.json();

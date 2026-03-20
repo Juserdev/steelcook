@@ -1,3 +1,4 @@
+import { format_thousands_with_dots } from "@/utils/format-numeric-input";
 import { products_config } from "../../products-config";
 import type { Products } from "../../products.types";
 
@@ -14,7 +15,7 @@ export function products_title_sheets(products: Products[], container: HTMLDivEl
     products_file.dataset.code = product.code
     products_file.dataset.name = product.name
     products_file.dataset.description = product.description
-    products_file.dataset.price = String(product.price)
+    products_file.dataset.price = format_thousands_with_dots(String(product.price))
 
     const product_code = document.createElement('span')
     product_code.classList.add(products_config.products_class.code)
@@ -30,7 +31,7 @@ export function products_title_sheets(products: Products[], container: HTMLDivEl
 
     const product_price = document.createElement('span')
     product_price.classList.add(products_config.products_class.price)
-    product_price.textContent = product.price.toString()
+    product_price.textContent = String(product.price) ?? ''
 
     const icons_container = document.createElement('div')
     icons_container.classList.add(products_config.icons.container_class)
