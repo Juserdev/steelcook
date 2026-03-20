@@ -4,6 +4,7 @@ import { form_aq } from "@/services/quotations/components/config/quotation-form-
 import { form_product_aq } from "@/services/quotations/components/config/quotation-product.config"
 import { create_form_fields } from "@/services/quotations/components/form/builders/create-form-fields"
 import type { Quotations } from "@/services/quotations/quotations.types"
+import { format_thousands_with_dots } from "@/utils/format-numeric-input"
 
 
 export function fill_quotation_form(id: string, form: HTMLFormElement, quotations: Quotations[]) {
@@ -101,17 +102,17 @@ export function fill_quotation_form(id: string, form: HTMLFormElement, quotation
     items_fields.code[i].value = item.code ?? ''
     items_fields.name[i].value = item.name ?? ''
     items_fields.description[i].value = item.description ?? ''
-    items_fields.price[i].value = String(item.price) ?? ''
+    items_fields.price[i].value = format_thousands_with_dots(String(item.price)) ?? ''
     items_fields.quantity[i].value = String(item.quantity) ?? ''
-    items_fields.total[i].value = String(item.total) ?? ''
+    items_fields.total[i].value = format_thousands_with_dots(String(item.total)) ?? ''
   })
 
   total_fields.total_code!.value = quotation.quotation_id ?? ''
-  total_fields.subtotal!.value = String(quotation.subtotal) ?? ''
-  total_fields.discount!.value = String(quotation.discount) ?? ''
+  total_fields.subtotal!.value = format_thousands_with_dots(String(quotation.subtotal)) ?? ''
+  total_fields.discount!.value = format_thousands_with_dots(String(quotation.discount)) ?? ''
   total_fields.net!.value = String(quotation.net) ?? ''
   total_fields.tax_rate!.value = String(quotation.tax_rate) ?? ''
-  total_fields.tax_amount!.value = String(quotation.tax_amount) ?? ''
-  total_fields.total!.value = String(quotation.total) ?? ''
+  total_fields.tax_amount!.value = format_thousands_with_dots(String(quotation.tax_amount)) ?? ''
+  total_fields.total!.value = format_thousands_with_dots(String(quotation.total)) ?? ''
 
 }
