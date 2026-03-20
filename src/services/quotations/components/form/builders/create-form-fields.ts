@@ -27,6 +27,7 @@ export function create_form_fields(
     input.placeholder = inputs.placeholder
 
     add_required_inputs(input, required_ids)
+
     if (readOnly_ids) add_readonly_inputs(input, readOnly_ids)
 
     if (inputs.list) {
