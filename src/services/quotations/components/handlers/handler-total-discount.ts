@@ -1,3 +1,6 @@
+import { format_thousands_with_dots } from "@/utils/format-numeric-input"
+import { parce_formatted_number } from "@/utils/parce-formatted-number"
+
 export function handler_total_discount(section: HTMLElement) {
 
   section.addEventListener('input', e => {
@@ -14,9 +17,9 @@ export function handler_total_discount(section: HTMLElement) {
     const input = input_subtotal.value
     const discount = input_discount.value
 
-    const subtotal = String(+input - +discount)
+    const subtotal = String(parce_formatted_number(input) - parce_formatted_number(discount))
 
-    input_neto.value = subtotal
+    input_neto.value = format_thousands_with_dots(subtotal)
 
   })
 }
