@@ -1,4 +1,5 @@
 import type { Create_Product } from "@/services/products/products.types"
+import { parce_formatted_number } from "@/utils/parce-formatted-number"
 
 export function extract_product_form(form: HTMLFormElement) {
 
@@ -13,7 +14,7 @@ export function extract_product_form(form: HTMLFormElement) {
     code: code,
     name: name,
     description: description,
-    price: Number(price)
+    price: parce_formatted_number(price)
   }
 
   return new_product
