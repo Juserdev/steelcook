@@ -26,7 +26,7 @@ export function quotation_title_sheets(quotations: Quotations[], container: HTML
 
     const quotation_total = document.createElement('span')
     quotation_total.classList.add(quotations_config.quotations_class.total)
-    quotation_total.textContent = quotation.total.toString()
+    quotation_total.textContent = String(quotation.total) ?? ''
 
     const quotation_date = document.createElement('span')
     quotation_date.classList.add(quotations_config.quotations_class.date)

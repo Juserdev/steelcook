@@ -5,6 +5,7 @@ import type { Send_Quote_Profile } from "@/services/profile/profile.types"
 
 import type { Send_Quote_Client } from "@/services/clients/clients.types"
 import type { Send_Quote_Settings } from "@/services/quote-settings/quote-settings-types"
+import { parce_formatted_number } from "@/utils/parce-formatted-number"
 import type { Send_Create_Quotation } from "../../quotations.types"
 
 export function extract_quotation_form(form: HTMLFormElement): Send_Create_Quotation {
@@ -63,19 +64,19 @@ export function extract_quotation_form(form: HTMLFormElement): Send_Create_Quota
     code: String(dq_product_codes[i]),
     name: String(dq_product_names[i]),
     description: String(dq_product_descriptions[i]),
-    price: Number(dq_product_prices[i]),
-    quantity: Number(dq_product_quantites[i]),
-    total: Number(dq_product_totals[i])
+    price: parce_formatted_number(String(dq_product_prices[i])),
+    quantity: parce_formatted_number(String(dq_product_quantites[i])),
+    total: parce_formatted_number(String(dq_product_totals[i]))
   }))
 
   const dq_quote_code = String(formData.get('total_code'))
 
-  const dq_total_subtotal = Number(formData.get('total_subtotal'))
+  const dq_total_subtotal = String(formData.get('total_subtotal'))
   const dq_total_discount = Number(formData.get('total_discount'))
-  const dq_total_net = Number(formData.get('total_net'))
+  const dq_total_net = String(formData.get('total_net'))
   const dq_total_tax_rate = Number(formData.get('total_tax_rate'))
   const dq_total_tax_amount = Number(formData.get('total_tax_amount'))
-  const dq_total_total = Number(formData.get('total_total'))
+  const dq_total_total = String(formData.get('total_total'))
 
   const new_quote: Send_Create_Quotation = {
     quotation_id: dq_quote_code,
@@ -83,12 +84,12 @@ export function extract_quotation_form(form: HTMLFormElement): Send_Create_Quota
     quote_settings: dq_settings,
     client_snapshot: dq_clients,
     items: dq_items,
-    subtotal: dq_total_subtotal,
+    subtotal: parce_formatted_number(dq_total_subtotal),
     discount: dq_total_discount,
-    net: dq_total_net,
+    net: parce_formatted_number(dq_total_net),
     tax_rate: dq_total_tax_rate,
     tax_amount: dq_total_tax_amount,
-    total: dq_total_total
+    total: parce_formatted_number(dq_total_total)
   }
 
   return new_quote
