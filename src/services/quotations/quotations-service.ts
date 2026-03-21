@@ -91,7 +91,7 @@ export async function deleteQuotation(TOKEN: string, id: string) {
   });
 
   if (!response.ok) {
-    throw new Error("Error deleting products");
+    throw new Error("Error deleting quotation");
   }
 
 }
