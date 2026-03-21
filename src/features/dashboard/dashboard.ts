@@ -20,7 +20,7 @@ import { quotations_toggle } from "@/services/quotations/components/quotations-t
 import { quote_settings_toggle } from "@/services/quote-settings/components/quote-settings-toggle"
 import { content_quote_settings } from "@/services/quote-settings/quote-settings"
 import '@/styles/dashboard.css'
-import { format_input_prices } from "@/utils/format-input-prices"
+import { init_input_behaviors } from "@/utils/format-input-prices"
 
 const TOKEN = localStorage.getItem('access_token')
 
@@ -63,5 +63,8 @@ product_toggle()
 quotations_toggle()
 profile_toggle()
 quote_settings_toggle()
-format_input_prices(right_container)
+init_input_behaviors(right_container)
+
+
+
 

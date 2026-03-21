@@ -27,7 +27,10 @@ export function clients_form(header: HTMLDivElement): HTMLFormElement {
     form.appendChild(label)
     form.appendChild(input)
 
-    add_required_inputs(input, 'name', 'phone')
+    const ids = ['name', 'phone']
+    add_required_inputs(input, ids)
+
+    if (input.name === 'phone') input.dataset.number = 'number'
 
   })
 

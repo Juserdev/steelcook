@@ -1,5 +1,6 @@
+import { numeric_fields, type Numeric_Fields } from "@/services/quotations/components/config/numeric-fields.config"
 import type { Form_Field } from "@/types/form.types"
-import { add_readonly_inputs } from "@/utils/add-readOnly-inputs"
+import { add_readonly_inputs } from "@/utils/add-readonly-inputs"
 import { add_required_inputs } from "@/utils/add-required-inputs"
 
 export function create_form_fields(
@@ -29,6 +30,8 @@ export function create_form_fields(
     add_required_inputs(input, required_ids)
 
     if (readOnly_ids) add_readonly_inputs(input, readOnly_ids)
+
+    if (numeric_fields.includes(input.name as Numeric_Fields)) { input.dataset.number = 'number' }
 
     if (inputs.list) {
       input.setAttribute('list', inputs.list)

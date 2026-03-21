@@ -28,7 +28,10 @@ export function profile_form(content: HTMLDivElement): HTMLFormElement {
     input.placeholder = inputs.placeholder
     input.classList.add(inputs.class.common, inputs.class.specific)
 
-    add_required_inputs(input, 'profile_company')
+    const ids = ['profile_company']
+    add_required_inputs(input, ids)
+
+    if (input.name === 'profile_phone') input.dataset.number = 'number'
 
     container.appendChild(label)
     container.appendChild(input)
