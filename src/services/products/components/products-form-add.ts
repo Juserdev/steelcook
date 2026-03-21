@@ -24,7 +24,10 @@ export function product_form(header: HTMLDivElement) {
     form.appendChild(label)
     form.appendChild(input)
 
-    if (input.name === 'price') input.dataset.input_price = 'input_price'
+    if (input.name === 'price') {
+      input.dataset.input_price = 'input_price'
+      input.dataset.number = 'number'
+    }
 
   })
 
