@@ -1,6 +1,6 @@
 import { form_profile_config } from "@/app/config/profile/form-profile.config"
 import type { Form_Mode } from "@/app/types/quotations/quotations.types"
-import { add_required_inputs } from "@/utils/add-required-inputs"
+import { add_required_inputs } from "@/app/shared/utils/form/add-required-inputs"
 
 
 export function profile_form(content: HTMLDivElement): HTMLFormElement {

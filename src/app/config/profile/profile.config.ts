@@ -1,5 +1,5 @@
-import { icons } from "@/types/icons.config";
-import type { Titles_Sheets } from "@/types/ui.types";
+import { icons } from "@/app/shared/config/icons.config";
+import type { Titles_Sheets } from "@/app/shared/types/ui.types";
 import type { Profile_config } from "../../types/profile/profile.types";
 
 export const profile_config: Profile_config = {

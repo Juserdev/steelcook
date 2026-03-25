@@ -1,4 +1,4 @@
-import type { Dataset } from "@/types/form.types";
+import type { Dataset } from "@/app/shared/types/form.types";
 
 export const products_dataset = {
   data_name: {

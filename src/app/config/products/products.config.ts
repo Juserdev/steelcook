@@ -1,6 +1,6 @@
-import type { Titles_Sheets } from "@/types/ui.types"
+import type { Titles_Sheets } from "@/app/shared/types/ui.types"
 import type { Products_Config } from "../../types/products/products.types"
-import { icons } from "@/types/icons.config"
+import { icons } from "@/app/shared/config/icons.config"
 
 export const products_config: Products_Config = {
   products_content_class: {

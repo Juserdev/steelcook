@@ -1,6 +1,6 @@
 import type { Clients_config } from "@/app/types/clients/clients.types";
-import { icons } from "@/types/icons.config";
-import type { Titles_Sheets } from "@/types/ui.types";
+import { icons } from "@/app/shared/config/icons.config";
+import type { Titles_Sheets } from "@/app/shared/types/ui.types";
 
 export const clients_config: Clients_config = {
   clients_container_class: {

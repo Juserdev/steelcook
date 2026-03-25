@@ -2,9 +2,9 @@
 import { createClient, deleteClient, editClient } from '@/app/services/clients/clients-services';
 import type { Clients } from '@/app/types/clients/clients.types';
 import { extract_client_form } from '@/app/utils/clients/extract-client-form';
-import { handle_delete_from_list } from '@/shared/handlers/handle-delete-from-list';
-import { handle_edit_open } from '@/shared/handlers/handle-edit-open';
-import { handle_submit } from '@/shared/handlers/handle-submit';
+import { handle_delete_from_list } from '@/app/shared/handlers/handle-delete-from-list';
+import { handle_edit_open } from '@/app/shared/handlers/handle-edit-open';
+import { handle_submit } from '@/app/shared/handlers/handle-submit';
 import { clients_header } from '../../builders/clients/clients-dashboard';
 import { clients_form } from '../../builders/clients/clients-form';
 import { clients_list } from '../../builders/clients/clients-list';

@@ -1,6 +1,6 @@
 import { products_config } from "@/app/config/products/products.config";
 import type { Products } from "@/app/types/products/products.types";
-import { format_thousands_with_dots } from "@/utils/format-numeric-input";
+import { format_thousands_with_dots } from "@/app/shared/utils/format/format-numeric-input";
 
 
 export function products_title_sheets(products: Products[], container: HTMLDivElement) {

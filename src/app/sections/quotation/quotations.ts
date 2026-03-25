@@ -10,10 +10,10 @@ import { extract_quotation_form } from "@/app/utils/quotation/extract-quotation-
 import { input_to_dataset_price } from "@/app/utils/quotation/input-to-dataset-price"
 import { createQuotation, deleteQuotation, editQuotation } from "@/app/services/quotation/quotations-service"
 import type { Quotations } from "@/services/quotations/quotations.types"
-import type { Quote_Settings } from "@/services/quote-settings/quote-settings-types"
-import { handle_delete_from_list } from "@/shared/handlers/handle-delete-from-list"
-import { handle_edit_open } from "@/shared/handlers/handle-edit-open"
-import { handle_submit } from "@/shared/handlers/handle-submit"
+import type { Quote_Settings } from "@/app/types/quote-settings/quote-settings.types"
+import { handle_delete_from_list } from "@/app/shared/handlers/handle-delete-from-list"
+import { handle_edit_open } from "@/app/shared/handlers/handle-edit-open"
+import { handle_submit } from "@/app/shared/handlers/handle-submit"
 
 export function content_quotations(
   TOKEN: string,

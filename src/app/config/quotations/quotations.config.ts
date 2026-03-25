@@ -1,5 +1,5 @@
-import { icons } from "@/types/icons.config";
-import type { Titles_Sheets } from "@/types/ui.types";
+import { icons } from "@/app/shared/config/icons.config";
+import type { Titles_Sheets } from "@/app/shared/types/ui.types";
 import type { Quotations_Config } from "@/app/types/quotations/quotations.types";
 
 

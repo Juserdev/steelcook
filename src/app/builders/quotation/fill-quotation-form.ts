@@ -5,7 +5,7 @@ import { form_aq } from "@/app/config/quotations/quotation-form-aq.config"
 import { form_product_aq } from "@/app/config/quotations/quotation-product.config"
 import type { Quotations } from "@/app/types/quotations/quotations.types"
 
-import { format_thousands_with_dots } from "@/utils/format-numeric-input"
+import { format_thousands_with_dots } from "@/app/shared/utils/format/format-numeric-input"
 
 
 export function fill_quotation_form(id: string, form: HTMLFormElement, quotations: Quotations[]) {

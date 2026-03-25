@@ -5,9 +5,9 @@ import { products_list } from "@/app/builders/products/products-list"
 import { extract_product_form } from "@/app/utils/products/extract_product_form"
 
 import type { Products } from "@/app/types/products/products.types"
-import { handle_delete_from_list } from "@/shared/handlers/handle-delete-from-list"
-import { handle_edit_open } from "@/shared/handlers/handle-edit-open"
-import { handle_submit } from "@/shared/handlers/handle-submit"
+import { handle_delete_from_list } from "@/app/shared/handlers/handle-delete-from-list"
+import { handle_edit_open } from "@/app/shared/handlers/handle-edit-open"
+import { handle_submit } from "@/app/shared/handlers/handle-submit"
 import { products_header } from "@/app/builders/products/products-dashbaord"
 import { createProduct, deleteProducts, editProducts } from "@/app/services/products/products-services"
 

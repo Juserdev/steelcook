@@ -4,8 +4,8 @@ import type { Send_Quote_Product } from "@/app/types/products/products.types"
 import type { Send_Quote_Profile } from "@/app/types/profile/profile.types"
 
 import type { Send_Quote_Client } from "@/app/types/clients/clients.types"
-import type { Send_Quote_Settings } from "@/services/quote-settings/quote-settings-types"
-import { parce_formatted_number } from "@/utils/parce-formatted-number"
+import type { Send_Quote_Settings } from "@/app/types/quote-settings/quote-settings.types"
+import { parce_formatted_number } from "@/app/shared/utils/format/parce-formatted-number"
 import type { Send_Create_Quotation } from "@/app/types/quotations/quotations.types"
 
 

@@ -1,4 +1,4 @@
-import type { Form_Field } from '@/types/form.types';
+import type { Form_Field } from '@/app/shared/types/form.types';
 
 export const form_profile_quotation_aq: Form_Field[] = [
   {

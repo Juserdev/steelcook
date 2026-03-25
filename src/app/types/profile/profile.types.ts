@@ -1,4 +1,4 @@
-import type { Button_Type } from "@/types/form.types"
+import type { Button_Type } from "@/app/shared/types/form.types"
 
 export interface Profile {
   address: string

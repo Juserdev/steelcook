@@ -1,4 +1,4 @@
-import type { Form } from "@/types/form.types";
+import type { Form } from "@/app/shared/types/form.types";
 
 export const form_aq: Form = {
   method: {
