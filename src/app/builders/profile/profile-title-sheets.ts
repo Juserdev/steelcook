@@ -1,5 +1,5 @@
-import { profile_config } from "@/services/profile/profile-config";
-import type { Profile } from "@/services/profile/profile.types";
+import { profile_config } from "@/app/config/profile/profile.config";
+import type { Profile } from "@/app/types/profile/profile.types";
 
 export function profile_title_shetts(company_profile: Profile[], container: HTMLDivElement) {
 

@@ -1,7 +1,7 @@
 
 
 import type { Send_Quote_Product } from "@/app/types/products/products.types"
-import type { Send_Quote_Profile } from "@/services/profile/profile.types"
+import type { Send_Quote_Profile } from "@/app/types/profile/profile.types"
 
 import type { Send_Quote_Client } from "@/app/types/clients/clients.types"
 import type { Send_Quote_Settings } from "@/services/quote-settings/quote-settings-types"

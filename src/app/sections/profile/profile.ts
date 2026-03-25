@@ -1,15 +1,16 @@
-import { fill_profile_form } from '@/services/profile/components/builders/fill-profile-form'
-import { profile_header } from '@/services/profile/components/builders/profile-header'
-import { profile_list } from '@/services/profile/components/builders/profile-list'
-import { profile_form } from '@/services/profile/components/form/profile-form'
-import { extract_profile_form } from '@/services/profile/components/form/utils/extract-profile-form'
-import { createProfile, deleteProfile, editProfile } from '@/services/profile/profile-services'
-import '@/services/profile/profile.css'
-import type { Profile } from '@/services/profile/profile.types'
+
+import { profile_form } from '@/app/builders/profile/profile-form'
+import { extract_profile_form } from '@/app/utils/profile/extract-profile-form'
+import { createProfile, deleteProfile, editProfile } from '@/app/services/profile/profile-services'
+import '@/app/styles/profile/profile.css'
+import type { Profile } from '@/app/types/profile/profile.types'
 import { handle_delete_from_list } from '@/shared/handlers/handle-delete-from-list'
 import { handle_edit_open } from '@/shared/handlers/handle-edit-open'
 import { handle_submit } from '@/shared/handlers/handle-submit'
 import { toggle_add_btn_visibility } from '@/utils/toggle-add-btn-visibility'
+import { profile_header } from '@/app/builders/profile/profile-header'
+import { profile_list } from '@/app/builders/profile/profile-list'
+import { fill_profile_form } from '@/app/builders/profile/fill-profile-form'
 
 
 

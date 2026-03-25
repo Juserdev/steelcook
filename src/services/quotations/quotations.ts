@@ -1,6 +1,6 @@
 import type { Clients } from "@/app/types/clients/clients.types"
 import type { Products } from "@/app/types/products/products.types"
-import type { Profile } from "@/services/profile/profile.types"
+import type { Profile } from "@/app/types/profile/profile.types"
 import { input_name_prices } from "@/services/quotations/components/config/input-name-price.config"
 import { fill_quotation_form } from "@/services/quotations/components/form/fill-quotation-form"
 import { quotation_form } from "@/services/quotations/components/form/quotation-form"

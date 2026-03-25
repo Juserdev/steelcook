@@ -1,6 +1,6 @@
 import { buttons } from '@/features/dashboard/sidebar/sidebar.config'
 import '@/features/dashboard/sidebar/sidebar.css'
-import type { Profile } from '@/services/profile/profile.types'
+import type { Profile } from '@/app/types/profile/profile.types'
 
 export function sidebar(profile: Profile[]): HTMLDivElement {
   const sidebar = document.createElement("div")

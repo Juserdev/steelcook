@@ -1,6 +1,6 @@
 import { icons } from "@/types/icons.config";
 import type { Titles_Sheets } from "@/types/ui.types";
-import type { Profile_config } from "./profile.types";
+import type { Profile_config } from "../../types/profile/profile.types";
 
 export const profile_config: Profile_config = {
   profile_content_class: {

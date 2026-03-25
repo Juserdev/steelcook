@@ -1,5 +1,6 @@
-import { editProfile } from "../../profile-services"
-import type { Profile, Send_Profile } from "../../profile.types"
+import { editProfile } from "@/app/services/profile/profile-services"
+import type { Profile, Send_Profile } from "@/app/types/profile/profile.types"
+
 
 export function handler_create_profile(form: HTMLFormElement, TOKEN: string, profile: Profile[]) {
   form.addEventListener('submit', async (e) => {

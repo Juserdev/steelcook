@@ -2,7 +2,7 @@
 import { getClients } from "@/app/services/clients/clients-services"
 import { getProducts } from "@/app/services/products/products-services"
 
-import { getProfile } from "@/services/profile/profile-services"
+import { getProfile } from "@/app/services/profile/profile-services"
 import { getQuotations } from "@/services/quotations/quotations-service"
 import { getQuoteSettings } from "@/services/quote-settings/quote-settings-service"
 

@@ -1,5 +1,5 @@
 import type { Clients, Create_Client } from "@/app/types/clients/clients.types";
-import { SUPABASE_KEY, SUPABASE_URL } from "@/services/auth-service";
+import { SUPABASE_KEY, SUPABASE_URL } from "@/app/services/auth-service";
 
 
 

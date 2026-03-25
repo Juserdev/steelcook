@@ -1,4 +1,4 @@
-import { form_profile_config } from "@/services/profile/components/config/form-profile-config"
+import { form_profile_config } from "@/app/config/profile/form-profile.config"
 import type { Form_Mode } from "@/services/quotations/quotations.types"
 import { add_required_inputs } from "@/utils/add-required-inputs"
 

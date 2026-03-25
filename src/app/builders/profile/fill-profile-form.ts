@@ -1,5 +1,5 @@
-import { form_profile_config } from "@/services/profile/components/config/form-profile-config";
-import type { Profile } from "@/services/profile/profile.types";
+import { form_profile_config } from "@/app/config/profile/form-profile.config";
+import type { Profile } from "@/app/types/profile/profile.types";
 
 export function fill_profile_form(
   id: string,

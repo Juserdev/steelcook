@@ -1,4 +1,4 @@
-import { login } from '@/services/auth-service.ts'
+import { login } from '@/app/services/auth-service'
 import { inputs } from '@/features/login/login.config'
 
 const app = document.querySelector<HTMLDivElement>("#app")!

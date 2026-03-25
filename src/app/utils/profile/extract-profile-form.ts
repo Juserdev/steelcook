@@ -1,4 +1,4 @@
-import type { Send_Profile } from "@/services/profile/profile.types"
+import type { Send_Profile } from "@/app/types/profile/profile.types"
 
 export function extract_profile_form(form: HTMLFormElement) {
   const formData = new FormData(form)

@@ -1,4 +1,4 @@
-import { profile_config } from "@/services/profile/profile-config"
+import { profile_config } from "@/app/config/profile/profile.config"
 
 export function profile_header(): HTMLDivElement {
   const container = document.createElement('div')

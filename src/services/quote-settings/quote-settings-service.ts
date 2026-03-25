@@ -1,4 +1,4 @@
-import { SUPABASE_KEY, SUPABASE_URL } from "@/services/auth-service";
+import { SUPABASE_KEY, SUPABASE_URL } from "@/app/services/auth-service";
 import type { Quote_Settings, Send_Quote_Settings } from "@/services/quote-settings/quote-settings-types";
 
 

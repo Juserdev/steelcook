@@ -9,7 +9,7 @@ import { create_form } from './builders/create-form'
 
 import type { Clients } from '@/app/types/clients/clients.types'
 import type { Products } from '@/app/types/products/products.types'
-import type { Profile } from '@/services/profile/profile.types'
+import type { Profile } from '@/app/types/profile/profile.types'
 import { ids_readonly } from '@/services/quotations/components/config/ids-readonly.config'
 import { ids_required } from '@/services/quotations/components/config/ids-required.config'
 import type { Quote_Settings } from '@/services/quote-settings/quote-settings-types'

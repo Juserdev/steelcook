@@ -1,5 +1,5 @@
 import { SUPABASE_KEY, SUPABASE_URL } from "../auth-service";
-import type { Profile, Send_Profile } from "./profile.types";
+import type { Profile, Send_Profile } from "../../types/profile/profile.types";
 
 export async function getProfile(TOKEN: string) {
 
