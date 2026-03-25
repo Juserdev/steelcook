@@ -1,6 +1,6 @@
 import { fill_product_form } from "@/app/builders/products/fill-product-form"
 
-import { product_form } from "@/app/builders/products/products-form-add"
+import { product_form } from "@/app/builders/products/products-form"
 import { products_list } from "@/app/builders/products/products-list"
 import { extract_product_form } from "@/app/utils/products/extract_product_form"
 

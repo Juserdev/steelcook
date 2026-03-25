@@ -1,4 +1,5 @@
 import { form_add_product } from "@/app/config/products/form-add-product.config"
+import { products_dataset } from "@/app/config/products/form-product-dataset.config"
 
 
 export function product_form(header: HTMLDivElement) {
@@ -26,8 +27,8 @@ export function product_form(header: HTMLDivElement) {
     form.appendChild(input)
 
     if (input.name === 'price') {
-      input.dataset.input_price = 'input_price'
-      input.dataset.number = 'number'
+      input.dataset.input_price = products_dataset.data_value.input_price
+      input.dataset.number = products_dataset.data_value.number
     }
 
   })

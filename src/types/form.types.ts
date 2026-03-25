@@ -1,5 +1,6 @@
 export type Method = 'POST' | 'GET' | 'DELETE' | 'PUT' | 'PATCH'
 export type Button_Type = "submit" | "reset" | "button"
+export type Data = 'number' | 'input_price'
 
 export interface Form {
   method: {
@@ -26,12 +27,12 @@ export interface Label {
 
 export interface Dataset {
   data_name: {
-    number?: string
-    2?: string
+    number?: Data
+    input_price?: Data
   }
   data_value: {
-    number?: string
-    2?: string
+    number?: Data
+    input_price?: Data
   }
 }
 
@@ -61,3 +62,4 @@ export interface Form_Add {
   fields: Form_Field[]
   button: Button_Form
 }
+

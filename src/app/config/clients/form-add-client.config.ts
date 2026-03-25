@@ -1,4 +1,4 @@
-import type { Dataset, Form_Add } from "@/types/form.types";
+import type { Form_Add } from "@/types/form.types";
 
 export const form_add_client = {
   form: {
@@ -116,13 +116,3 @@ export const form_add_client = {
     class: "btn-form-client"
   }
 } as const satisfies Form_Add
-
-export const clients_dataset = {
-  data_name: {
-    number: 'number'
-  },
-  data_value: {
-    number: "number"
-  }
-
-} as const satisfies Dataset
