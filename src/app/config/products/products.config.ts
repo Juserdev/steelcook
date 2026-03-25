@@ -1,5 +1,5 @@
 import type { Titles_Sheets } from "@/types/ui.types"
-import type { Products_Config } from "./products.types"
+import type { Products_Config } from "../../types/products/products.types"
 import { icons } from "@/types/icons.config"
 
 export const products_config: Products_Config = {

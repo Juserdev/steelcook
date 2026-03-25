@@ -1,4 +1,5 @@
-import { product_titles_sheets } from "../../products-config"
+import { product_titles_sheets } from "@/app/config/products/products.config"
+
 
 export function products_title(): HTMLDivElement {
   const list_container = document.createElement('div')

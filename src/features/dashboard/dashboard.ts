@@ -1,12 +1,10 @@
 import { sidebar } from "@/features/dashboard/sidebar/sidebar"
 import { content_clients } from "@/app/sections/clients/clients"
-import { content_products } from "@/services/products/products"
+import { content_products } from "@/app/sections/products/products"
 import { content_profile } from "@/services/profile/profile"
 import { content_quotations } from "@/services/quotations/quotations"
-
 import { client_toggle } from "@/app/utils/clients/clients-toggle"
-import { product_toggle } from "@/services/products/components/products-toggle"
-
+import { product_toggle } from "@/app/utils/products/products-toggle"
 import { loadDashboardData } from "@/features/dashboard/dashboard-data"
 import { content_home } from "@/features/dashboard/main-content/home/home"
 import { initDashboardNavigation } from "@/features/dashboard/navigation/dashboard-navigation"
@@ -15,8 +13,8 @@ import { profile_toggle } from "@/services/profile/components/profile-toggle"
 import { quotations_toggle } from "@/services/quotations/components/quotations-toggle"
 import { quote_settings_toggle } from "@/services/quote-settings/components/quote-settings-toggle"
 import { content_quote_settings } from "@/services/quote-settings/quote-settings"
-import '@/styles/dashboard.css'
 import { init_input_behaviors } from "@/utils/format-input-prices"
+import '@/styles/dashboard.css'
 
 const TOKEN = localStorage.getItem('access_token')
 

@@ -1,4 +1,4 @@
-import type { Products } from "@/services/products/products.types"
+import type { Products } from "@/app/types/products/products.types"
 import { format_thousands_with_dots } from "@/utils/format-numeric-input"
 
 export function handler_product_autofill(section: HTMLElement, products: Products[]) {

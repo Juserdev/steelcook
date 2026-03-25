@@ -1,4 +1,4 @@
-import type { Create_Product } from "@/services/products/products.types"
+import type { Create_Product } from "@/app/types/products/products.types"
 import { parce_formatted_number } from "@/utils/parce-formatted-number"
 
 export function extract_product_form(form: HTMLFormElement) {

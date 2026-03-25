@@ -1,4 +1,5 @@
-import { products_config } from "../products-config"
+import { products_config } from "@/app/config/products/products.config"
+
 
 export function products_header(): HTMLDivElement {
   const products_container = document.createElement('div')

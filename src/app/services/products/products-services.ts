@@ -1,5 +1,6 @@
-import { SUPABASE_KEY, SUPABASE_URL } from "../auth-service";
-import type { Create_Product, Products } from "./products.types";
+import type { Create_Product, Products } from "@/app/types/products/products.types";
+import { SUPABASE_KEY, SUPABASE_URL } from "@/services/auth-service";
+
 
 export async function getProducts(TOKEN: string) {
 

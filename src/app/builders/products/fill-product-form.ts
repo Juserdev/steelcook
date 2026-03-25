@@ -1,5 +1,5 @@
-import { form_add_product } from "@/services/products/components/form/form-add-product.config";
-import type { Products } from "@/services/products/products.types";
+import { form_add_product } from "@/app/config/products/form-add-product.config";
+import type { Products } from "@/app/types/products/products.types";
 import { format_thousands_with_dots } from "@/utils/format-numeric-input";
 
 export function fill_product_form(

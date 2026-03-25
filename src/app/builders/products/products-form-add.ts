@@ -1,4 +1,5 @@
-import { form_add_product } from "./form/form-add-product.config"
+import { form_add_product } from "@/app/config/products/form-add-product.config"
+
 
 export function product_form(header: HTMLDivElement) {
   const form = document.createElement('form')

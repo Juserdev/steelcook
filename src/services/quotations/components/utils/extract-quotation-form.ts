@@ -1,6 +1,6 @@
 
 
-import type { Send_Quote_Product } from "@/services/products/products.types"
+import type { Send_Quote_Product } from "@/app/types/products/products.types"
 import type { Send_Quote_Profile } from "@/services/profile/profile.types"
 
 import type { Send_Quote_Client } from "@/app/types/clients/clients.types"
