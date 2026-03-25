@@ -1,7 +1,7 @@
 import type { Clients } from "@/app/types/clients/clients.types"
 import type { Products } from "@/app/types/products/products.types"
-import type { Quotations } from "@/services/quotations/quotations.types"
 import { homeContentConfig } from "./home-config"
+import type { Quotations } from "@/app/types/quotations/quotations.types"
 
 export function content_home(clients: Clients[], products: Products[], quotations: Quotations[]): HTMLDivElement {
   const home = document.createElement('div')

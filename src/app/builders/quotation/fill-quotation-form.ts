@@ -1,9 +1,10 @@
-import { ids_readonly } from "@/services/quotations/components/config/ids-readonly.config"
-import { ids_required } from "@/services/quotations/components/config/ids-required.config"
-import { form_aq } from "@/services/quotations/components/config/quotation-form-aq.config"
-import { form_product_aq } from "@/services/quotations/components/config/quotation-product.config"
-import { create_form_fields } from "@/services/quotations/components/form/builders/create-form-fields"
-import type { Quotations } from "@/services/quotations/quotations.types"
+import { create_form_fields } from "@/app/builders/quotation/create-form-fields"
+import { ids_readonly } from "@/app/config/quotations/ids-readonly.config"
+import { ids_required } from "@/app/config/quotations/ids-required.config"
+import { form_aq } from "@/app/config/quotations/quotation-form-aq.config"
+import { form_product_aq } from "@/app/config/quotations/quotation-product.config"
+import type { Quotations } from "@/app/types/quotations/quotations.types"
+
 import { format_thousands_with_dots } from "@/utils/format-numeric-input"
 
 

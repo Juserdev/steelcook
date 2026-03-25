@@ -1,4 +1,4 @@
-import { numeric_fields, type Numeric_Fields } from "@/services/quotations/components/config/numeric-fields.config"
+import { numeric_fields, type Numeric_Fields } from "@/app/config/quotations/numeric-fields.config"
 import type { Form_Field } from "@/types/form.types"
 import { add_readonly_inputs } from "@/utils/add-readonly-inputs"
 import { add_required_inputs } from "@/utils/add-required-inputs"

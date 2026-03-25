@@ -1,7 +1,4 @@
-import type { Btn_Add_Quottion } from "../../config/btn.types"
-import { quotation_btn_add_product } from "../../config/quotation-btn-add-product.config"
-
-quotation_btn_add_product
+import type { Btn_Add_Quottion } from "@/app/types/quotations/btn.types"
 
 export function create_btns(form: HTMLFormElement, btn: Btn_Add_Quottion) {
   const add_product_btn = document.createElement("button")

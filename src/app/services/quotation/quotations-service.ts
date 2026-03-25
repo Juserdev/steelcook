@@ -1,5 +1,5 @@
-import { SUPABASE_KEY, SUPABASE_URL } from "../../app/services/auth-service";
-import type { Quotations, Send_Create_Quotation } from "./quotations.types";
+import type { Quotations, Send_Create_Quotation } from "@/app/types/quotations/quotations.types";
+import { SUPABASE_KEY, SUPABASE_URL } from "../auth-service";
 
 export async function getQuotations(TOKEN: string) {
 

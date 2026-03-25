@@ -1,6 +1,6 @@
-import type { Titles_Sheets } from "@/types/ui.types";
-import type { Quotations_Config } from "@/services/quotations/quotations.types";
 import { icons } from "@/types/icons.config";
+import type { Titles_Sheets } from "@/types/ui.types";
+import type { Quotations_Config } from "@/app/types/quotations/quotations.types";
 
 
 export const quotations_config: Quotations_Config = {

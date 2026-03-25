@@ -1,4 +1,4 @@
-import type { Btn_Add_Quottion } from "@/services/quotations/components/config/btn.types"
+import type { Btn_Add_Quottion } from "@/app/types/quotations/btn.types"
 
 export const quotation_btn_add_product: Btn_Add_Quottion = {
   type: 'button',

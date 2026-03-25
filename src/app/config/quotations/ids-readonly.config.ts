@@ -1,4 +1,5 @@
-import type { Ids_Readonly } from "@/services/quotations/quotations.types";
+import type { Ids_Readonly } from "@/app/types/quotations/quotations.types";
+
 
 export const ids_readonly = {
   products_id_readonly: ['product_totals'],

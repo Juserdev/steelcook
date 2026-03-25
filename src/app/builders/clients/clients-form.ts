@@ -1,7 +1,7 @@
 import { form_add_client } from '@/app/config/clients/form-add-client.config'
 import { clients_dataset } from '@/app/config/clients/form-client-dataset.config'
-import type { Form_Mode } from '@/services/quotations/quotations.types'
 import { add_required_inputs } from '@/utils/add-required-inputs'
+import type { Form_Mode } from '@/app/types/quotations/quotations.types'
 
 export function clients_form(header: HTMLDivElement): HTMLFormElement {
 

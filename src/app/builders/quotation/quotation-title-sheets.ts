@@ -1,5 +1,5 @@
-import type { Quotations } from "../../quotations.types";
-import { quotations_config } from "../config/quotations.config";
+import { quotations_config } from "@/app/config/quotations/quotations.config";
+import type { Quotations } from "@/app/types/quotations/quotations.types";
 
 export function quotation_title_sheets(quotations: Quotations[], container: HTMLDivElement) {
 

@@ -1,6 +1,6 @@
 import type { Quotations } from "../quotations.types";
-import { quotation_title } from "./builders/quotation-title";
-import { quotation_title_sheets } from "./builders/quotation-title-sheets";
+import { quotation_title } from "./quotation-title";
+import { quotation_title_sheets } from "./quotation-title-sheets";
 
 export function quotation_list(quotations: Quotations[], header: HTMLDivElement) {
 

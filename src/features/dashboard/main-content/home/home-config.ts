@@ -1,6 +1,6 @@
 import type { Clients } from "@/app/types/clients/clients.types"
 import type { Products } from "@/app/types/products/products.types"
-import type { Quotations } from "@/services/quotations/quotations.types"
+import type { Quotations } from "@/app/types/quotations/quotations.types"
 import type { HomeContent } from "@features/dashboard/main-content/home/home.types"
 
 

@@ -1,4 +1,4 @@
-import type { Input_Name_Price } from "@/services/quotations/components/config/input-name-price.config"
+import type { Input_Name_Price } from "@/app/config/quotations/input-name-price.config"
 
 export function input_to_dataset_price(
   form: HTMLFormElement,
