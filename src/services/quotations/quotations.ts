@@ -1,4 +1,4 @@
-import type { Clients } from "@/services/clients/clients.types"
+import type { Clients } from "@/app/types/clients/clients.types"
 import type { Products } from "@/services/products/products.types"
 import type { Profile } from "@/services/profile/profile.types"
 import { input_name_prices } from "@/services/quotations/components/config/input-name-price.config"

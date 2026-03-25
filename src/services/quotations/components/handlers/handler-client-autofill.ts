@@ -1,4 +1,4 @@
-import type { Clients } from "@/services/clients/clients.types"
+import type { Clients } from "@/app/types/clients/clients.types"
 
 export function handler_client_autofill(form: HTMLFormElement, clients: Clients[]) {
   const c_input_name = form.elements.namedItem('client_name') as HTMLInputElement

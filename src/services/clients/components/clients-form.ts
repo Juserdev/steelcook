@@ -1,4 +1,4 @@
-import { form_add_client } from '@/services/clients/components/form/form-add-client.config'
+import { clients_dataset, form_add_client } from '@/app/config/clients/form-add-client.config'
 import type { Form_Mode } from '@/services/quotations/quotations.types'
 import { add_required_inputs } from '@/utils/add-required-inputs'
 
@@ -23,6 +23,10 @@ export function clients_form(header: HTMLDivElement): HTMLFormElement {
     input.name = inputs.name
     input.placeholder = inputs.placeholder
     input.classList.add(inputs.class.specific, inputs.class.common)
+
+    if (input.name === 'phone') {
+      input.dataset.number = clients_dataset.data_value.number
+    }
 
     form.appendChild(label)
     form.appendChild(input)

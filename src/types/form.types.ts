@@ -24,6 +24,17 @@ export interface Label {
   class: Class_Name
 }
 
+export interface Dataset {
+  data_name: {
+    number?: string
+    2?: string
+  }
+  data_value: {
+    number?: string
+    2?: string
+  }
+}
+
 export interface Input {
   type: string
   id: string
@@ -31,6 +42,7 @@ export interface Input {
   placeholder: string
   class: Class_Name
   list?: string
+  dataset?: Dataset
 }
 
 export interface Form_Field {

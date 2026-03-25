@@ -1,4 +1,4 @@
-import type { Clients } from "../clients.types";
+import type { Clients } from "../../../app/types/clients/clients.types";
 import { clients_title } from "./builders/clients-title";
 import { clients_title_sheets } from "./builders/clients-title-sheets";
 

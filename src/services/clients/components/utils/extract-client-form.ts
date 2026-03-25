@@ -1,4 +1,4 @@
-import type { Create_Client } from "@/services/clients/clients.types"
+import type { Create_Client } from "@/app/types/clients/clients.types"
 
 export function extract_client_form(form: HTMLFormElement): Create_Client {
   const formData = new FormData(form)

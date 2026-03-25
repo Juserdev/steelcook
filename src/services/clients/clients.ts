@@ -1,6 +1,6 @@
 
 import { createClient, deleteClient, editClient } from '@/services/clients/clients-services';
-import type { Clients } from '@/services/clients/clients.types';
+import type { Clients } from '@/app/types/clients/clients.types';
 import { fill_client_form } from '@/services/clients/components/builders/fill-client-form';
 import { extract_client_form } from '@/services/clients/components/utils/extract-client-form';
 import { handle_delete_from_list } from '@/shared/handlers/handle-delete-from-list';

@@ -1,4 +1,4 @@
-import { clients_config } from '@/services/clients/clients.config'
+import { clients_config } from '@/app/config/clients/clients.config'
 
 export function clients_header(): HTMLDivElement {
   const clients_container = document.createElement('div')

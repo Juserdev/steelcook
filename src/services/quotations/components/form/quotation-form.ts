@@ -7,7 +7,7 @@ import { form_total_aq } from '../config/quotation-total.config'
 import { form_quote_settings_aq } from '../config/quotations-settings.config'
 import { create_form } from './builders/create-form'
 
-import type { Clients } from '@/services/clients/clients.types'
+import type { Clients } from '@/app/types/clients/clients.types'
 import type { Products } from '@/services/products/products.types'
 import type { Profile } from '@/services/profile/profile.types'
 import { ids_readonly } from '@/services/quotations/components/config/ids-readonly.config'

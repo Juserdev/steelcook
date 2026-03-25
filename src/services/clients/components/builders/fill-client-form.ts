@@ -1,5 +1,5 @@
-import type { Clients } from "@/services/clients/clients.types";
-import { form_add_client } from "@/services/clients/components/form/form-add-client.config";
+import type { Clients } from "@/app/types/clients/clients.types";
+import { form_add_client } from "@/app/config/clients/form-add-client.config";
 
 export function fill_client_form(
   id: string,

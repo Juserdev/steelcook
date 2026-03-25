@@ -1,4 +1,4 @@
-import type { Clients_config } from "@/services/clients/clients.types";
+import type { Clients_config } from "@/app/types/clients/clients.types";
 import { icons } from "@/types/icons.config";
 import type { Titles_Sheets } from "@/types/ui.types";
 
