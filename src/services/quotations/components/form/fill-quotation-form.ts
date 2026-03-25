@@ -110,7 +110,7 @@ export function fill_quotation_form(id: string, form: HTMLFormElement, quotation
   total_fields.total_code!.value = quotation.quotation_id ?? ''
   total_fields.subtotal!.value = format_thousands_with_dots(String(quotation.subtotal)) ?? ''
   total_fields.discount!.value = format_thousands_with_dots(String(quotation.discount)) ?? ''
-  total_fields.net!.value = String(quotation.net) ?? ''
+  total_fields.net!.value = format_thousands_with_dots(String(quotation.net)) ?? ''
   total_fields.tax_rate!.value = String(quotation.tax_rate) ?? ''
   total_fields.tax_amount!.value = format_thousands_with_dots(String(quotation.tax_amount)) ?? ''
   total_fields.total!.value = format_thousands_with_dots(String(quotation.total)) ?? ''
