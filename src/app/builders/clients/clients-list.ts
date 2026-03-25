@@ -1,6 +1,7 @@
-import type { Clients } from "../../../app/types/clients/clients.types";
-import { clients_title } from "./builders/clients-title";
-import { clients_title_sheets } from "./builders/clients-title-sheets";
+import { clients_title } from "@/app/builders/clients/clients-title";
+import type { Clients } from "../../types/clients/clients.types";
+import { clients_title_sheets } from "@/app/builders/clients/clients-title-sheets";
+
 
 export function clients_list(clients: Clients[], header: HTMLDivElement) {
 
@@ -9,7 +10,6 @@ export function clients_list(clients: Clients[], header: HTMLDivElement) {
   clients_title_sheets(clients, client_container)
 
   header.appendChild(client_container)
-
 
   return client_container
 

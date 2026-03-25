@@ -1,14 +1,10 @@
 import { sidebar } from "@/features/dashboard/sidebar/sidebar"
-import { content_clients } from "@/services/clients/clients"
+import { content_clients } from "@/app/sections/clients/clients"
 import { content_products } from "@/services/products/products"
 import { content_profile } from "@/services/profile/profile"
 import { content_quotations } from "@/services/quotations/quotations"
-// import { loadDashboardData } from "./dashboard-data"
-// import { content_home } from "./main-content/home/home"
-// import { initDashboardNavigation } from "./navigation/dashboard-navigation"
-// import { showQuotationPublic } from "./navigation/dashboard-public-links"
 
-import { client_toggle } from "@/services/clients/components/clients-toggle"
+import { client_toggle } from "@/app/utils/clients/clients-toggle"
 import { product_toggle } from "@/services/products/components/products-toggle"
 
 import { loadDashboardData } from "@/features/dashboard/dashboard-data"

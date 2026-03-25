@@ -1,14 +1,14 @@
 
-import { createClient, deleteClient, editClient } from '@/services/clients/clients-services';
+import { createClient, deleteClient, editClient } from '@/app/services/clients/clients-services';
 import type { Clients } from '@/app/types/clients/clients.types';
-import { fill_client_form } from '@/services/clients/components/builders/fill-client-form';
-import { extract_client_form } from '@/services/clients/components/utils/extract-client-form';
+import { extract_client_form } from '@/app/utils/clients/extract-client-form';
 import { handle_delete_from_list } from '@/shared/handlers/handle-delete-from-list';
 import { handle_edit_open } from '@/shared/handlers/handle-edit-open';
 import { handle_submit } from '@/shared/handlers/handle-submit';
-import { clients_header } from './components/clients-dashboard';
-import { clients_form } from './components/clients-form';
-import { clients_list } from './components/clients-list';
+import { clients_header } from '../../builders/clients/clients-dashboard';
+import { clients_form } from '../../builders/clients/clients-form';
+import { clients_list } from '../../builders/clients/clients-list';
+import { fill_client_form } from '@/app/builders/clients/fill-client-form';
 
 
 

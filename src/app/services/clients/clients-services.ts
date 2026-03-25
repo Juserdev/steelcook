@@ -1,5 +1,7 @@
-import { SUPABASE_KEY, SUPABASE_URL } from "../auth-service";
-import type { Clients, Create_Client } from "../../app/types/clients/clients.types";
+import type { Clients, Create_Client } from "@/app/types/clients/clients.types";
+import { SUPABASE_KEY, SUPABASE_URL } from "@/services/auth-service";
+
+
 
 export async function getClients(TOKEN: string) {
 

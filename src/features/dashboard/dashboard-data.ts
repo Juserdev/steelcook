@@ -1,4 +1,5 @@
-import { getClients } from "@/services/clients/clients-services"
+
+import { getClients } from "@/app/services/clients/clients-services"
 import { getProducts } from "@/services/products/products-services"
 import { getProfile } from "@/services/profile/profile-services"
 import { getQuotations } from "@/services/quotations/quotations-service"

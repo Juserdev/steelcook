@@ -24,9 +24,7 @@ export function clients_form(header: HTMLDivElement): HTMLFormElement {
     input.placeholder = inputs.placeholder
     input.classList.add(inputs.class.specific, inputs.class.common)
 
-    if (input.name === 'phone') {
-      input.dataset.number = clients_dataset.data_value.number
-    }
+    if (input.name === 'phone') input.dataset.number = clients_dataset.data_value.number
 
     form.appendChild(label)
     form.appendChild(input)
@@ -34,7 +32,7 @@ export function clients_form(header: HTMLDivElement): HTMLFormElement {
     const ids = ['name', 'phone']
     add_required_inputs(input, ids)
 
-    if (input.name === 'phone') input.dataset.number = 'number'
+
 
   })
 

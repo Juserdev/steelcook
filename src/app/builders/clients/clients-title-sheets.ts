@@ -1,5 +1,6 @@
-import { clients_config } from "../../../../app/config/clients/clients.config";
-import type { Clients } from "../../../../app/types/clients/clients.types";
+import { clients_config } from "@/app/config/clients/clients.config";
+import type { Clients } from "@/app/types/clients/clients.types";
+
 
 export function clients_title_sheets(clients: Clients[], container: HTMLDivElement) {
 

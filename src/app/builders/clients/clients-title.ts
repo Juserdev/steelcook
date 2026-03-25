@@ -1,4 +1,5 @@
-import { client_title_sheets } from "../../../../app/config/clients/clients.config"
+import { client_title_sheets } from "@/app/config/clients/clients.config"
+
 
 export function clients_title(): HTMLDivElement {
   const list_container = document.createElement('div')
