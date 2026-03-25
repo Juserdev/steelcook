@@ -1,4 +1,4 @@
-import '@/styles/landing.css'
+import '@/landing/styles/landing.css'
 
 const app = document.querySelector<HTMLDivElement>("#app")!
 
