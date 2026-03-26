@@ -32,7 +32,8 @@ export function products_title_sheets(products: Products[], container: HTMLDivEl
 
     const product_price = document.createElement('span')
     product_price.classList.add(products_config.products_class.price)
-    product_price.textContent = String(product.price) ?? ''
+    const format_price = format_thousands_with_dots(String(product.price))
+    product_price.textContent = `$${format_price}`
 
     const icons_container = document.createElement('div')
     icons_container.classList.add(products_config.icons.container_class)
