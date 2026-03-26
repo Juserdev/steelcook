@@ -1,5 +1,6 @@
 import { quotations_config } from "@/app/features/quotations/config/quotations.config";
 import type { Quotations } from "@/app/features/quotations/types/quotations.types";
+import { format_thousands_with_dots } from "@/app/shared/utils/format/format-numeric-input";
 
 export function quotation_title_sheets(quotations: Quotations[], container: HTMLDivElement) {
 
@@ -26,7 +27,8 @@ export function quotation_title_sheets(quotations: Quotations[], container: HTML
 
     const quotation_total = document.createElement('span')
     quotation_total.classList.add(quotations_config.quotations_class.total)
-    quotation_total.textContent = String(quotation.total) ?? ''
+    const total_price = format_thousands_with_dots(String(quotation.total))
+    quotation_total.textContent = `$${total_price}`
 
     const quotation_date = document.createElement('span')
     quotation_date.classList.add(quotations_config.quotations_class.date)
