@@ -24,10 +24,10 @@ export function handle_total_tax_amount(section: HTMLElement) {
     const tax_rate = Number(input_tax_rate.value)
 
     const result_tax = format_thousands_with_dots(String(net * tax_rate / 100))
-
     input_tax_amount.value = result_tax
 
-    const result = (subtotal - discount) + +result_tax
+    const tax_amount = parce_formatted_number(result_tax)
+    const result = (subtotal - discount) + tax_amount
 
     input_total.value = format_thousands_with_dots(String(result))
 
