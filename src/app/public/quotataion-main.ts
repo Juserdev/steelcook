@@ -1,4 +1,4 @@
-import { get_public_quotation } from "@/app/services/quotation/quotation-public-services";
+import { get_public_quotation } from "@/app/features/quotations/services/quotation-public-services";
 
 
 const urlParams = new URLSearchParams(window.location.search)
