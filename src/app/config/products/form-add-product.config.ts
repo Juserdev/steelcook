@@ -1,4 +1,4 @@
-import type { Form_Add } from "@/app/shared/types/form.types";
+import type { Dataset_Numeric, Form_Add } from "@/app/shared/types/form.types";
 
 export const form_add_product: Form_Add = {
   form: {
@@ -99,3 +99,7 @@ export const form_add_product: Form_Add = {
   }
 }
 
+
+export const products_dataset = {
+  data: 'price'
+} as const satisfies Dataset_Numeric
