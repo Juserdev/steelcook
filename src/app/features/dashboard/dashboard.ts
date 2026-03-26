@@ -1,21 +1,20 @@
-import { sidebar } from "@/app/features/sidebar/sidebar"
-
-import { content_products } from "@/app/features/products/products"
-import { content_profile } from "@/app/features/profile/profile"
-import { content_quotations } from "@/app/features/quotations/quotations"
+import { content_clients } from "@/app/features/clients/clients"
 import { client_toggle } from "@/app/features/clients/utils/clients-toggle"
-import { product_toggle } from "@/app/features/products/utils/products-toggle"
 import { loadDashboardData } from "@/app/features/dashboard/services/dashboard.services"
+import '@/app/features/dashboard/styles/dashboard.css'
+import { content_home } from "@/app/features/home/home"
+import { content_products } from "@/app/features/products/products"
+import { product_toggle } from "@/app/features/products/utils/products-toggle"
+import { content_profile } from "@/app/features/profile/profile"
+import { profile_toggle } from "@/app/features/profile/utils/profile-toggle"
+import { content_quotations } from "@/app/features/quotations/quotations"
+import { quotations_toggle } from "@/app/features/quotations/utils/quotations-toggle"
+import { content_quote_settings } from "@/app/features/quote-settings/quote-settings"
+import { quote_settings_toggle } from "@/app/features/quote-settings/utils/quote-settings-toggle"
+import { sidebar } from "@/app/features/sidebar/sidebar"
 import { initDashboardNavigation } from "@/app/shared/navigation/dashboard-navigation"
 import { showQuotationPublic } from "@/app/shared/navigation/dashboard-public-links"
-import { profile_toggle } from "@/app/features/profile/utils/profile-toggle"
-import { quotations_toggle } from "@/app/features/quotations/utils/quotations-toggle"
-import { quote_settings_toggle } from "@/app/features/quote-settings/utils/quote-settings-toggle"
-import { content_quote_settings } from "@/app/features/quote-settings/quote-settings"
 import { init_input_behaviors } from "@/app/shared/utils/format/format-input-prices"
-import { content_home } from "@/app/features/home/home"
-import '@/app/features/dashboard/styles/dashboard.css'
-import { content_clients } from "@/app/features/clients/clients"
 
 const TOKEN = localStorage.getItem('access_token')
 
@@ -59,7 +58,3 @@ quotations_toggle()
 profile_toggle()
 quote_settings_toggle()
 init_input_behaviors(right_container)
-
-
-
-

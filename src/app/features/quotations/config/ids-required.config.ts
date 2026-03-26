@@ -1,4 +1,5 @@
-import type { Ids_Required } from "@/services/quotations/quotations.types";
+import type { Ids_Required } from "@/app/features/quotations/types/quotations.types";
+
 
 export const ids_required = {
   profile_id_required: ['profile_name', 'profile_phone'],

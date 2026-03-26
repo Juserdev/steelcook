@@ -1,7 +1,7 @@
 import type { Products } from "@/app/features/products/types/products.types"
 import { format_thousands_with_dots } from "@/app/shared/utils/format/format-numeric-input"
 
-export function handler_product_autofill(section: HTMLElement, products: Products[]) {
+export function handle_product_autofill(section: HTMLElement, products: Products[]) {
 
   section.addEventListener('input', (e) => {
     const target = e.target as HTMLInputElement

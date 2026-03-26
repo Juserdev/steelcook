@@ -1,4 +1,4 @@
-import { quotation_titles_sheets } from "../config/quotations.config"
+import { quotation_titles_sheets } from "@/app/features/quotations/config/quotations.config"
 
 export function quotation_title(): HTMLDivElement {
   const list_container = document.createElement('div')

@@ -1,5 +1,6 @@
+import { editProfile } from "@/app/features/profile/services/profile-services"
 import type { Profile, Send_Profile } from "@/app/features/profile/types/profile.types"
-import { editProfile } from "../services/profile-services"
+
 
 
 export function handler_create_profile(form: HTMLFormElement, TOKEN: string, profile: Profile[]) {

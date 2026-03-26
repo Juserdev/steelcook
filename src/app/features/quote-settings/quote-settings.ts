@@ -1,4 +1,7 @@
-
+import { fill_quote_settings_form } from '@/app/features/quote-settings/components/fill-quote-settings-form'
+import { quote_settings_header } from '@/app/features/quote-settings/components/quote-settings-dashboard'
+import { settings_form } from '@/app/features/quote-settings/components/quote-settings-form'
+import { quote_settings_list } from '@/app/features/quote-settings/components/quote-settings-list'
 import { createQuoteSettings, deleteQuoteSettings, editQuoteSettings } from '@/app/features/quote-settings/services/quote-settings-services'
 import type { Quote_Settings } from '@/app/features/quote-settings/types/quote-settings.types'
 import { extract_quote_settings } from '@/app/features/quote-settings/utils/extract-quote-settings'
@@ -6,11 +9,6 @@ import { handle_delete_from_list } from '@/app/shared/handlers/handle-delete-fro
 import { handle_edit_open } from '@/app/shared/handlers/handle-edit-open'
 import { handle_submit } from '@/app/shared/handlers/handle-submit'
 import { toggle_add_btn_visibility } from '@/app/shared/utils/ui/toggle-add-btn-visibility'
-import { fill_quote_settings_form } from './components/fill-quote-settings-form'
-import { quote_settings_header } from './components/quote-settings-dashboard'
-import { settings_form } from './components/quote-settings-form'
-import { quote_settings_list } from './components/quote-settings-list'
-
 
 export function content_quote_settings(TOKEN: string, quote_settings: Quote_Settings[]): HTMLDivElement {
 

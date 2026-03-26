@@ -1,6 +1,5 @@
 import { quote_settings_config } from "@/app/features/quote-settings/config/quote-settings.config";
-import type { Quote_Settings } from "../../../app/types/quote-settings/quote-settings.types";
-
+import type { Quote_Settings } from "@/app/features/quote-settings/types/quote-settings.types";
 
 export function quote_settings_list(quote_settings: Quote_Settings[], header: HTMLDivElement) {
   const list_contaier = document.createElement("div")

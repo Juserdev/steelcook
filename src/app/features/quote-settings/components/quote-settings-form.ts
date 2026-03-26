@@ -1,6 +1,5 @@
-
-import { form_add_quote_settings } from "@/app/features/quote-settings/config/form-add-quote-settings.config"
 import type { Form_Mode } from "@/app/features/quotations/types/quotations.types"
+import { form_add_quote_settings } from "@/app/features/quote-settings/config/form-add-quote-settings.config"
 
 export function settings_form(header: HTMLDivElement): HTMLFormElement {
   const form_mm = form_add_quote_settings.form

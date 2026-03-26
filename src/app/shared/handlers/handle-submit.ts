@@ -1,6 +1,5 @@
 import type { Form_Mode } from "@/app/features/quotations/types/quotations.types"
 
-
 export function handle_submit<T>(
   TOKEN: string,
   form: HTMLFormElement,

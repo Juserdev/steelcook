@@ -1,9 +1,7 @@
-// export function handler_total_tax_amount(section: HTMLElement) {
-
 import { format_thousands_with_dots } from "@/app/shared/utils/format/format-numeric-input"
 import { parce_formatted_number } from "@/app/shared/utils/format/parce-formatted-number"
 
-export function handler_total_tax_amount(section: HTMLElement) {
+export function handle_total_tax_amount(section: HTMLElement) {
 
   section.addEventListener('input', e => {
 

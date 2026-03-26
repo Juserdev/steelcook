@@ -1,8 +1,9 @@
+import type { Profile_Config } from "@/app/features/profile/types/profile.types";
 import { icons } from "@/app/shared/config/icons.config";
 import type { Titles_Sheets } from "@/app/shared/types/ui.types";
-import type { Profile_config } from "../types/profile.types";
 
-export const profile_config: Profile_config = {
+
+export const profile_config: Profile_Config = {
   profile_content_class: {
     common_class: 'section-content',
     class: 'profile-content'

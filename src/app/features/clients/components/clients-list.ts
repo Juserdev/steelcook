@@ -1,7 +1,6 @@
 import { clients_title } from "@/app/features/clients/components/clients-title";
-import type { Clients } from "../types/clients.types";
 import { clients_title_sheets } from "@/app/features/clients/components/clients-title-sheets";
-
+import type { Clients } from "@/app/features/clients/types/clients.types";
 
 export function clients_list(clients: Clients[], header: HTMLDivElement) {
 

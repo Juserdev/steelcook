@@ -1,4 +1,3 @@
-
 import { products_config } from "@/app/features/products/config/products.config";
 import type { Products } from "@/app/features/products/types/products.types";
 import { format_thousands_with_dots } from "@/app/shared/utils/format/format-numeric-input";

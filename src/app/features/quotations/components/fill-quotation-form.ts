@@ -1,11 +1,10 @@
+import { create_form_fields } from "@/app/features/quotations/components/create-form-fields"
 import { ids_readonly } from "@/app/features/quotations/config/ids-readonly.config"
 import { ids_required } from "@/app/features/quotations/config/ids-required.config"
 import { form_aq } from "@/app/features/quotations/config/quotation-form-aq.config"
 import { form_product_aq } from "@/app/features/quotations/config/quotation-product.config"
 import type { Quotations } from "@/app/features/quotations/types/quotations.types"
 import { format_thousands_with_dots } from "@/app/shared/utils/format/format-numeric-input"
-import { create_form_fields } from "./create-form-fields"
-
 
 export function fill_quotation_form(id: string, form: HTMLFormElement, quotations: Quotations[]) {
   form.dataset.mode = form_aq.mode.edit

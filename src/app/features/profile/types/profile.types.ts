@@ -11,7 +11,7 @@ export interface Profile {
   phone: number | null
 }
 
-export interface Profile_config {
+export interface Profile_Config {
   profile_content_class: {
     common_class: string,
     class: string

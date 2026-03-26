@@ -1,6 +1,6 @@
+import { profile_title_shetts } from "@/app/features/profile/components/profile-title-sheets";
+import { profile_titles } from "@/app/features/profile/components/profile-titles";
 import type { Profile } from "@/app/features/profile/types/profile.types";
-import { profile_title_shetts } from "./profile-title-sheets";
-import { profile_titles } from "./profile-titles";
 
 export function profile_list(profile: Profile[], header: HTMLDivElement) {
 

@@ -1,7 +1,7 @@
 import { format_thousands_with_dots } from "@/app/shared/utils/format/format-numeric-input"
 import { parce_formatted_number } from "@/app/shared/utils/format/parce-formatted-number"
 
-export function handler_product_total(section: HTMLElement, section_total: HTMLElement) {
+export function handle_product_total(section: HTMLElement, section_total: HTMLElement) {
 
   section.addEventListener('input', (e) => {
 

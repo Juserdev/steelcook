@@ -2,30 +2,31 @@
 import type { Clients } from '@/app/features/clients/types/clients.types'
 import type { Products } from '@/app/features/products/types/products.types'
 import type { Profile } from '@/app/features/profile/types/profile.types'
+import { create_form } from '@/app/features/quotations/components/create-form'
+import { create_btns } from '@/app/features/quotations/components/create-form-btns'
+import { create_form_fields } from '@/app/features/quotations/components/create-form-fields'
+import { create_form_section } from '@/app/features/quotations/components/create-form-sections'
 import { ids_readonly } from '@/app/features/quotations/config/ids-readonly.config'
 import { ids_required } from '@/app/features/quotations/config/ids-required.config'
 import { quotation_btn_add_product } from '@/app/features/quotations/config/quotation-btn-add-product.config'
+import { quotation_btn_submit } from '@/app/features/quotations/config/quotation-btn-submit.confing'
+import { form_client_aq } from '@/app/features/quotations/config/quotation-client.config'
+import { profile_inputs_map, settings_inputs_map } from '@/app/features/quotations/config/quotation-fill-maps.config'
+import { form_product_aq } from '@/app/features/quotations/config/quotation-product.config'
+import { form_profile_quotation_aq } from '@/app/features/quotations/config/quotation-profile.config'
+import { section_types } from '@/app/features/quotations/config/quotation-section.config'
+import { form_total_aq } from '@/app/features/quotations/config/quotation-total.config'
+import { form_quote_settings_aq } from '@/app/features/quotations/config/quotations-settings.config'
+import { handle_client_autofill } from '@/app/features/quotations/handlers/handle-client-autofill'
+import { handle_product_add } from '@/app/features/quotations/handlers/handle-product-add'
+import { handle_product_autofill } from '@/app/features/quotations/handlers/handle-product-autofill'
+import { handle_product_total } from '@/app/features/quotations/handlers/handle-product-total'
+import { handler_total_discount } from '@/app/features/quotations/handlers/handle-total-discount'
+import { handle_total_tax_amount } from '@/app/features/quotations/handlers/handle-total-tax-amount'
+import { create_datalist } from '@/app/features/quotations/utils/create-datalist'
+import { fill_form_fileds } from '@/app/features/quotations/utils/fill_form_fileds'
 import type { Quote_Settings } from '@/app/features/quote-settings/types/quote-settings.types'
-import { quotation_btn_submit } from '../config/quotation-btn-submit.confing'
-import { form_client_aq } from '../config/quotation-client.config'
-import { profile_inputs_map, settings_inputs_map } from '../config/quotation-fill-maps.config'
-import { form_product_aq } from '../config/quotation-product.config'
-import { form_profile_quotation_aq } from '../config/quotation-profile.config'
-import { section_types } from '../config/quotation-section.config'
-import { form_total_aq } from '../config/quotation-total.config'
-import { form_quote_settings_aq } from '../config/quotations-settings.config'
-import { handler_client_autofill } from '../handlers/handle-client-autofill'
-import { handler_product_add } from '../handlers/handle-product-add'
-import { handler_product_autofill } from '../handlers/handle-product-autofill'
-import { handler_product_total } from '../handlers/handle-product-total'
-import { handler_total_discount } from '../handlers/handle-total-discount'
-import { handler_total_tax_amount } from '../handlers/handle-total-tax-amount'
-import { create_datalist } from '../utils/create-datalist'
-import { fill_form_fileds } from '../utils/fill_form_fileds'
-import { create_form } from './create-form'
-import { create_btns } from './create-form-btns'
-import { create_form_fields } from './create-form-fields'
-import { create_form_section } from './create-form-sections'
+
 
 export function quotation_form(
   header: HTMLDivElement,
@@ -64,7 +65,7 @@ export function quotation_form(
 
   // agrego los datoa automatios
 
-  handler_client_autofill(form, clients)
+  handle_client_autofill(form, clients)
 
   // Formulario de productos
 
@@ -77,12 +78,12 @@ export function quotation_form(
 
   // creacion de formulario
 
-  handler_product_autofill(section_products, products)
+  handle_product_autofill(section_products, products)
 
   // Boton para agregar productos 
 
   const btn_add_product = create_btns(form, quotation_btn_add_product)
-  handler_product_add(btn_add_product, section_products)
+  handle_product_add(btn_add_product, section_products)
 
   // Formulario con detalles finales
 
@@ -90,12 +91,12 @@ export function quotation_form(
   create_form_fields(form_total_aq, section_total, 'total', ids_required.total_id_required, ids_readonly.totals_id_readonly)
 
   // funcion que crea el total de los productos y el total total
-  handler_product_total(section_products, section_total)
+  handle_product_total(section_products, section_total)
 
   // funcion para ejecucion e formulas en el total
   handler_total_discount(section_total)
 
-  handler_total_tax_amount(section_total)
+  handle_total_tax_amount(section_total)
 
   // Boton submit
 
