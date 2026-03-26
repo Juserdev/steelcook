@@ -5,23 +5,8 @@
       "@/*": [
         "src/*"
       ],
-      "@features/*": [
-        "src/features/*"
-      ],
-      "@services/*": [
-        "src/services/*"
-      ],
-      "@styles/*": [
-        "src/styles/*"
-      ],
-      "@types/*": [
-        "src/types/*"
-      ],
-      "@utils/*": [
-        "src/utils/*"
-      ],
-      "@shared/*": [
-        "src/shared/*"
+      "@app/*": [
+        "src/app/*"
       ]
     },
     "target": "ES2022",
