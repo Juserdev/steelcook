@@ -1,0 +1,22 @@
+.list-container-home {
+  padding-top: clamp(1.5rem, 5vw, 2rem);
+}
+
+.home-container-info {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(0.5rem, 5vw, 1rem);
+  padding-bottom: clamp(0.5rem, 5vw, 1rem);
+}
+
+.title-clients,
+.title-products,
+.title-quotations {
+  font-size: clamp(1.5rem, 5vw, 2.5rem);
+}
+
+.clients-text,
+.products-text,
+.quotations-text {
+  font-size: clamp(0.6rem, 5vw, 2rem);
+}
