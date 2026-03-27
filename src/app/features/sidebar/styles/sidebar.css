@@ -28,7 +28,7 @@
   background-color: rgb(221, 220, 220);
 }
 
-@media (width <=500px) {
+@media (width <=800px) {
   .logo {
     position: fixed;
     top: 0;

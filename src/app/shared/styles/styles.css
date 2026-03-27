@@ -30,7 +30,8 @@
 }
 
 .conatiner-profile-icons,
-.conatiner-client-icons {
+.conatiner-client-icons,
+.conatiner-product-icons {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -46,7 +47,9 @@
 }
 
 .add-client-btn,
-.btn-form-client {
+.add-product-btn,
+.btn-form-client,
+.btn-form-product {
   border: none;
   outline: none;
   cursor: pointer;
@@ -56,11 +59,12 @@
   border-radius: 1rem;
 }
 
-.btn-form-client {
+.btn-form-client,
+.btn-form-product {
   margin-top: 20px;
 }
 
-@media (width <=500px) {
+@media (width <=800px) {
   #app {
     flex-direction: column;
   }
@@ -76,7 +80,8 @@
   }
 
   .conatiner-profile-icons,
-  .conatiner-client-icons {
+  .conatiner-client-icons,
+  .conatiner-product-icons {
     padding: 0.5rem;
     padding-bottom: 0;
     width: 100%;
@@ -90,7 +95,8 @@
   }
 
   .add-client-btn,
-  .btn-form-client {
+  .btn-form-client,
+  .add-product-btn {
     width: 100%;
   }
 }
