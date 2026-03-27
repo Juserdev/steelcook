@@ -12,11 +12,11 @@
 .title-clients,
 .title-products,
 .title-quotations {
-  font-size: clamp(1.5rem, 5vw, 2.5rem);
+  font-size: var(--font-size-titles);
 }
 
 .clients-text,
 .products-text,
 .quotations-text {
-  font-size: clamp(0.6rem, 5vw, 2rem);
+  font-size: var(--font-size-spans);
 }
