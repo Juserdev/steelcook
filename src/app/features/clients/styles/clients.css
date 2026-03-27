@@ -16,7 +16,7 @@
   grid-template-columns: 1.5fr repeat(2, 1fr) 1.5fr 1fr 1fr;
 }
 
-@media (width <=500px) {
+@media (width <=800px) {
   .clients-titles-sheet {
     display: none;
   }

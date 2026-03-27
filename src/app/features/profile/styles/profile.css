@@ -11,7 +11,7 @@
   gap: 1rem;
 }
 
-@media (width <=500px) {
+@media (width <=800px) {
   .profile-titles-sheet {
     display: none;
   }
