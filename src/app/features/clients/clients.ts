@@ -8,6 +8,8 @@ import { extract_client_form } from '@/app/features/clients/utils/extract-client
 import { handle_delete_from_list } from '@/app/shared/handlers/handle-delete-from-list.handle';
 import { handle_edit_open } from '@/app/shared/handlers/handle-edit-open.handle';
 import { handle_submit } from '@/app/shared/handlers/handle-submit.handle';
+import '@app/features/clients/styles/clients-form.css';
+import '@app/features/clients/styles/clients.css';
 
 export function content_clients(TOKEN: string, clients: Clients[]): HTMLDivElement {
 

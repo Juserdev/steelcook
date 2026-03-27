@@ -1,4 +1,13 @@
 :root {
-  --font-size-titles: clamp(1rem, 3vw + 1rem, 2rem);
-  --font-size-spans: clamp(0.9rem, 0.2vw + 0.8rem, 1.1rem);
+  --font-size-titles: clamp(1rem, 3vw + 0.8rem, 2rem);
+  --font-size-titles-list: clamp(1rem, 2vw + 0.8rem, 1.3rem);
+  --font-size-spans: clamp(0.9rem, 2vw + 0.8rem, 1.1rem);
+  --font-size-inputs: clamp(0.7rem, 2vw + 0.8rem, 1rem);
+  --btns-add-padding: 0.8rem 1.5rem;
+  --list-container-padding-top: 1rem;
+
+  /* colors */
+
+  --interface-containet: rgba(159, 159, 159, 0.276);
+  --bg-inputs: rgba(229, 229, 229, 0.399);
 }
