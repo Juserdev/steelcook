@@ -55,7 +55,8 @@
 .btn-edit-profile,
 .btn-form-client,
 .btn-form-product,
-.btn-form-profile {
+.btn-form-profile,
+.quotation-btn-submit {
   border: none;
   outline: none;
   cursor: pointer;
@@ -107,7 +108,8 @@
   .btn-edit-profile,
   .btn-form-client,
   .btn-form-product,
-  .btn-form-profile {
+  .btn-form-profile,
+  .quotation-btn-submit {
     width: 100%;
   }
 }

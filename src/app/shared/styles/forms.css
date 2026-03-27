@@ -1,6 +1,7 @@
 .form-add-clients,
 .form-add-products,
-.containet-input-label {
+.containet-input-label,
+.form-add-quotation {
   padding-top: var(--list-container-padding-top);
   display: flex;
   flex-direction: column;
@@ -9,14 +10,44 @@
   gap: 0.5rem;
 }
 
+.section-faq-profile,
+.section-faq-client,
+.section-faq-qs,
+.section-faq-product,
+.section-faq-total,
+.container-profile-aq,
+.container-quotation-aq,
+.container-client-aq,
+.container-product-aq,
+.container-total-aq {
+  max-width: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
 .fac-label,
-.fap-label .profile-label {
+.fap-label,
+.profile-label,
+.faq-profile-label,
+.faq-qs-label,
+.faq-client-label,
+.faq-product-label,
+.faq-total-label {
   font-size: var(--font-size-titles-list);
 }
 
 .fac-input,
 .fap-input,
-.profile-input {
+.profile-input,
+.faq-profile-input,
+.faq-qs-input,
+.faq-client-input,
+.faq-product-input,
+.faq-total-input {
   max-width: 100%;
   width: 100%;
   padding: 0.5rem 1rem;
