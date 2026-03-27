@@ -1,4 +1,4 @@
-import { create_form_fields } from '@/app/features/quotations/components/create-form-fields';
+import { create_form_fields } from '@/app/features/quotations/components/create-form-fields.view';
 import { ids_readonly } from '@/app/features/quotations/config/ids-readonly.config';
 import { ids_required } from '@/app/features/quotations/config/ids-required.config';
 import { form_product_aq } from '@/app/features/quotations/config/quotation-product.config';

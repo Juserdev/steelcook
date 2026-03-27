@@ -1,5 +1,5 @@
-import { clients_title } from "@/app/features/clients/components/clients-title";
-import { clients_title_sheets } from "@/app/features/clients/components/clients-title-sheets";
+import { clients_title_sheets } from "@/app/features/clients/components/clients-title-sheets.view";
+import { clients_title } from "@/app/features/clients/components/clients-title.view";
 import type { Clients } from "@/app/features/clients/types/clients.types";
 
 export function clients_list(clients: Clients[], header: HTMLDivElement) {

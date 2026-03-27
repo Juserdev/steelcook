@@ -1,6 +1,6 @@
 import { quotations_config } from "@/app/features/quotations/config/quotations.config";
 import type { Quotations } from "@/app/features/quotations/types/quotations.types";
-import { format_thousands_with_dots } from "@/app/shared/utils/format/format-numeric-input";
+import { format_thousands_with_dots } from "@/app/shared/utils/format/format-numeric-input.utils";
 
 export function quotation_title_sheets(quotations: Quotations[], container: HTMLDivElement) {
 

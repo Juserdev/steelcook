@@ -1,5 +1,5 @@
-import { format_thousands_with_dots } from "@/app/shared/utils/format/format-numeric-input"
-import { parce_formatted_number } from "@/app/shared/utils/format/parce-formatted-number"
+import { format_thousands_with_dots } from "@/app/shared/utils/format/format-numeric-input.utils"
+import { parce_formatted_number } from "@/app/shared/utils/format/parce-formatted-number.utils"
 
 export function handle_product_total(section: HTMLElement, section_total: HTMLElement) {
 

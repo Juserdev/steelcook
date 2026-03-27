@@ -1,6 +1,6 @@
-import type { Products } from "@/app/features/products/types/products.types";
-import { format_thousands_with_dots } from "@/app/shared/utils/format/format-numeric-input";
 import { form_add_product } from "@/app/features/products/config/form-add-product.config";
+import type { Products } from "@/app/features/products/types/products.types";
+import { format_thousands_with_dots } from "@/app/shared/utils/format/format-numeric-input.utils";
 
 export function fill_product_form(
   id: string,

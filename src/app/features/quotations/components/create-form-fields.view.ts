@@ -1,7 +1,7 @@
 import { numeric_fields, type Numeric_Fields } from "@/app/features/quotations/config/numeric-fields.config"
 import type { Form_Field } from "@/app/shared/types/form.types"
-import { add_readonly_inputs } from "@/app/shared/utils/form/add-readonly-inputs"
-import { add_required_inputs } from "@/app/shared/utils/form/add-required-inputs"
+import { add_readonly_inputs } from "@/app/shared/utils/form/add-readonly-inputs.utils"
+import { add_required_inputs } from "@/app/shared/utils/form/add-required-inputs.utils"
 
 export function create_form_fields(
   form: Form_Field[],
