@@ -15,6 +15,7 @@ import { initDashboardNavigation } from "@/app/shared/navigation/dashboard-navig
 import { showQuotationPublic } from "@/app/shared/navigation/dashboard-public-links"
 import { init_input_behaviors } from "@/app/shared/utils/format/format-input-prices.utils"
 import '@app/features/dashboard/styles/dashboard.css'
+import '@app/shared/styles/styles.css'
 import '@app/shared/styles/variables.css'
 
 const TOKEN = localStorage.getItem('access_token')
