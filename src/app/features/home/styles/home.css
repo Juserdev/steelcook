@@ -1,7 +1,3 @@
-.list-container-home {
-  padding-top: clamp(1.5rem, 5vw, 2rem);
-}
-
 .home-container-info {
   display: flex;
   flex-direction: column;
