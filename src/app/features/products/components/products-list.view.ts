@@ -1,5 +1,5 @@
-import { products_title } from "@/app/features/products/components/products-title"
-import { products_title_sheets } from "@/app/features/products/components/products-title-sheets"
+import { products_title_sheets } from "@/app/features/products/components/products-title-sheets.view"
+import { products_title } from "@/app/features/products/components/products-title.view"
 import type { Products } from "@/app/features/products/types/products.types"
 
 export function products_list(products: Products[], header: HTMLDivElement) {

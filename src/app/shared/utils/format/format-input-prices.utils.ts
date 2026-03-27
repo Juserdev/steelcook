@@ -1,4 +1,4 @@
-import { format_thousands_with_dots } from "@/app/shared/utils/format/format-numeric-input"
+import { format_thousands_with_dots } from "@/app/shared/utils/format/format-numeric-input.utils"
 
 export function init_input_behaviors(container: HTMLDivElement) {
   const regex_num = /\D/g

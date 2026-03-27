@@ -1,4 +1,4 @@
-import { editProfile } from "@/app/features/profile/services/profile-services"
+import { editProfile } from "@/app/features/profile/services/profile.services"
 import type { Profile, Send_Profile } from "@/app/features/profile/types/profile.types"
 
 

@@ -4,7 +4,7 @@ import type { Send_Quote_Profile } from "@/app/features/profile/types/profile.ty
 import type { Send_Quote_Client } from "@/app/features/clients/types/clients.types"
 import type { Send_Create_Quotation } from "@/app/features/quotations/types/quotations.types"
 import type { Send_Quote_Settings } from "@/app/features/quote-settings/types/quote-settings.types"
-import { parce_formatted_number } from "@/app/shared/utils/format/parce-formatted-number"
+import { parce_formatted_number } from "@/app/shared/utils/format/parce-formatted-number.utils"
 
 
 export function extract_quotation_form(form: HTMLFormElement): Send_Create_Quotation {
