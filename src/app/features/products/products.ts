@@ -8,6 +8,7 @@ import { extract_product_form } from "@/app/features/products/utils/extract_prod
 import { handle_delete_from_list } from "@/app/shared/handlers/handle-delete-from-list.handle"
 import { handle_edit_open } from "@/app/shared/handlers/handle-edit-open.handle"
 import { handle_submit } from "@/app/shared/handlers/handle-submit.handle"
+import '@app/features/products/styles/products.css'
 
 export function content_products(TOKEN: string, products: Products[]): HTMLDivElement {
 

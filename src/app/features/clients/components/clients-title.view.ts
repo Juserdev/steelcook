@@ -6,7 +6,7 @@ export function clients_title(): HTMLDivElement {
   list_container.classList.add("list-container-client")
 
   const clients_titles_sheet_container = document.createElement("div")
-  clients_titles_sheet_container.classList.add("quotations-titles-sheet")
+  clients_titles_sheet_container.classList.add("clients-titles-sheet")
 
   list_container.appendChild(clients_titles_sheet_container)
 

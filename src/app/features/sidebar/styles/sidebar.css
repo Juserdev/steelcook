@@ -28,12 +28,17 @@
   background-color: rgb(221, 220, 220);
 }
 
-@media (width <=500px) {
+@media (width <=800px) {
   .logo {
     position: fixed;
     top: 0;
     left: 50%;
     transform: translateX(-50%);
+    max-width: 100%;
+    padding: 0 9rem;
+    background: var(--interface-containet);
+    backdrop-filter: blur(1rem);
+    border-radius: 0 0 1rem 1rem;
   }
 
   .interface-container {
@@ -46,7 +51,7 @@
     bottom: 0.8rem;
     left: 50%;
     transform: translateX(-50%);
-    background-color: rgba(0, 0, 0, 0.385);
+    background-color: var(--interface-containet);
     backdrop-filter: blur(1rem);
     border-radius: 2rem;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);

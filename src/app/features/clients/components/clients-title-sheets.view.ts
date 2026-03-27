@@ -1,4 +1,4 @@
-import { clients_config } from "@/app/features/clients/config/clients.config";
+import { client_title_sheets, clients_config } from "@/app/features/clients/config/clients.config";
 import type { Clients } from "@/app/features/clients/types/clients.types";
 
 
@@ -21,22 +21,27 @@ export function clients_title_sheets(clients: Clients[], container: HTMLDivEleme
     const name = document.createElement('span')
     name.classList.add(clients_config.clients_class.name)
     name.textContent = client.name
+    name.dataset.item = `${client_title_sheets[0].title}:`
 
     const client_id = document.createElement('span')
     client_id.classList.add(clients_config.clients_class.id)
     client_id.textContent = String(client.client_id ?? '')
+    client_id.dataset.item = `${client_title_sheets[1].title}:`
 
     const email = document.createElement('span')
     email.classList.add(clients_config.clients_class.email)
     email.textContent = client.email
+    email.dataset.item = `${client_title_sheets[2].title}:`
 
     const address = document.createElement('span')
     address.classList.add(clients_config.clients_class.address)
     address.textContent = client.address
+    address.dataset.item = `${client_title_sheets[3].title}:`
 
     const phone = document.createElement('span')
     phone.classList.add(clients_config.clients_class.phone)
     phone.textContent = String(client.phone ?? '')
+    phone.dataset.item = `${client_title_sheets[4].title}:`
 
     const icons_container = document.createElement('div')
     icons_container.classList.add(clients_config.icons.container_class)
