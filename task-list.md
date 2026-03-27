@@ -13,6 +13,10 @@
 
 - [ ] Arreglar los tipos y los configs de products y clients ya que modifique los typos de form. 
 
+## Estilos
+
+- [ ] Eliminar logo de profile, es totalmente incesesario y eliminar codigo para ocultar logo en css despues de eliminar en ficheros *.ts
+
 <!-- 
   ! Reutilizacion de formulario de cotizacion con cambio de metodo:
   por lo prronto el estamos reutilizando el formulario y cambiamos el metodo, aun me valta poner los datos en el formulario y cambiar la funcion del boton submit
