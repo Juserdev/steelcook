@@ -48,8 +48,10 @@
 
 .add-client-btn,
 .add-product-btn,
+.btn-edit-profile,
 .btn-form-client,
-.btn-form-product {
+.btn-form-product,
+.btn-form-profile {
   border: none;
   outline: none;
   cursor: pointer;
@@ -60,7 +62,8 @@
 }
 
 .btn-form-client,
-.btn-form-product {
+.btn-form-product,
+.btn-form-profile {
   margin-top: 20px;
 }
 
@@ -95,8 +98,11 @@
   }
 
   .add-client-btn,
+  .add-product-btn,
+  .btn-edit-profile,
   .btn-form-client,
-  .add-product-btn {
+  .btn-form-product,
+  .btn-form-profile {
     width: 100%;
   }
 }

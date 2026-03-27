@@ -1,5 +1,6 @@
 .form-add-clients,
-.form-add-products {
+.form-add-products,
+.containet-input-label {
   padding-top: var(--list-container-padding-top);
   display: flex;
   flex-direction: column;
@@ -9,12 +10,13 @@
 }
 
 .fac-label,
-.fap-label {
+.fap-label .profile-label {
   font-size: var(--font-size-titles-list);
 }
 
 .fac-input,
-.fap-input {
+.fap-input,
+.profile-input {
   max-width: 100%;
   width: 100%;
   padding: 0.5rem 1rem;
