@@ -45,6 +45,21 @@
   border-radius: 0.5rem;
 }
 
+.add-client-btn,
+.btn-form-client {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background: white;
+  outline: 1px solid black;
+  padding: var(--btns-add-padding);
+  border-radius: 1rem;
+}
+
+.btn-form-client {
+  margin-top: 20px;
+}
+
 @media (width <=500px) {
   #app {
     flex-direction: column;
@@ -72,5 +87,10 @@
     padding: 0.2rem 5rem;
     outline: 1px dashed black;
     border-radius: 1rem;
+  }
+
+  .add-client-btn,
+  .btn-form-client {
+    width: 100%;
   }
 }

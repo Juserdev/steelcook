@@ -13,6 +13,11 @@
 
 - [ ] Arreglar los tipos y los configs de products y clients ya que modifique los typos de form. 
 
+## Generales
+
+- [ ] crear funcion para quitar boton de agregar cliente/producto etc (que abre el formulario) cuando este abierto el formulario y que cuando salga vuelva y aparezca
+  - creo que esta funcion ya esta lista, solo debo agregar las etiquetas
+
 ## Estilos
 
 - [ ] Eliminar logo de profile, es totalmente incesesario y eliminar codigo para ocultar logo en css despues de eliminar en ficheros *.ts
