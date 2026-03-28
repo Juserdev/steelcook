@@ -1,7 +1,8 @@
 .form-add-clients,
 .form-add-products,
 .containet-input-label,
-.form-add-quotation {
+.form-add-quotation,
+.form-add-quote-settings {
   padding-top: var(--list-container-padding-top);
   display: flex;
   flex-direction: column;
@@ -44,7 +45,8 @@
 .faq-qs-label,
 .faq-client-label,
 .faq-product-label,
-.faq-total-label {
+.faq-total-label,
+.fqs-label {
   font-size: var(--font-size-titles-list);
 }
 
@@ -55,7 +57,8 @@
 .faq-qs-input,
 .faq-client-input,
 .faq-product-input,
-.faq-total-input {
+.faq-total-input,
+.fqs-input {
   max-width: 100%;
   width: 100%;
   padding: 0.5rem 1rem;
