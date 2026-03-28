@@ -34,7 +34,8 @@
 .conatiner-profile-icons,
 .conatiner-client-icons,
 .conatiner-product-icons,
-.conatiner-quotation-icons {
+.conatiner-quotation-icons,
+.conatiner-qs-icons {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -56,7 +57,9 @@
 .btn-form-client,
 .btn-form-product,
 .btn-form-profile,
-.quotation-btn-submit {
+.quotation-btn-submit,
+.btn-edit-quote-settings,
+.btn-form-quote-settings {
   border: none;
   outline: none;
   cursor: pointer;
@@ -68,7 +71,8 @@
 
 .btn-form-client,
 .btn-form-product,
-.btn-form-profile {
+.btn-form-profile,
+.btn-form-quote-settings {
   margin-top: 20px;
 }
 
@@ -90,7 +94,8 @@
   .conatiner-profile-icons,
   .conatiner-client-icons,
   .conatiner-product-icons,
-  .conatiner-quotation-icons {
+  .conatiner-quotation-icons,
+  .conatiner-qs-icons {
     padding: 0.5rem;
     padding-bottom: 0;
     width: 100%;
@@ -109,7 +114,9 @@
   .btn-form-client,
   .btn-form-product,
   .btn-form-profile,
-  .quotation-btn-submit {
+  .quotation-btn-submit,
+  .btn-edit-quote-settings,
+  .btn-form-quote-settings {
     width: 100%;
   }
 }

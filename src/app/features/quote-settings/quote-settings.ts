@@ -9,6 +9,7 @@ import { handle_delete_from_list } from '@/app/shared/handlers/handle-delete-fro
 import { handle_edit_open } from '@/app/shared/handlers/handle-edit-open.handle'
 import { handle_submit } from '@/app/shared/handlers/handle-submit.handle'
 import { toggle_add_btn_visibility } from '@/app/shared/utils/ui/toggle-add-btn-visibility.utils'
+import '@app/features/quote-settings/styles/quote-settings.css'
 
 export function content_quote_settings(TOKEN: string, quote_settings: Quote_Settings[]): HTMLDivElement {
 
