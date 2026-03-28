@@ -1,7 +1,7 @@
 import type { Clients } from "@/app/features/clients/types/clients.types"
+import type { HomeContent } from "@/app/features/home/types/home.types"
 import type { Products } from "@/app/features/products/types/products.types"
 import type { Quotations } from "@/app/features/quotations/types/quotations.types"
-import type { HomeContent } from "@/app/features/home/types/home.types"
 
 
 export function homeContentConfig(clients: Clients[], products: Products[], quotations: Quotations[]) {
@@ -10,7 +10,7 @@ export function homeContentConfig(clients: Clients[], products: Products[], quot
       title: 'Clientes',
       class_title: 'title-clients',
       counter: clients.length,
-      class_counter: 'counter',
+      class_counter: 'home-counter',
       text: 'Clientes registrados',
       class_text: 'clients-text',
       class_container: 'home-container-info'
