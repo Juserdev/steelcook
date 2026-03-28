@@ -21,8 +21,9 @@
   border: none;
   outline: none;
   background: white;
-  outline: 1px solid black;
+  outline: 1px dashed black;
   border-radius: 0.5rem;
+  padding: 0.4rem 0;
 }
 
 .btn-add-product {

@@ -10,6 +10,14 @@
   gap: 0.5rem;
 }
 
+.section-faq-profile-title,
+.section-faq-qs-title,
+.section-faq-client-title,
+.section-faq-product-title,
+.section-faq-total-title {
+  font-size: var(--font-size-titles-list);
+}
+
 .section-faq-profile,
 .section-faq-client,
 .section-faq-qs,
