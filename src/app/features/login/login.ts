@@ -1,6 +1,6 @@
 import { inputs } from '@/app/features/login/config/login.config'
 import { login } from '@/app/features/login/services/auth.services'
-
+import '@app/features/login/styles/login.css'
 
 const app = document.querySelector<HTMLDivElement>("#app")!
 
