@@ -7,7 +7,7 @@ import type { Quotations } from "@/app/features/quotations/types/quotations.type
 export function homeContentConfig(clients: Clients[], products: Products[], quotations: Quotations[]) {
   const home_content: HomeContent[] = [
     {
-      title: 'Clientes',
+      title: 'CLIENTES',
       class_title: 'title-clients',
       counter: clients.length,
       class_counter: 'home-counter',
@@ -16,7 +16,7 @@ export function homeContentConfig(clients: Clients[], products: Products[], quot
       class_container: 'home-container-info'
     },
     {
-      title: 'Productos',
+      title: 'PRODUCTOS:',
       class_title: 'title-products',
       counter: products.length,
       class_counter: 'counter',
@@ -25,7 +25,7 @@ export function homeContentConfig(clients: Clients[], products: Products[], quot
       class_container: 'home-container-info'
     },
     {
-      title: 'Cotizaciones',
+      title: 'COTIZACIONES',
       class_title: 'title-quotations',
       counter: quotations.length,
       class_counter: 'counter',
