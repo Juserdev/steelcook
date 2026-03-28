@@ -12,7 +12,7 @@ export const quote_settings_config = {
     text_button: "Editar configuraciones"
   },
   qs: {
-    file: 'list-qs-file',
+    file: 'list-qs',
     content: "qs-file",
     observations: {
       title: 'Observaciones',

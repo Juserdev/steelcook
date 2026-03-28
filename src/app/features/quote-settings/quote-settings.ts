@@ -17,7 +17,7 @@ export function content_quote_settings(TOKEN: string, quote_settings: Quote_Sett
   const form = settings_form(qs_header)
 
   handle_submit(TOKEN, form, extract_quote_settings, createQuoteSettings, editQuoteSettings)
-  handle_edit_open(quote_settings, qs_header, form, { item: 'qs-file', list: 'list-qs-file' }, fill_quote_settings_form)
+  handle_edit_open(quote_settings, qs_header, form, { item: 'qs-file', list: 'list-qs' }, fill_quote_settings_form)
   handle_delete_from_list(TOKEN, list, 'qs', deleteQuoteSettings)
 
   toggle_add_btn_visibility(qs_header, quote_settings, 'add_quote_settings')
