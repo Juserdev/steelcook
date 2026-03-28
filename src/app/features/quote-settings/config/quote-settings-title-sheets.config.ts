@@ -6,11 +6,11 @@ export const quote_settings_titles_sheets = [
     class: "quote-settings-sheet-observation",
     common_class: "quote-settings-sheet",
   }, {
-    title: "WARANTY",
+    title: "GARANTIA",
     class: "quote-settings-sheet-warranty",
     common_class: "quote-settings-sheet",
   }, {
-    title: "DELIVERY TIME",
+    title: "TIEMPO DE ENTREGA",
     class: "quote-settings-sheet-delivery-time",
     common_class: "quote-settings-sheet",
   }, {

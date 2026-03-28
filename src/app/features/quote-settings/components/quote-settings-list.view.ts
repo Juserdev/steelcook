@@ -26,22 +26,22 @@ export function quote_settings_list(quote_settings: Quote_Settings[], header: HT
       const observations = document.createElement('span')
       observations.classList.add(qsc.qs.observations.class_content, qsc.qs.observations.class)
       observations.textContent = content.observations
-      observations.dataset.item = `$${quote_settings_titles_sheets[0].title}:`
+      observations.dataset.item = `${quote_settings_titles_sheets[0].title}:`
 
       const warranty = document.createElement('span')
       warranty.classList.add(qsc.qs.warranty.class_content, qsc.qs.warranty.class)
       warranty.textContent = content.warranty
-      warranty.dataset.item = `$${quote_settings_titles_sheets[1].title}:`
+      warranty.dataset.item = `${quote_settings_titles_sheets[1].title}:`
 
       const delivery_time = document.createElement('span')
       delivery_time.classList.add(qsc.qs.delivery_time.class_content, qsc.qs.delivery_time.class)
       delivery_time.textContent = content.delivery_time
-      delivery_time.dataset.item = `$${quote_settings_titles_sheets[2].title}:`
+      delivery_time.dataset.item = `${quote_settings_titles_sheets[2].title}:`
 
       const transport = document.createElement('span')
       transport.classList.add(qsc.qs.transport.class_content, qsc.qs.transport.class)
       transport.textContent = content.transport
-      transport.dataset.item = `$${quote_settings_titles_sheets[3].title}:`
+      transport.dataset.item = `${quote_settings_titles_sheets[3].title}:`
 
       const icons_container = document.createElement('div')
       icons_container.classList.add(quote_settings_config.icons.container_class)
