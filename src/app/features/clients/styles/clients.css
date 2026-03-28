@@ -30,17 +30,4 @@
     border-radius: 1rem;
   }
 
-  .client-file>span[data-item] {
-    display: flex;
-    gap: 0.2rem;
-    align-items: center;
-    border-bottom: 1px dashed rgb(182, 182, 182);
-    padding: 0.5rem;
-  }
-
-  .client-file>span[data-item]::before {
-    content: attr(data-item);
-    font-size: var(--font-size-spans);
-    letter-spacing: 0.1rem;
-  }
 }
