@@ -44,7 +44,7 @@ export function create_form_fields(
       container.appendChild(label)
       container.appendChild(input)
       container.appendChild(datalist)
-      return
+
     }
 
     input.classList.add(inputs.class.specific, inputs.class.common)

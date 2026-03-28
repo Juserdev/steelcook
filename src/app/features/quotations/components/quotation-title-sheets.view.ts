@@ -1,4 +1,4 @@
-import { quotations_config } from "@/app/features/quotations/config/quotations.config";
+import { quotation_titles_sheets, quotations_config } from "@/app/features/quotations/config/quotations.config";
 import type { Quotations } from "@/app/features/quotations/types/quotations.types";
 import { format_thousands_with_dots } from "@/app/shared/utils/format/format-numeric-input.utils";
 
@@ -13,29 +13,33 @@ export function quotation_title_sheets(quotations: Quotations[], container: HTML
     quotation_file.classList.add(quotations_config.quotations_class.file)
     quotation_file.dataset.id = quotation.id
 
-    const quotation_id = document.createElement('sapn')
+    const quotation_id = document.createElement('span')
     quotation_id.classList.add(quotations_config.quotations_class.id)
     quotation_id.textContent = quotation.quotation_id
+    quotation_id.dataset.item = `${quotation_titles_sheets[0].title}:`
 
     const quotation_client = document.createElement('span')
     quotation_client.classList.add(quotations_config.quotations_class.client)
     quotation_client.textContent = quotation.client_snapshot.name
+    quotation_client.dataset.item = `${quotation_titles_sheets[1].title}:`
 
     const quotation_phone = document.createElement('span')
     quotation_phone.classList.add(quotations_config.quotations_class.phone)
     quotation_phone.textContent = String(quotation.client_snapshot.phone ?? '')
+    quotation_phone.dataset.item = `${quotation_titles_sheets[2].title}:`
 
     const quotation_total = document.createElement('span')
     quotation_total.classList.add(quotations_config.quotations_class.total)
     const total_price = format_thousands_with_dots(String(quotation.total))
     quotation_total.textContent = `$${total_price}`
+    quotation_total.dataset.item = `${quotation_titles_sheets[3].title}:`
 
     const quotation_date = document.createElement('span')
     quotation_date.classList.add(quotations_config.quotations_class.date)
-
     const date = new Date(quotation.created_at)
     const formatted_date = `${date.getDate()}-${date.getMonth() + 1}-${date.getFullYear()}`
     quotation_date.textContent = formatted_date
+    quotation_date.dataset.item = `${quotation_titles_sheets[4].title}:`
 
     const quotation_button = document.createElement('button')
     quotation_button.classList.add(quotations_config.quotations_class.button)
