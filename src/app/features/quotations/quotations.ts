@@ -14,6 +14,7 @@ import type { Quote_Settings } from "@/app/features/quote-settings/types/quote-s
 import { handle_delete_from_list } from "@/app/shared/handlers/handle-delete-from-list.handle"
 import { handle_edit_open } from "@/app/shared/handlers/handle-edit-open.handle"
 import { handle_submit } from "@/app/shared/handlers/handle-submit.handle"
+import '@app/features/quotations/styles/quotations.css'
 
 
 export function content_quotations(

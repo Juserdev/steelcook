@@ -1,7 +1,6 @@
 import { content_clients } from "@/app/features/clients/clients"
 import { client_toggle } from "@/app/features/clients/utils/clients-toggle.utils"
 import { loadDashboardData } from "@/app/features/dashboard/services/dashboard.services"
-import '@/app/features/dashboard/styles/dashboard.css'
 import { content_home } from "@/app/features/home/home"
 import { content_products } from "@/app/features/products/products"
 import { product_toggle } from "@/app/features/products/utils/products-toggle.utils"
@@ -15,6 +14,10 @@ import { sidebar } from "@/app/features/sidebar/sidebar"
 import { initDashboardNavigation } from "@/app/shared/navigation/dashboard-navigation"
 import { showQuotationPublic } from "@/app/shared/navigation/dashboard-public-links"
 import { init_input_behaviors } from "@/app/shared/utils/format/format-input-prices.utils"
+import '@app/features/dashboard/styles/dashboard.css'
+import '@app/shared/styles/forms.css'
+import '@app/shared/styles/styles.css'
+import '@app/shared/styles/variables.css'
 
 const TOKEN = localStorage.getItem('access_token')
 

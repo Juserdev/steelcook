@@ -95,7 +95,7 @@ export const form_add_product: Form_Add = {
   button: {
     type: 'submit',
     text: "Enviar",
-    class: 'btn-form-client'
+    class: 'btn-form-product'
   }
 }
 

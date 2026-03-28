@@ -1,4 +1,4 @@
-import { profile_config } from "@/app/features/profile/config/profile.config";
+import { profile_config, profile_titles_sheets } from "@/app/features/profile/config/profile.config";
 import type { Profile } from "@/app/features/profile/types/profile.types";
 
 export function profile_title_shetts(company_profile: Profile[], container: HTMLDivElement) {
@@ -15,22 +15,27 @@ export function profile_title_shetts(company_profile: Profile[], container: HTML
     const profile_company = document.createElement('span')
     profile_company.classList.add(profile_config.profile_class.company)
     profile_company.textContent = profile.company
+    profile_company.dataset.item = `${profile_titles_sheets[0].title}:`
 
     const profile_id = document.createElement('span')
     profile_id.classList.add(profile_config.profile_class.company_id)
     profile_id.textContent = profile.company_id.toString()
+    profile_id.dataset.item = `${profile_titles_sheets[1].title}:`
 
     const profile_email = document.createElement('span')
     profile_email.classList.add(profile_config.profile_class.email)
     profile_email.textContent = profile.email
+    profile_email.dataset.item = `${profile_titles_sheets[2].title}:`
 
     const profile_phone = document.createElement('span')
     profile_phone.classList.add(profile_config.profile_class.phone)
     profile_phone.textContent = String(profile.phone ?? '')
+    profile_phone.dataset.item = `${profile_titles_sheets[3].title}:`
 
     const profile_address = document.createElement('span')
     profile_address.classList.add(profile_config.profile_class.address)
     profile_address.textContent = profile.address
+    profile_address.dataset.item = `${profile_titles_sheets[4].title}:`
 
     const icons_container = document.createElement('div')
     icons_container.classList.add(profile_config.icons.container_class)

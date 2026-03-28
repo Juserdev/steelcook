@@ -1,4 +1,4 @@
-import { products_config } from "@/app/features/products/config/products.config";
+import { product_titles_sheets, products_config } from "@/app/features/products/config/products.config";
 import type { Products } from "@/app/features/products/types/products.types";
 import { format_thousands_with_dots } from "@/app/shared/utils/format/format-numeric-input.utils";
 
@@ -21,19 +21,23 @@ export function products_title_sheets(products: Products[], container: HTMLDivEl
     const product_code = document.createElement('span')
     product_code.classList.add(products_config.products_class.code)
     product_code.textContent = product.code
+    product_code.dataset.item = `${product_titles_sheets[0].title}:`
 
     const product_name = document.createElement('span')
     product_name.classList.add(products_config.products_class.name)
     product_name.textContent = product.name
+    product_name.dataset.item = `${product_titles_sheets[1].title}:`
 
     const product_description = document.createElement('span')
     product_description.classList.add(products_config.products_class.description)
     product_description.textContent = product.description
+    product_description.dataset.item = `${product_titles_sheets[2].title}:`
 
     const product_price = document.createElement('span')
     product_price.classList.add(products_config.products_class.price)
     const format_price = format_thousands_with_dots(String(product.price))
     product_price.textContent = `$${format_price}`
+    product_price.dataset.item = `${product_titles_sheets[3].title}:`
 
     const icons_container = document.createElement('div')
     icons_container.classList.add(products_config.icons.container_class)

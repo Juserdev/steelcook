@@ -1,6 +1,6 @@
+import type { Quotations_Config } from "@/app/features/quotations/types/quotations.types";
 import { icons } from "@/app/shared/config/icons.config";
 import type { Titles_Sheets } from "@/app/shared/types/ui.types";
-import type { Quotations_Config } from "@/app/features/quotations/types/quotations.types";
 
 
 export const quotations_config: Quotations_Config = {
@@ -51,12 +51,20 @@ export const quotation_titles_sheets: Titles_Sheets[] = [
     class: "quoattion-sheet-client",
     common_class: "quoattion-sheet"
   }, {
+    title: "TELEFONO",
+    class: "quoattion-sheet-phone",
+    common_class: "quoattion-sheet"
+  }, {
     title: "VALOR",
-    class: "quoattion-sheet-value",
+    class: "quoattion-sheet-price",
     common_class: "quoattion-sheet"
   }, {
     title: "FECHA",
     class: "quoattion-sheet-date",
+    common_class: "quoattion-sheet"
+  }, {
+    title: "VER",
+    class: "quoattion-sheet-VIEW",
     common_class: "quoattion-sheet"
   }
 ]
