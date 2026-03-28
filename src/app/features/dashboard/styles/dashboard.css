@@ -1,0 +1,4 @@
+.title {
+  font-size: clamp(2rem, 5vw, 4rem);
+  padding-bottom: clamp(1.5rem, 5vw, 2rem);
+}

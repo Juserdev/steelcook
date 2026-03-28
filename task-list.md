@@ -13,6 +13,17 @@
 
 - [ ] Arreglar los tipos y los configs de products y clients ya que modifique los typos de form. 
 
+## Generales
+
+- [ ] crear funcion para quitar boton de agregar cliente/producto etc (que abre el formulario) cuando este abierto el formulario y que cuando salga vuelva y aparezca
+  - creo que esta funcion ya esta lista, solo debo agregar las etiquetas
+
+## Estilos
+
+- [ ] Eliminar logo de profile, es totalmente incesesario y eliminar codigo para ocultar logo en css despues de eliminar en ficheros *.ts
+- [ ] corregir home para meter estilos iguales en todo
+- [ ] crear estilos en configuraciones de cotizacion, creo que debe ser igual a los demas
+
 <!-- 
   ! Reutilizacion de formulario de cotizacion con cambio de metodo:
   por lo prronto el estamos reutilizando el formulario y cambiamos el metodo, aun me valta poner los datos en el formulario y cambiar la funcion del boton submit

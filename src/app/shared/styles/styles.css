@@ -1,0 +1,115 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+#app {
+  max-width: 100vw;
+  width: 100%;
+  display: flex;
+}
+
+.left-container {
+  max-width: 300px;
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.right-container {
+  max-width: 100vw;
+  width: 100%;
+  padding: 20px;
+}
+
+.active {
+  display: none
+}
+
+
+
+.conatiner-profile-icons,
+.conatiner-client-icons,
+.conatiner-product-icons,
+.conatiner-quotation-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.icon-edit,
+.icon-delete {
+  cursor: pointer;
+  padding: 0.1rem 0.7rem;
+  outline: 1px solid black;
+  border-radius: 0.5rem;
+}
+
+.add-client-btn,
+.add-product-btn,
+.add-quotation-btn,
+.btn-edit-profile,
+.btn-form-client,
+.btn-form-product,
+.btn-form-profile,
+.quotation-btn-submit {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background: white;
+  outline: 1px solid black;
+  padding: var(--btns-add-padding);
+  border-radius: 1rem;
+}
+
+.btn-form-client,
+.btn-form-product,
+.btn-form-profile {
+  margin-top: 20px;
+}
+
+@media (width <=800px) {
+  #app {
+    flex-direction: column;
+  }
+
+  .left-container {
+    max-width: 100vw;
+    width: 100%;
+    height: 5rem;
+  }
+
+  .right-container {
+    margin-bottom: 5rem;
+  }
+
+  .conatiner-profile-icons,
+  .conatiner-client-icons,
+  .conatiner-product-icons,
+  .conatiner-quotation-icons {
+    padding: 0.5rem;
+    padding-bottom: 0;
+    width: 100%;
+  }
+
+  .icon-edit,
+  .icon-delete {
+    padding: 0.2rem 5rem;
+    outline: 1px dashed black;
+    border-radius: 1rem;
+  }
+
+  .add-client-btn,
+  .add-product-btn,
+  .btn-edit-profile,
+  .btn-form-client,
+  .btn-form-product,
+  .btn-form-profile,
+  .quotation-btn-submit {
+    width: 100%;
+  }
+}
