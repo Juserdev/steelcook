@@ -13,7 +13,7 @@
 .left-container {
   max-width: 300px;
   width: 100%;
-  padding: 20px;
+  padding: 1.5rem;
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -22,7 +22,7 @@
 .right-container {
   max-width: 100vw;
   width: 100%;
-  padding: 20px;
+  padding: 2.7rem 1.5rem;
 }
 
 .active {
@@ -48,6 +48,13 @@
   padding: 0.1rem 0.7rem;
   outline: 1px solid black;
   border-radius: 0.5rem;
+  transition: background 0.3s ease;
+}
+
+.icon-edit:hover,
+.icon-delete:hover {
+  background-color: rgb(206, 202, 202);
+  color: white;
 }
 
 .add-client-btn,
@@ -73,7 +80,7 @@
 .btn-form-product,
 .btn-form-profile,
 .btn-form-quote-settings {
-  margin-top: 20px;
+  margin-top: 1.6rem;
 }
 
 @media (width <=800px) {
@@ -118,5 +125,19 @@
   .btn-edit-quote-settings,
   .btn-form-quote-settings {
     width: 100%;
+  }
+
+  span[data-item] {
+    display: grid;
+    grid-template-columns: 1fr 1.7fr;
+    align-items: center;
+    border-bottom: 1px dashed rgb(182, 182, 182);
+    padding: 0.5rem;
+  }
+
+  span[data-item]::before {
+    content: attr(data-item);
+    font-size: var(--font-size-spans);
+    letter-spacing: 0.1rem;
   }
 }
