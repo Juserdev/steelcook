@@ -52,7 +52,8 @@ loginForm.addEventListener("submit", async (e) => {
 
   if (ACCESS_TOKEN) {
     localStorage.setItem('access_token', ACCESS_TOKEN)
-    window.location.href = '../dashboard/index.html'
+    const isProduction = window.location.hostname !== 'localhost'
+    window.location.href = isProduction ? "/system/dashboard/index.html" : "../dashboard/index.html"
   } else {
     alert('Login fallido, revisa tus credenciales')
   }

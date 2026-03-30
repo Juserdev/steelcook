@@ -21,7 +21,7 @@
 }
 
 #app {
-  background-image: var(--bg-gradient), url("../public/bg.jpg");
+  background-image: var(--bg-gradient), url("../../../public/bg.jpg");
   background-size: cover, cover;
   background-position: center;
   background-repeat: no-repeat;

@@ -7,7 +7,10 @@ export function showQuotationPublic() {
     button.addEventListener('click', () => {
 
       const public_id = button.dataset.public_id
-      if (public_id) window.open(`/system/quotation/index.html?public_id=${public_id}`, "_blank")
+      const isProduction = window.location.hostname !== 'localhost'
+      const quotationPath = isProduction ? `/system/quotation/index.html?public_id=${public_id}` : `../quotation/index.html?public_id=${public_id}`
+
+      if (public_id) window.open(quotationPath, "_blank")
 
     })
   });
