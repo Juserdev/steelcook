@@ -7,9 +7,8 @@ export async function get_public_quotation(public_id: string) {
       {
         method: "GET",
         headers: {
-          "apikey": SUPABASE_KEY,
-          "Authorization": `Bearer ${SUPABASE_KEY}`,
           "Content-Type": "application/json",
+          "apikey": SUPABASE_KEY,
         }
       }
     )
@@ -23,7 +22,9 @@ export async function get_public_quotation(public_id: string) {
     return data[0]
 
   } catch (error) {
-    console.error(error)
+    console.error('error fetching quotation: ', error)
+    return null
   }
+
 
 }

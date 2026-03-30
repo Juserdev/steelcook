@@ -16,7 +16,7 @@ export function homeContentConfig(clients: Clients[], products: Products[], quot
       class_container: 'home-container-info'
     },
     {
-      title: 'PRODUCTOS:',
+      title: 'PRODUCTOS',
       class_title: 'title-products',
       counter: products.length,
       class_counter: 'counter',
