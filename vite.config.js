@@ -13,6 +13,7 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: './src/landing/main.ts',
+        index: './index.html',
         login: './system/login/index.html',
         dashboard: './system/dashboard/index.html',
         quotation: './system/quotation/index.html'
