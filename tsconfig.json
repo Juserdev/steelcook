@@ -4,6 +4,9 @@
     "paths": {
       "@/*": [
         "src/*"
+      ],
+      "@app/*": [
+        "src/app/*"
       ]
     },
     "target": "ES2022",

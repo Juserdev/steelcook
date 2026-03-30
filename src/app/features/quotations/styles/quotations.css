@@ -1,0 +1,54 @@
+.list-container-quotations {
+  padding-top: var(--list-container-padding-top);
+  display: flex;
+  flex-direction: column;
+  gap: clamp(0.7rem, 2vw + 0.5rem, 1rem);
+}
+
+.quotations-titles-sheet {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  font-size: var(--font-size-titles-list);
+}
+
+.quotation-file {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(7, 1fr);
+}
+
+.quotation-vew-btn {
+  border: none;
+  outline: none;
+  background: white;
+  outline: 1px dashed black;
+  border-radius: 0.5rem;
+  padding: 0.4rem 0;
+}
+
+.btn-add-product {
+  margin-top: 0.5rem;
+  width: 100%;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background: white;
+  outline: 1px solid black;
+  padding: var(--btns-add-padding);
+  border-radius: 1rem;
+}
+
+@media (width <=800px) {
+  .quotations-titles-sheet {
+    display: none;
+  }
+
+  .quotation-file {
+    display: flex;
+    flex-direction: column;
+    outline: 1px dashed rgb(182, 182, 182);
+    padding: 0.5rem;
+    border-radius: 1rem;
+  }
+
+}

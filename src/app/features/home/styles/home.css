@@ -1,0 +1,23 @@
+.home-titles-sheet {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  font-size: var(--font-size-titles-list);
+}
+
+.home-file {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+@media (width <=800px) {
+  .home-titles-sheet {
+    display: none;
+  }
+
+  .home-file {
+    display: flex;
+    flex-direction: column;
+  }
+
+}

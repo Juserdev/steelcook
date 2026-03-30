@@ -1,0 +1,33 @@
+.list-container-client {
+  padding-top: var(--list-container-padding-top);
+  display: flex;
+  flex-direction: column;
+  gap: clamp(0.7rem, 2vw + 0.5rem, 1rem);
+}
+
+.clients-titles-sheet {
+  display: grid;
+  grid-template-columns: 1.5fr repeat(2, 1fr) 1.5fr 1fr 1fr;
+  font-size: var(--font-size-titles-list);
+}
+
+.client-file {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 1.5fr repeat(2, 1fr) 1.5fr 1fr 1fr;
+}
+
+@media (width <=800px) {
+  .clients-titles-sheet {
+    display: none;
+  }
+
+  .client-file {
+    display: flex;
+    flex-direction: column;
+    outline: 1px dashed rgb(182, 182, 182);
+    padding: 0.5rem;
+    border-radius: 1rem;
+  }
+
+}

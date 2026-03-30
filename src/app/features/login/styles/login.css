@@ -1,0 +1,53 @@
+:root {
+  --font-size-titles-list: clamp(1rem, 2vw + 0.8rem, 1.3rem);
+  --btns-add-padding: 0.8rem 1.5rem;
+  --bg-inputs: rgba(229, 229, 229, 0.399);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+#app {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+}
+
+.login-container {
+  padding: 0.6rem;
+  max-width: 300px;
+  width: 100%;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.label {
+  font-size: var(--font-size-titles-list);
+}
+
+.input {
+  max-width: 100%;
+  width: 100%;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  border: none;
+  background: var(--bg-inputs);
+  font-size: 1rem;
+}
+
+.login-btn {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background: white;
+  outline: 1px solid black;
+  padding: var(--btns-add-padding);
+  border-radius: 1rem;
+}
